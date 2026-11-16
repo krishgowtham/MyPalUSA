@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyPalUSA | Professional Home Enhancement &amp; Installation Services</title>
-  <meta name="description" content="Certified residential installation partner across North Carolina: TV wall mounting, smart switches, climate thermostats, keyless deadbolts, and custom window treatments.">
+  <title>MyPalUSA LLC | Professional Home Enhancement &amp; Installation Services</title>
+  <meta name="description" content="Premier residential installation partner across North Carolina: TV wall mounting, smart switches, climate thermostats, keyless deadbolts, and custom window treatments.">
   <link rel="stylesheet" href="css/apple.css">
   <style>
 
@@ -177,7 +177,7 @@
     padding: 28px 24px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   }
   .minimal-card:hover {
@@ -202,7 +202,7 @@
     font-size: 14px;
     color: #6e6e73;
     line-height: 1.5;
-    margin-bottom: 18px;
+    margin-bottom: 0;
   }
   .minimal-card a {
     font-size: 13.5px;
@@ -531,7 +531,7 @@
     <div class="site-container navbar-inner">
       <a href="index.html" class="nav-brand">
         <img src="images/logo.png" alt="MyPalUSA Logo" class="nav-brand-logo">
-        <span class="nav-brand-text">MyPal<span>USA</span></span>
+        <span class="nav-brand-text">MyPal<span>USA</span> LLC</span>
       </a>
 
       <!-- Desktop Links -->
@@ -544,7 +544,7 @@
 
       <!-- Action Buttons -->
       <div class="nav-actions">
-        <a href="tel:9196563524" class="nav-phone-btn">📞 (919) 656 3524</a>
+        <a href="tel:9196563524" class="nav-phone-btn"><span class="btn-icon">📞</span><span>(919) 656 3524</span></a>
         <button type="button" onclick="openScheduleModal();" class="nav-cta-btn">Schedule Service</button>
         <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu();" aria-label="Toggle Menu">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
@@ -563,7 +563,7 @@
       <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
       <a href="about.html" class="mobile-nav-link">About Us</a>
       <div class="mobile-nav-divider"></div>
-      <a href="tel:9196563524" class="mobile-nav-link phone">📞 Call (919) 656 3524</a>
+      <a href="tel:9196563524" class="mobile-nav-link phone"><span class="btn-icon">📞</span><span>Call (919) 656 3524</span></a>
       <button type="button" onclick="openScheduleModal(); toggleMobileMenu();" class="mobile-schedule-btn">Schedule Service Now &rsaquo;</button>
     </div>
   </header>
@@ -580,7 +580,7 @@
         <p>Your trusted home enhancement partner for custom window blinds, wobble-free ceiling fans, TV wall mounting, and smart home automation across North Carolina.</p>
         <div class="hero-btns">
           <button type="button" onclick="openScheduleModal(null, event);" class="btn-pill primary" style="padding: 13px 28px; font-size: 15px;">Schedule Service Now &rsaquo;</button>
-          <a href="installation.html" class="btn-pill secondary" style="padding: 13px 26px; font-size: 15px;">Explore 12 Services</a>
+          <a href="installation.html" class="btn-pill secondary" style="padding: 13px 26px; font-size: 15px;">Explore Services &rsaquo;</a>
         </div>
       </div>
       <div class="hero-image-pane">
@@ -595,81 +595,69 @@
       <div class="section-header-center">
         <span class="section-tag">Core Disciplines</span>
         <h3>Professional Installation Portfolio</h3>
-        <p>Expert residential enhancements delivered with certified craftsmanship, upfront rates, and zero mess.</p>
+        <p>Expert residential enhancements delivered with quality craftsmanship, upfront rates, and zero mess.</p>
       </div>
 
       <div class="minimal-pillars-grid">
         <!-- Pillar 1: Blinds -->
         <div class="minimal-card">
-          <div>
-            <div class="discipline-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 3h18"></path>
-                <path d="M4 7h16"></path>
-                <path d="M4 11h16"></path>
-                <path d="M4 15h16"></path>
-                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-              </svg>
-            </div>
-            <h4>Custom Window Blinds</h4>
-            <p>Laser-leveled custom blinds, cordless faux wood, motorized roller shades, and precision trim bracket mounting.</p>
+          <div class="discipline-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3h18"></path>
+              <path d="M4 7h16"></path>
+              <path d="M4 11h16"></path>
+              <path d="M4 15h16"></path>
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            </svg>
           </div>
-          <a href="installation.html#blinds">Specs &amp; Details &rsaquo;</a>
+          <h4>Custom Window Blinds</h4>
+          <p>Laser-leveled custom blinds, cordless faux wood, motorized roller shades, and precision trim bracket mounting.</p>
         </div>
 
         <!-- Pillar 2: Ceiling Fans -->
         <div class="minimal-card">
-          <div>
-            <div class="discipline-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M12 9V3a3 3 0 0 1 3 3v3"></path>
-                <path d="M15 12h6a3 3 0 0 1-3 3h-3"></path>
-                <path d="M12 15v6a3 3 0 0 1-3-3v-3"></path>
-                <path d="M9 12H3a3 3 0 0 1 3-3h3"></path>
-              </svg>
-            </div>
-            <h4>Ceiling Fan Installation</h4>
-            <p>100% wobble-free dynamic blade balancing, UL fan-rated steel box bracing, and remote or dual wall switch wiring.</p>
+          <div class="discipline-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 9V3a3 3 0 0 1 3 3v3"></path>
+              <path d="M15 12h6a3 3 0 0 1-3 3h-3"></path>
+              <path d="M12 15v6a3 3 0 0 1-3-3v-3"></path>
+              <path d="M9 12H3a3 3 0 0 1 3-3h3"></path>
+            </svg>
           </div>
-          <a href="installation.html#fans">Specs &amp; Details &rsaquo;</a>
+          <h4>Ceiling Fan Installation</h4>
+          <p>100% wobble-free dynamic blade balancing, UL fan-rated steel box bracing, and remote or dual wall switch wiring.</p>
         </div>
 
         <!-- Pillar 3: TV Mounting -->
         <div class="minimal-card">
-          <div>
-            <div class="discipline-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="13" rx="2"></rect>
-                <path d="M8 20h8"></path>
-                <path d="M12 17v3"></path>
-              </svg>
-            </div>
-            <h4>Media &amp; TV Mounting</h4>
-            <p>Concealed in-wall cabling, heavy-duty stud anchoring, soundbar integration, and zero-wire floating TV setups up to 100".</p>
+          <div class="discipline-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="13" rx="2"></rect>
+              <path d="M8 20h8"></path>
+              <path d="M12 17v3"></path>
+            </svg>
           </div>
-          <a href="installation.html#tv">Specs &amp; Details &rsaquo;</a>
+          <h4>Media &amp; TV Mounting</h4>
+          <p>Concealed in-wall cabling, heavy-duty stud anchoring, soundbar integration, and zero-wire floating TV setups up to 100".</p>
         </div>
 
         <!-- Pillar 4: Smart Home & Assembly -->
         <div class="minimal-card">
-          <div>
-            <div class="discipline-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
-                <path d="M9 18h6"></path>
-                <path d="M10 22h4"></path>
-              </svg>
-            </div>
-            <h4>Smart Home &amp; Lighting</h4>
-            <p>Smart dimmer switches, multi-stage thermostats, biometric smart locks, garage ceiling racks, and furniture assembly.</p>
+          <div class="discipline-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+              <path d="M9 18h6"></path>
+              <path d="M10 22h4"></path>
+            </svg>
           </div>
-          <a href="installation.html#smart-switches">Specs &amp; Details &rsaquo;</a>
+          <h4>Smart Home &amp; Lighting</h4>
+          <p>Smart dimmer switches, multi-stage thermostats, biometric smart locks, garage ceiling racks, and furniture assembly.</p>
         </div>
       </div>
 
       <div class="explore-all-bar">
-        <a href="installation.html" class="btn-pill primary" style="padding: 14px 34px; font-size: 15.5px; box-shadow: 0 4px 14px rgba(0, 113, 227, 0.25);">View All 12 Installation Services &rsaquo;</a>
+        <a href="installation.html" class="btn-pill primary" style="padding: 14px 34px; font-size: 15.5px; box-shadow: 0 4px 14px rgba(0, 113, 227, 0.25);">View All Installation Services &rsaquo;</a>
       </div>
     </div>
   </section>
@@ -726,7 +714,7 @@
     <div class="action-strip-inner">
       <h4>Ready to schedule your installation?</h4>
       <p>Direct scheduling available by phone at <a href="tel:9196563524" class="phone-link">(919) 656 3524</a> or email consultation.</p>
-      <button type="button" onclick="openScheduleModal(null, event);" class="btn-pill primary" style="padding: 13px 30px; font-size: 15px;">📅 Schedule Free Consultation &rsaquo;</button>
+      <button type="button" onclick="openScheduleModal(null, event);" class="btn-pill primary" style="padding: 13px 30px; font-size: 15px;"><span class="btn-icon">📅</span><span>Schedule Free Consultation &rsaquo;</span></button>
     </div>
   </section>
 
@@ -741,10 +729,10 @@
         <div class="footer-col brand-col">
           <a href="index.html" class="footer-brand">
             <img src="images/logo.png" alt="MyPalUSA Logo" class="footer-logo">
-            <span class="footer-brand-text">MyPal<span>USA</span></span>
+            <span class="footer-brand-text">MyPal<span>USA</span> LLC</span>
           </a>
           <p class="footer-bio">
-            Where Talent Meets Opportunity. Premier residential enhancement and certified installation contractors across North Carolina. Triangle area certified technicians with upfront pricing and zero drywall mess.
+            Where Talent Meets Opportunity. Premier residential enhancement and professional installation contractors across North Carolina. Triangle area skilled technicians with upfront pricing and zero drywall mess.
           </p>
           <div class="footer-contact-direct">
             <a href="tel:9196563524">📞 (919) 656 3524</a>
@@ -752,35 +740,7 @@
           </div>
         </div>
 
-        <!-- Col 2: Core Disciplines -->
-        <div class="footer-col">
-          <h5>Core Disciplines</h5>
-          <ul class="footer-links">
-            <li><a href="installation.html#blinds">Custom Window Blinds</a></li>
-            <li><a href="installation.html#fans">Wobble-Free Ceiling Fans</a></li>
-            <li><a href="installation.html#tv">Media &amp; TV Wall Mounting</a></li>
-            <li><a href="installation.html#curtains">Tailored Drapery &amp; Rods</a></li>
-            <li><a href="installation.html#smart-switches">Smart Home &amp; Lighting</a></li>
-            <li><a href="installation.html#thermostats">Climate &amp; Thermostats</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: 12 Services -->
-        <div class="footer-col">
-          <h5>12 Services</h5>
-          <ul class="footer-links">
-            <li><a href="service_blinds.html">Custom Window Blinds</a></li>
-            <li><a href="service_ceiling_fans.html">Wobble-Free Ceiling Fans</a></li>
-            <li><a href="service_tv_mounting.html">TV Wall Mounting</a></li>
-            <li><a href="service_curtains.html">Tailored Drapery &amp; Rods</a></li>
-            <li><a href="service_smart_switches.html">Smart Dimmer Switches</a></li>
-            <li><a href="service_thermostats.html">Nest / Ecobee Thermostats</a></li>
-            <li><a href="service_smart_locks.html">Biometric Smart Deadbolts</a></li>
-            <li><a href="service_garage_shelves.html">Ceiling Garage Shelving</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Service Areas & Hours -->
+        <!-- Col 2: Service Areas & Hours -->
         <div class="footer-col">
           <h5>NC Service Coverage</h5>
           <p class="footer-coverage-text">
@@ -812,7 +772,7 @@
     <div class="schedule-modal-card">
       <button type="button" class="modal-close-btn" onclick="closeScheduleModal();" aria-label="Close">&times;</button>
       
-      <span class="modal-pill">MyPalUSA Direct Dispatch</span>
+      <span class="modal-pill">MyPalUSA LLC Direct Dispatch</span>
       <h3 id="modalTitle">Schedule Your Installation</h3>
       <p id="modalSub">Connect directly with our installation team to get a quote, check availability, or schedule your appointment.</p>
       
@@ -824,7 +784,13 @@
             <span class="modal-contact-value">(919) 656 3524</span>
             <span class="modal-contact-meta">Mon–Sat &bull; 8:00 AM – 8:00 PM EST</span>
           </div>
-          <span class="modal-action-tag">Call Now &rsaquo;</span>
+          <div class="modal-action-col">
+            <span class="modal-action-tag">Call Now &rsaquo;</span>
+            <button type="button" class="modal-copy-btn" onclick="copyContactText('(919) 656 3524', this, event);" title="Copy Phone Number">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy</span>
+            </button>
+          </div>
         </a>
 
         <a href="mailto:mypalusallc@gmail.com?subject=Installation%20Schedule%20Request%20-%20MyPalUSA" class="modal-contact-card">
@@ -834,13 +800,19 @@
             <span class="modal-contact-value">mypalusallc@gmail.com</span>
             <span class="modal-contact-meta">Fast response within 2 hours</span>
           </div>
-          <span class="modal-action-tag">Send Email &rsaquo;</span>
+          <div class="modal-action-col">
+            <span class="modal-action-tag">Send Email &rsaquo;</span>
+            <button type="button" class="modal-copy-btn" onclick="copyContactText('mypalusallc@gmail.com', this, event);" title="Copy Email Address">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy</span>
+            </button>
+          </div>
         </a>
       </div>
 
       <div class="modal-guarantee-bar">
         <span>✓ Upfront Pricing</span>
-        <span>✓ Certified Techs</span>
+        <span>✓ Skilled Techs</span>
         <span>✓ Zero Drywall Mess</span>
         <span>✓ 100% Guaranteed</span>
       </div>
@@ -851,6 +823,44 @@
     function toggleMobileMenu() {
       var m = document.getElementById('mobileMenu');
       if (m) m.classList.toggle('active');
+    }
+
+    
+    function copyContactText(text, btn, e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      function setCopied() {
+        if (!btn) return;
+        btn.classList.add('copied');
+        var origHTML = btn.innerHTML;
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copied!</span>';
+        setTimeout(function() {
+          btn.classList.remove('copied');
+          btn.innerHTML = origHTML;
+        }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(setCopied).catch(function() {
+          fallbackCopy(text);
+          setCopied();
+        });
+      } else {
+        fallbackCopy(text);
+        setCopied();
+      }
+      function fallbackCopy(str) {
+        var ta = document.createElement('textarea');
+        ta.value = str;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch(err) {}
+        document.body.removeChild(ta);
+      }
+      return false;
     }
 
     function openScheduleModal(serviceName, e) {

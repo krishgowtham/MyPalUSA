@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Garage Shelves & Overhead Racks | Professional Installation | MyPalUSA</title>
+  <title>Garage Shelves & Overhead Racks | Professional Installation | MyPalUSA LLC</title>
   <meta name="description" content="Industrial ceiling joist attachment, corner anti-sway truss bracing, and heavy-duty wall shelving.">
   <link rel="stylesheet" href="css/apple.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -131,7 +131,7 @@
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 10px;
       transition: all 0.2s;
     }
     .btn-hero-primary:hover { background: #3894ff; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 113, 227, 0.25); }
@@ -146,7 +146,7 @@
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 10px;
       transition: all 0.2s;
     }
     .btn-hero-secondary:hover { background: #e8e8ed; }
@@ -562,13 +562,11 @@
     margin-bottom: 2px;
   }
   .contact-card-val {
-    font-size: 16.5px;
+    font-size: 15.5px;
     font-weight: 700;
     color: #1d1d1f;
     letter-spacing: -0.01em;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   .contact-card-note {
     font-size: 11.5px;
@@ -603,7 +601,7 @@
     <div class="site-container navbar-inner">
       <a href="index.html" class="nav-brand">
         <img src="images/logo.png" alt="MyPalUSA Logo" class="nav-brand-logo">
-        <span class="nav-brand-text">MyPal<span>USA</span></span>
+        <span class="nav-brand-text">MyPal<span>USA</span> LLC</span>
       </a>
 
       <!-- Desktop Links -->
@@ -616,7 +614,7 @@
 
       <!-- Action Buttons -->
       <div class="nav-actions">
-        <a href="tel:9196563524" class="nav-phone-btn">📞 (919) 656 3524</a>
+        <a href="tel:9196563524" class="nav-phone-btn"><span class="btn-icon">📞</span><span>(919) 656 3524</span></a>
         <button type="button" onclick="openScheduleModal();" class="nav-cta-btn">Schedule Service</button>
         <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu();" aria-label="Toggle Menu">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
@@ -635,7 +633,7 @@
       <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
       <a href="about.html" class="mobile-nav-link">About Us</a>
       <div class="mobile-nav-divider"></div>
-      <a href="tel:9196563524" class="mobile-nav-link phone">📞 Call (919) 656 3524</a>
+      <a href="tel:9196563524" class="mobile-nav-link phone"><span class="btn-icon">📞</span><span>Call (919) 656 3524</span></a>
       <button type="button" onclick="openScheduleModal(); toggleMobileMenu();" class="mobile-schedule-btn">Schedule Service Now &rsaquo;</button>
     </div>
   </header>
@@ -662,8 +660,8 @@
       <p class="lead">Industrial ceiling joist attachment, corner anti-sway truss bracing, and heavy-duty wall shelving.</p>
 
       <div class="hero-btn-group">
-        <a href="tel:9196563524" class="btn-hero-primary">📞 Call (919) 656 3524</a>
-        <a href="javascript:void(0)" onclick="openScheduleModal('Garage Shelves & Overhead Racks');" class="btn-hero-primary">📅 Schedule Installation &rsaquo;</a>
+        <a href="tel:9196563524" class="btn-hero-primary"><span class="btn-icon">📞</span><span>Call (919) 656 3524</span></a>
+        <a href="javascript:void(0)" onclick="openScheduleModal('Garage Shelves & Overhead Racks');" class="btn-hero-primary"><span class="btn-icon">📅</span><span>Schedule Installation &rsaquo;</span></a>
       </div>
 
       <div class="hero-image-wrap">
@@ -887,7 +885,7 @@
     <!-- 8. Prev / Next Navigation -->
     <div class="service-nav">
       <a href="service_curtains.html">&lsaquo; Curtains & Custom Drapery Rods</a>
-      <a href="installation.html" style="color: #86868b; font-weight: normal;">View All 12 Services</a>
+      <a href="installation.html" style="color: #86868b; font-weight: normal;">View All Services</a>
       <a href="service_furniture_assembly.html">Furniture Assembly & Wall Anchoring &rsaquo;</a>
     </div>
 
@@ -918,7 +916,13 @@
           <span class="contact-card-val">(919) 656 3524</span>
           <span class="contact-card-note">Mon–Sat • 8:00 AM – 8:00 PM EST</span>
         </div>
-        <span class="contact-card-action">Call Now &rsaquo;</span>
+        <div class="modal-action-col">
+          <span class="contact-card-action">Call Now &rsaquo;</span>
+          <button type="button" class="modal-copy-btn" onclick="copyContactText('(919) 656 3524', this, event);" title="Copy Phone Number">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy</span>
+          </button>
+        </div>
       </a>
 
       <!-- Email Option -->
@@ -929,7 +933,13 @@
           <span class="contact-card-val">mypalusallc@gmail.com</span>
           <span class="contact-card-note">Fast response within 2 hours</span>
         </div>
-        <span class="contact-card-action">Send Email &rsaquo;</span>
+        <div class="modal-action-col">
+          <span class="contact-card-action">Send Email &rsaquo;</span>
+          <button type="button" class="modal-copy-btn" onclick="copyContactText('mypalusallc@gmail.com', this, event);" title="Copy Email Address">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy</span>
+          </button>
+        </div>
       </a>
     </div>
 
@@ -940,7 +950,45 @@
 </div>
 
 <script>
-function openScheduleModal(serviceName) {
+
+    function copyContactText(text, btn, e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      function setCopied() {
+        if (!btn) return;
+        btn.classList.add('copied');
+        var origHTML = btn.innerHTML;
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copied!</span>';
+        setTimeout(function() {
+          btn.classList.remove('copied');
+          btn.innerHTML = origHTML;
+        }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(setCopied).catch(function() {
+          fallbackCopy(text);
+          setCopied();
+        });
+      } else {
+        fallbackCopy(text);
+        setCopied();
+      }
+      function fallbackCopy(str) {
+        var ta = document.createElement('textarea');
+        ta.value = str;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch(err) {}
+        document.body.removeChild(ta);
+      }
+      return false;
+    }
+
+    function openScheduleModal(serviceName) {
   var modal = document.getElementById('scheduleModal');
   if (modal) {
     var titleEl = document.getElementById('modalTitle');
