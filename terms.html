@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions | MyPalUSA LLC</title>
+  <meta name="description" content="Terms & Conditions governing residential installation services, quoting, warranties, and platform usage for MyPalUSA LLC.">
+  <link rel="stylesheet" href="css/apple.css">
+  <style>
+    /* Terms Page Specific Styles */
+    .terms-hero {
+      padding: 140px 0 60px;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      border-bottom: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .terms-hero .section-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .terms-hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .terms-hero p {
+      font-size: 18px;
+      color: #64748b;
+      max-width: 720px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    .terms-meta-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      padding: 8px 20px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+    .terms-meta-bar span.bullet {
+      color: #cbd5e1;
+    }
+
+    /* Content Layout */
+    .terms-layout {
+      padding: 60px 0 100px;
+      background: #fbfbfd;
+    }
+    .terms-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .terms-paper {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 48px 56px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .terms-preamble {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #334155;
+      background: #f8fafc;
+      border-left: 4px solid var(--apple-blue);
+      padding: 24px;
+      border-radius: 0 14px 14px 0;
+      margin-bottom: 40px;
+    }
+    .terms-preamble strong {
+      color: #0f172a;
+    }
+
+    .terms-section {
+      margin-bottom: 36px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .terms-section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 24px;
+      padding-bottom: 0;
+    }
+
+    .terms-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .terms-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-right: 2px;
+    }
+
+    .terms-text {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #475569;
+      margin-bottom: 12px;
+    }
+    .terms-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-sublist {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .terms-sublist li {
+      position: relative;
+      padding-left: 28px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #475569;
+    }
+    .terms-sublist li::before {
+      content: attr(data-letter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 700;
+      color: #0284c7;
+      font-size: 13px;
+    }
+
+    .terms-nested-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 4px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .terms-nested-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+    .terms-nested-list li::before {
+      content: attr(data-num);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 600;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .terms-callout {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .terms-callout h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .terms-callout p {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .terms-contact-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .terms-contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      font-size: 13px;
+      font-weight: 600;
+      color: #0f172a;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .terms-contact-btn:hover {
+      border-color: var(--apple-blue);
+      color: var(--apple-blue);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      .terms-hero {
+        padding: 110px 0 40px;
+      }
+      .terms-hero h1 {
+        font-size: 34px;
+      }
+      .terms-hero p {
+        font-size: 16px;
+      }
+      .terms-paper {
+        padding: 28px 24px;
+        border-radius: 18px;
+      }
+      .terms-preamble {
+        padding: 18px;
+        font-size: 14px;
+      }
+      .terms-heading {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Glass Navigation Bar -->
+  <header class="site-navbar">
+    <div class="site-container navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="MyPalUSA Logo" class="nav-brand-logo">
+        <span class="nav-brand-text">MyPal<span>USA</span> <span class="brand-llc">LLC</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="installation.html" class="nav-link">Installation Services</a>
+        <a href="catalog.html" class="nav-link">Hardware Catalog</a>
+        <a href="about.html" class="nav-link">About Us</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:9196563524" class="nav-phone-btn"><span class="btn-icon">📞</span><span>(919) 656 3524</span></a>
+        <button type="button" onclick="openScheduleModal();" class="nav-cta-btn">Schedule Service</button>
+        <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu();" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="mobile-dropdown" id="mobileMenu">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="installation.html" class="mobile-nav-link">Installation Services</a>
+      <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="terms-hero">
+    <div class="site-container">
+      <span class="section-pill">LEGAL &amp; AGREEMENTS</span>
+      <h1>Terms &amp; Conditions</h1>
+      <p>Please review these terms carefully. They outline the rights, responsibilities, and standards governing our installation services, quotations, and online platform.</p>
+      <div class="terms-meta-bar">
+        <span>Effective Date: January 1, 2024</span>
+        <span class="bullet">&bull;</span>
+        <span>Last Updated: November 2026</span>
+        <span class="bullet">&bull;</span>
+        <span>Jurisdiction: North Carolina, USA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <main class="terms-layout">
+    <div class="terms-container">
+      <div class="terms-paper">
+
+        <!-- Preamble -->
+        <div class="terms-preamble">
+          These Terms &amp; Conditions ("Agreement") govern the provision of installation services by <strong>MyPalUSA LLC</strong> ("Company," "we," "us," or "our") to the client ("Client," "you," or "your"). By accepting a quote, engaging our services, or allowing us to commence work, you agree to be bound by these Terms &amp; Conditions.
+        </div>
+
+        <!-- Section 1 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">1</span> Services Provided</h2>
+          <p class="terms-text">
+            MyPalUSA LLC agrees to perform installation services as detailed in the agreed-upon proposal, quote, or work order ("Scope of Work"). Any changes to the Scope of Work must be agreed upon in writing by both parties and may result in adjustments to the price and schedule.
+          </p>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">2</span> Quotes and Pricing</h2>
+          <ul class="terms-sublist">
+            <li data-letter="a.">All quotes provided by MyPalUSA LLC are valid for <strong>30 days</strong> from the date of issuance unless otherwise stated in writing.</li>
+            <li data-letter="b.">Prices quoted are based on the information available at the time of quoting. Any unforeseen circumstances, concealed site conditions, or changes requested by the Client that impact the time or materials required may result in additional charges.</li>
+            <li data-letter="c.">A deposit (typically 20% to 50% of the total estimated cost, or a specified fixed amount) may be required before work commences. This deposit is non-refundable unless otherwise specified in writing.</li>
+          </ul>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">3</span> Payment Terms</h2>
+          <ul class="terms-sublist">
+            <li data-letter="a.">Unless otherwise agreed in writing, full payment is due upon completion of the installation services.</li>
+            <li data-letter="b.">Payments can be made via electronic bank transfer (ACH/Zelle), major credit or debit cards, check, or digital payment methods approved by MyPalUSA LLC.</li>
+            <li data-letter="c.">Late payments may be subject to a late fee of <strong>1.5% per month</strong> or the maximum allowed by North Carolina law, whichever is less, on the outstanding balance.</li>
+            <li data-letter="d.">In the event of non-payment, MyPalUSA LLC reserves the right to cease work, remove any installed equipment (where legally permissible and practical), and pursue all available legal remedies for collection.</li>
+          </ul>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">4</span> Client Responsibilities</h2>
+          <p class="terms-text">The Client agrees to:</p>
+          <ul class="terms-sublist">
+            <li data-letter="a.">Provide clear and unobstructed access to the work area.</li>
+            <li data-letter="b.">Ensure the site is prepared and safe for the installation team to commence work (e.g., clear of personal belongings, old fixtures removed if agreed, sufficient lighting, and active electrical power).</li>
+            <li data-letter="c.">Provide accurate information regarding existing infrastructure, utilities, wiring, and any potential hazards.</li>
+            <li data-letter="d.">Be available or have an authorized adult representative available to answer questions and make decisions during the installation process.</li>
+            <li data-letter="e.">Secure any necessary HOA approvals, permits, or municipal permissions required for the installation, unless otherwise explicitly agreed upon in the Scope of Work.</li>
+            <li data-letter="f.">Protect their personal property, fragile items, or furnishings from dust, debris, or other potential impacts of the installation process.</li>
+          </ul>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">5</span> Scheduling and Delays</h2>
+          <ul class="terms-sublist">
+            <li data-letter="a.">MyPalUSA LLC will make reasonable efforts to complete the installation within the estimated timeframe. However, all dates and arrival windows are estimates and not strict guarantees.</li>
+            <li data-letter="b.">
+              We are not liable for delays caused by circumstances beyond our reasonable control, including but not limited to:
+              <ul class="terms-nested-list">
+                <li data-num="i.">Acts of God, natural disasters, severe weather events, war, or civic disruption;</li>
+                <li data-num="ii.">Manufacturer delays, material shortages, or supply chain bottlenecks;</li>
+                <li data-num="iii.">Client-requested changes, delays in providing property access, or incomplete site readiness;</li>
+                <li data-num="iv.">Inclement weather impeding safe travel or ladder/roof work;</li>
+                <li data-num="v.">Unforeseen site conditions or concealed structural defects.</li>
+              </ul>
+            </li>
+            <li data-letter="c.">In the event of a delay, MyPalUSA LLC will communicate with the Client promptly and work to reschedule as soon as reasonably possible.</li>
+          </ul>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">6</span> Site Conditions and Concealed Defects</h2>
+          <ul class="terms-sublist">
+            <li data-letter="a.">MyPalUSA LLC is not responsible for pre-existing or latent defects in the Client's property, including but not limited to structural deterioration, non-code compliant electrical wiring, hidden plumbing/gas pipes, termite damage, or unsuitable drywall/framing surfaces.</li>
+            <li data-letter="b.">If unforeseen conditions are encountered during the installation that require additional labor, specialized anchors, or extra materials, MyPalUSA LLC will notify the Client and obtain approval for any additional costs before proceeding.</li>
+          </ul>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">7</span> Warranty and Guarantees</h2>
+          <ul class="terms-sublist">
+            <li data-letter="a.">MyPalUSA LLC warrants that all installation services will be performed in a professional and workmanlike manner, in accordance with recognized industry standards.</li>
+            <li data-letter="b.">Our warranty on labor is valid for <strong>90 days</strong> from the date of completion (unless otherwise specified on your written invoice/quote). This warranty covers defects in our direct workmanship only.</li>
+            <li data-letter="c.">
+              This warranty does not cover:
+              <ul class="terms-nested-list">
+                <li data-num="i.">Damage caused by misuse, abuse, neglect, overload, or improper maintenance by the Client or third parties;</li>
+                <li data-num="ii.">Normal wear and tear, cosmetic scratching, or environmental weathering;</li>
+                <li data-num="iii.">Defects, failures, or firmware issues in customer-supplied materials, hardware, or appliances (manufacturer warranties apply to such equipment);</li>
+                <li data-num="iv.">Repairs, disassemblies, or alterations performed by anyone other than MyPalUSA LLC.</li>
+              </ul>
+            </li>
+            <li data-letter="d.">To make a warranty claim, the Client must notify MyPalUSA LLC in writing within the warranty period, describing the defect along with supporting photos.</li>
+          </ul>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">8</span> Limitation of Liability</h2>
+          <ul class="terms-sublist">
+            <li data-letter="a.">To the fullest extent permitted by applicable law, MyPalUSA LLC's total aggregate liability for any claim arising out of or relating to these services, whether in contract, tort (including negligence), or otherwise, shall not exceed the total amount paid by the Client to MyPalUSA LLC for the specific services giving rise to the claim.</li>
+            <li data-letter="b.">MyPalUSA LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, loss of business, data interruption, or loss of property use, even if advised of the possibility of such damages.</li>
+          </ul>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">9</span> Indemnification</h2>
+          <p class="terms-text">
+            The Client agrees to indemnify, defend, and hold harmless MyPalUSA LLC, its officers, employees, contractors, and agents from and against any and all claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with the Client's breach of these Terms &amp; Conditions, the Client's negligence or willful misconduct, or any third-party claims arising from the Client's use of the installed services or equipment.
+          </p>
+        </div>
+
+        <!-- Section 10 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">10</span> Insurance</h2>
+          <p class="terms-text">
+            MyPalUSA LLC maintains commercial general liability insurance. We recommend that the Client maintain appropriate homeowner's, renter's, or commercial property insurance to cover their property and any potential liabilities.
+          </p>
+        </div>
+
+        <!-- Section 11 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">11</span> Governing Law and Dispute Resolution</h2>
+          <ul class="terms-sublist">
+            <li data-letter="a.">This Agreement shall be governed by and construed in accordance with the laws of the <strong>State of North Carolina</strong>, without regard to its conflict of law principles.</li>
+            <li data-letter="b.">Any dispute arising out of or relating to this Agreement shall first be attempted to be resolved through good-faith informal negotiations between the parties.</li>
+            <li data-letter="c.">If negotiations are unsuccessful, the parties agree to consider mediation as a mutually agreeable means of alternative dispute resolution.</li>
+            <li data-letter="d.">If mediation is unsuccessful, any formal legal action or proceeding shall be brought exclusively in the state or federal courts located in <strong>Wake County, North Carolina</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- Section 12 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">12</span> Entire Agreement</h2>
+          <p class="terms-text">
+            These Terms &amp; Conditions, together with any agreed-upon Scope of Work, proposal, or written work order, constitute the entire agreement between MyPalUSA LLC and the Client regarding the services provided and supersede all prior and contemporaneous agreements, proposals, representations, and understandings, whether written or oral.
+          </p>
+        </div>
+
+        <!-- Section 13 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">13</span> Severability</h2>
+          <p class="terms-text">
+            If any provision of these Terms &amp; Conditions is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall remain in full force and effect.
+          </p>
+        </div>
+
+        <!-- Section 14 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">14</span> Amendments</h2>
+          <p class="terms-text">
+            These Terms &amp; Conditions may only be amended in writing and signed or formally agreed to by authorized representatives of both MyPalUSA LLC and the Client.
+          </p>
+        </div>
+
+        <!-- Section 15 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">15</span> Acceptance of Terms</h2>
+          <p class="terms-text">
+            By accepting a quote, signing an estimate or invoice, scheduling an appointment, or allowing MyPalUSA LLC technicians to commence work, the Client acknowledges that they have read, understood, and agree to be bound by these Terms &amp; Conditions.
+          </p>
+        </div>
+
+        <!-- Section 16 -->
+        <div class="terms-section">
+          <h2 class="terms-heading"><span class="terms-num">16</span> External Links &amp; Affiliate Disclosure</h2>
+          <p class="terms-text">
+            Our website or digital materials may contain links to third-party websites, hardware products, or services. If you click on an external link and make a purchase or take a specified action, MyPalUSA LLC may receive a small affiliate commission or referral fee at no additional cost to you. MyPalUSA LLC is not responsible for the content, privacy policies, or practices of any third-party websites or services linked from our platform.
+          </p>
+        </div>
+
+        <!-- Closing Policy Modification Statement -->
+        <div class="terms-callout">
+          <h4>Policy Updates &amp; Amendments</h4>
+          <p>
+            MyPalUSA LLC reserves the right to amend these Terms &amp; Conditions from time to time. Any changes will be effective upon posting on our website. Continued engagement of our services after such changes constitutes your acceptance of the updated terms.
+          </p>
+          <div class="terms-contact-links">
+            <a href="mailto:mypalusallc@gmail.com?subject=Inquiry%20Regarding%20Terms%20and%20Conditions" class="terms-contact-btn">
+              <span>✉️</span> Contact Legal &amp; Dispatch
+            </a>
+            <a href="tel:9196563524" class="terms-contact-btn">
+              <span>📞</span> Call (919) 656 3524
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Modern Dark Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Identity -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-brand">
+            <img src="images/logo.png" alt="MyPalUSA" class="footer-logo">
+            <span class="footer-brand-text">MyPal<span>USA</span> <span class="brand-llc">LLC</span></span>
+          </a>
+          <p class="footer-tagline">
+            Professional Residential Hardware Installation &amp; Smart Home Integration. Direct Dispatch across North Carolina's Research Triangle.
+          </p>
+          <div class="footer-direct-contact">
+            <a href="tel:9196563524" class="footer-contact-link"><span class="btn-icon">📞</span><span>(919) 656 3524</span></a>
+            <a href="mailto:mypalusallc@gmail.com" class="footer-contact-link"><span class="btn-icon">✉️</span><span>mypalusallc@gmail.com</span></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Service Areas & Hours -->
+        <div class="footer-col">
+          <h5>NC Service Coverage</h5>
+          <p class="footer-coverage-text">
+            Serving Raleigh, Cary, Apex, Morrisville, Wake Forest, Durham, Chapel Hill, Holly Springs, Fuquay-Varina, Garner, and Clayton.
+          </p>
+          <div class="footer-hours">
+            <strong>Operating Hours:</strong><br>
+            Monday – Saturday: 8:00 AM – 8:00 PM EST<br>
+            Sunday: By Appointment
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 MyPalUSA LLC. All rights reserved. &bull; Licensed &amp; Insured Residential Specialists</div>
+        <div class="footer-bottom-links">
+          <a href="index.html">Home</a>
+          <a href="installation.html">Installation</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="about.html">About Us</a>
+          <a href="terms.html" class="active">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schedule Modal Popup -->
+  <div class="schedule-modal-backdrop" id="scheduleModal" onclick="handleModalBackdropClick(event);">
+    <div class="schedule-modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeScheduleModal();" aria-label="Close">&times;</button>
+      
+      <span class="modal-pill">MyPalUSA LLC Direct Dispatch</span>
+      <h3 id="modalTitle">Schedule Your Installation</h3>
+      <p id="modalSub">Connect directly with our installation team to get a quote, check availability, or schedule your appointment.</p>
+      
+      <div class="modal-contact-grid">
+        <a href="tel:9196563524" class="modal-contact-card">
+          <div class="modal-icon-badge">📞</div>
+          <div class="modal-contact-info">
+            <span class="modal-contact-title">Direct Phone &amp; SMS</span>
+            <span class="modal-contact-value">(919) 656 3524</span>
+            <span class="modal-contact-meta">Mon–Sat &bull; 8:00 AM – 8:00 PM EST</span>
+          </div>
+          <div class="modal-action-col">
+            <span class="modal-action-tag">Call Now &rsaquo;</span>
+            <button type="button" class="modal-copy-btn" onclick="copyContactText('(919) 656 3524', this, event);" title="Copy Phone Number">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </a>
+
+        <a href="mailto:mypalusallc@gmail.com?subject=Installation%20Schedule%20Request%20-%20MyPalUSA" class="modal-contact-card">
+          <div class="modal-icon-badge">✉️</div>
+          <div class="modal-contact-info">
+            <span class="modal-contact-title">Direct Email Dispatch</span>
+            <span class="modal-contact-value">mypalusallc@gmail.com</span>
+            <span class="modal-contact-meta">Fast response within 2 hours</span>
+          </div>
+          <div class="modal-action-col">
+            <span class="modal-action-tag">Send Email &rsaquo;</span>
+            <button type="button" class="modal-copy-btn" onclick="copyContactText('mypalusallc@gmail.com', this, event);" title="Copy Email Address">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </a>
+      </div>
+
+      <div class="modal-guarantee-bar">
+        <span>✓ Upfront Pricing</span>
+        <span>✓ Skilled Techs</span>
+        <span>✓ Zero Drywall Mess</span>
+        <span>✓ 100% Guaranteed</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      var m = document.getElementById('mobileMenu');
+      if (m) m.classList.toggle('active');
+    }
+
+    function copyContactText(text, btn, e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      function setCopied() {
+        if (!btn) return;
+        btn.classList.add('copied');
+        var origHTML = btn.innerHTML;
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copied!</span>';
+        setTimeout(function() {
+          btn.classList.remove('copied');
+          btn.innerHTML = origHTML;
+        }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(setCopied).catch(function() {
+          fallbackCopy(text);
+          setCopied();
+        });
+      } else {
+        fallbackCopy(text);
+        setCopied();
+      }
+      function fallbackCopy(str) {
+        var ta = document.createElement('textarea');
+        ta.value = str;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch(err) {}
+        document.body.removeChild(ta);
+      }
+      return false;
+    }
+
+    function openScheduleModal(serviceName, e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      var modal = document.getElementById('scheduleModal');
+      var title = document.getElementById('modalTitle');
+      var sub = document.getElementById('modalSub');
+      if (serviceName && title) {
+        title.textContent = 'Schedule ' + serviceName;
+        if (sub) sub.textContent = 'Ready to schedule ' + serviceName + '? Contact our lead technician directly for quick quotes and booking:';
+      } else if (title) {
+        title.textContent = 'Schedule Your Installation';
+        if (sub) sub.textContent = 'Connect directly with our installation team to get a quote, check availability, or schedule your appointment.';
+      }
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      return false;
+    }
+
+    function closeScheduleModal() {
+      var modal = document.getElementById('scheduleModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target && e.target.id === 'scheduleModal') {
+        closeScheduleModal();
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeScheduleModal();
+    });
+  </script>
+</body>
+</html>
