@@ -157,22 +157,24 @@ a {
   margin-bottom: 18px;
 }
 .gradient-text-blue {
-  background: linear-gradient(135deg, #ffffff 30%, #2997ff 100%);
+  background: linear-gradient(135deg, #0071e3 0%, #005bb5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #0071e3;
 }
 .gradient-text-teal {
-  background: linear-gradient(135deg, #ffffff 30%, #6ee7b7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #0d9488;
 }
 .subhead-lead {
-  font-size: clamp(19px, 2.5vw, 24px);
-  color: #a1a1a6;
+  font-size: clamp(17px, 2vw, 20px);
+  color: #515154;
   max-width: 720px;
   margin: 0 auto 36px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* Apple Buttons */
