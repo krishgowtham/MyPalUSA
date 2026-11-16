@@ -70,7 +70,7 @@
       background: #0071e3;
       color: #ffffff;
     }
-    .btn-pill-sm.primary:hover { background: #0d5f58; }
+    .btn-pill-sm.primary:hover { background: #3894ff; }
 
     .detail-hero {
       padding: clamp(40px, 6vw, 80px) 0 40px;
@@ -134,7 +134,7 @@
       gap: 6px;
       transition: all 0.2s;
     }
-    .btn-hero-primary:hover { background: #0d5f58; transform: translateY(-1px); }
+    .btn-hero-primary:hover { background: #3894ff; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 113, 227, 0.25); }
     .btn-hero-secondary {
       background: #f5f5f7;
       color: #1d1d1f;
@@ -362,7 +362,7 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-    .btn-primary:hover { background: #0d5f58; }
+    .btn-primary:hover { background: #3894ff; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 113, 227, 0.25); }
 
     .faq-wrap {
       background: #ffffff;
@@ -388,33 +388,6 @@
       color: #515154;
       line-height: 1.6;
       margin: 0;
-    }
-
-    .booking-stage {
-      background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
-      border: 1px solid #a7f3d0;
-      border-radius: 28px;
-      padding: clamp(36px, 5vw, 60px) clamp(20px, 4vw, 40px);
-      text-align: center;
-      margin-bottom: 70px;
-    }
-    .booking-stage h3 {
-      font-size: clamp(24px, 3vw, 34px);
-      font-weight: 700;
-      color: #064e3b;
-      margin-bottom: 12px;
-    }
-    .booking-stage p {
-      font-size: clamp(15px, 1.8vw, 17.5px);
-      color: #047857;
-      max-width: 680px;
-      margin: 0 auto 28px;
-    }
-    .booking-stage-btns {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
     }
 
     .service-nav {
@@ -445,9 +418,6 @@
       .sub-nav-cta { width: 100%; justify-content: space-between; }
       .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
       .type-item { flex-direction: column; gap: 12px; }
-      .booking-stage { padding: 32px 18px; }
-      .booking-stage-btns { flex-direction: column; }
-      .booking-stage-btns a { width: 100%; justify-content: center; }
     }
 
     
@@ -638,10 +608,10 @@
 
       <!-- Desktop Links -->
       <nav class="nav-menu">
-        <a href="index.html" class="nav-link ">Home</a>
+        <a href="index.html" class="nav-link">Home</a>
         <a href="installation.html" class="nav-link active">Installation Services</a>
-        <a href="catalog.html" class="nav-link ">Hardware Catalog</a>
-        <a href="contact.html" class="nav-link ">Consultation</a>
+        <a href="catalog.html" class="nav-link">Hardware Catalog</a>
+        <a href="about.html" class="nav-link">About Us</a>
       </nav>
 
       <!-- Action Buttons -->
@@ -660,10 +630,10 @@
 
     <!-- Mobile Dropdown -->
     <div class="mobile-dropdown" id="mobileMenu">
-      <a href="index.html" class="mobile-nav-link ">Home</a>
+      <a href="index.html" class="mobile-nav-link">Home</a>
       <a href="installation.html" class="mobile-nav-link active">Installation Services</a>
-      <a href="catalog.html" class="mobile-nav-link ">Hardware Catalog</a>
-      <a href="contact.html" class="mobile-nav-link ">Consultation</a>
+      <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
       <div class="mobile-nav-divider"></div>
       <a href="tel:9196563524" class="mobile-nav-link phone">📞 Call (919) 656 3524</a>
       <button type="button" onclick="openScheduleModal(); toggleMobileMenu();" class="mobile-schedule-btn">Schedule Service Now &rsaquo;</button>
@@ -804,38 +774,54 @@
           <div class="spec-label">Ceiling Types</div>
           <div class="spec-val">Solid Wood Joists, I-Beams, Open Trusses, Finished Drywall Ceilings</div>
         </div>
+        <div class="spec-row">
+          <div class="spec-label">Supported Ceiling Height</div>
+          <div class="spec-val">Residential garages up to 10 to 12 feet maximum</div>
+        </div>
     </div>
 
     <!-- 5. Transparent Packages & Pricing -->
     <div class="section-title-wrap">
       <h2>Installation Packages & Rates</h2>
-      <p>Upfront pricing with no surprise charges. Backed by our 100% satisfaction guarantee.</p>
+      <p>Standard list rates shown below. <strong>We frequently charge less with active promotional specials &amp; bundle savings — call for today’s discounted price!</strong></p>
     </div>
     <div class="packages-grid">
       
         <div class="package-card">
+          <div class="package-discount-pill">✨ Special Discount Available</div>
           <div class="package-name">Single 4x8 Overhead Ceiling Rack</div>
-          <div class="package-price">$149</div>
+          <div class="package-price-row">
+            <div class="package-price">$149</div>
+            <span class="package-price-sub">Standard List</span>
+          </div>
           <ul class="package-features">
             <li>4x8 ft Rack assembly & install</li><li>Lag-bolted to 4 separate joists</li><li>Up to 600 lb capacity</li><li>Includes 4 utility deck hooks</li>
           </ul>
-          <a href="javascript:void(0)" onclick="openScheduleModal('Single 4x8 Overhead Ceiling Rack');" class="btn-primary" style="margin-top: auto;">Schedule Package &rsaquo;</a>
+          <a href="javascript:void(0)" onclick="openScheduleModal('Single 4x8 Overhead Ceiling Rack');" class="btn-primary" style="margin-top: auto;">Call for Special Price &rsaquo;</a>
         </div>
         <div class="package-card">
+          <div class="package-discount-pill">✨ Special Discount Available</div>
           <div class="package-name">Dual 4x8 Rack Super-System</div>
-          <div class="package-price">$269</div>
+          <div class="package-price-row">
+            <div class="package-price">$269</div>
+            <span class="package-price-sub">Standard List</span>
+          </div>
           <ul class="package-features">
             <li>Two 4x8 ft Overhead racks</li><li>Tandem or L-shape configuration</li><li>Over 250 cu ft storage added</li><li>8 Utility hanging hooks</li>
           </ul>
-          <a href="javascript:void(0)" onclick="openScheduleModal('Dual 4x8 Rack Super-System');" class="btn-primary" style="margin-top: auto;">Schedule Package &rsaquo;</a>
+          <a href="javascript:void(0)" onclick="openScheduleModal('Dual 4x8 Rack Super-System');" class="btn-primary" style="margin-top: auto;">Call for Special Price &rsaquo;</a>
         </div>
         <div class="package-card">
+          <div class="package-discount-pill">✨ Special Discount Available</div>
           <div class="package-name">Overhead + Wall Shelf Combo</div>
-          <div class="package-price">$349</div>
+          <div class="package-price-row">
+            <div class="package-price">$349</div>
+            <span class="package-price-sub">Standard List</span>
+          </div>
           <ul class="package-features">
             <li>One 4x8 ft Overhead ceiling rack</li><li>Two 2x4 ft Heavy steel wall shelves</li><li>Stud-anchored wall tracks</li><li>Tool & ladder organizing kit</li>
           </ul>
-          <a href="javascript:void(0)" onclick="openScheduleModal('Overhead + Wall Shelf Combo');" class="btn-primary" style="margin-top: auto;">Schedule Package &rsaquo;</a>
+          <a href="javascript:void(0)" onclick="openScheduleModal('Overhead + Wall Shelf Combo');" class="btn-primary" style="margin-top: auto;">Call for Special Price &rsaquo;</a>
         </div>
     </div>
 
@@ -847,6 +833,10 @@
     <div class="faq-wrap">
       
         <div class="faq-item">
+          <h4>What is the maximum garage ceiling height for overhead racks?</h4>
+          <p>We install overhead racks on residential garage ceilings up to <strong>10 to 12 feet maximum</strong>. Ultra-high commercial ceilings exceeding 12 feet are not supported.</p>
+        </div>
+        <div class="faq-item">
           <h4>Can you install in finished drywall ceilings?</h4>
           <p>Yes! Over 90% of our installations are in finished drywall garages. We locate joist centers with precision digital scanners.</p>
         </div>
@@ -856,13 +846,41 @@
         </div>
     </div>
 
-    <!-- 7. Bottom Booking Stage -->
-    <div class="booking-stage">
-      <h3>Ready to Schedule Your Garage Shelves & Overhead Racks?</h3>
-      <p>Our technicians are ready to assist with fast scheduling, transparent quotes, and flawless execution across North Carolina.</p>
-      <div class="booking-stage-btns">
-        <a href="tel:9196563524" class="btn-hero-primary" style="padding: 13px 32px;">📞 Call (919) 656 3524</a>
-        <a href="javascript:void(0)" onclick="openScheduleModal('Garage Shelves & Overhead Racks');" class="btn-hero-primary" style="padding: 13px 32px;">📅 Schedule Installation &rsaquo;</a>
+            <!-- 7. Compatible Products from Catalog -->
+    <div class="catalog-service-section">
+      <div class="section-title-wrap">
+        <h2>Recommended Garage Storage Racks & Shelves</h2>
+        <p>Commercial-grade overhead ceiling racks, steel wall shelves, and heavy-duty utility hooks.</p>
+      </div>
+      <div class="product-track">
+        <div class="product-cell">
+          <div class="cell-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M3 4h18v2H3zm2 4h14v2H5zm0 4h14v2H5zm0 4h14v2H5zm-2 4h18v2H3z"/></svg>
+          </div>
+          <div class="cell-name">4x8 ft Heavy-Duty Overhead Ceiling Rack</div>
+          <a href="catalog.html" target="_blank" rel="noopener" class="btn-amazon-gold">View on Amazon</a>
+        </div>
+        <div class="product-cell">
+          <div class="cell-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M3 4h18v2H3zm2 4h14v2H5zm0 4h14v2H5zm0 4h14v2H5zm-2 4h18v2H3z"/></svg>
+          </div>
+          <div class="cell-name">Heavy Steel Wall-Mount Shelf Brackets</div>
+          <a href="catalog.html" target="_blank" rel="noopener" class="btn-amazon-gold">View on Amazon</a>
+        </div>
+        <div class="product-cell view-all-cell">
+          <div class="cell-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+          </div>
+          <div class="cell-name">More in Catalog</div>
+          <a href="catalog.html" class="btn-amazon-gold btn-view-all-pill">View all</a>
+        </div>
+      </div>
+      <div class="catalog-explore-footer">
+        <a href="catalog.html" class="btn-pill secondary">Explore Full Hardware Catalog &rsaquo;</a>
+      </div>
+    </div>
+      <div class="catalog-explore-footer">
+        <a href="catalog.html" class="btn-pill secondary">Explore Full Hardware Catalog &rsaquo;</a>
       </div>
     </div>
 
@@ -928,8 +946,8 @@ function openScheduleModal(serviceName) {
     var titleEl = document.getElementById('modalTitle');
     var subEl = document.getElementById('modalSub');
     if (serviceName && typeof serviceName === 'string') {
-      if (titleEl) titleEl.textContent = 'Schedule ' + serviceName;
-      if (subEl) subEl.textContent = 'Contact our specialists directly to book your ' + serviceName + ' appointment or get an instant quote.';
+      if (titleEl) titleEl.textContent = 'Special Price: ' + serviceName;
+      if (subEl) subEl.textContent = 'Call our team directly at (919) 656 3524 to claim your discounted rate, explore bundle specials, and schedule service.';
     } else {
       if (titleEl) titleEl.textContent = 'Schedule Installation';
       if (subEl) subEl.textContent = 'Connect directly with our installation team to get a quote, check availability, or schedule your appointment.';

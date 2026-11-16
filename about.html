@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | MyPalUSA - Great Value, Exceptional Craftsmanship</title>
+  <meta name="description" content="Founded in 2023, MyPalUSA is dedicated to providing high-quality residential installation and smart home enhancement services across North Carolina at honest, affordable rates.">
+  <link rel="stylesheet" href="css/apple.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+      color: #1d1d1f;
+      padding: clamp(60px, 8vw, 96px) 24px clamp(40px, 5vw, 64px);
+      text-align: center;
+      border-bottom: 1px solid #e5e5ea;
+    }
+    .about-hero h1 {
+      font-size: clamp(36px, 5.5vw, 62px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #1d1d1f;
+    }
+    .about-hero h1 span {
+      color: #0071e3;
+    }
+    .about-lead {
+      font-size: clamp(17px, 2.2vw, 21px);
+      color: #515154;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      line-height: 1.55;
+      font-weight: 400;
+    }
+
+    /* Core Story Grid */
+    .story-section {
+      padding: clamp(60px, 7vw, 90px) 24px;
+      background: #ffffff;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: clamp(24px, 3.5vw, 40px);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .story-card {
+      background: #fbfbfd;
+      border: 1px solid #e5e5ea;
+      border-radius: var(--radius-lg);
+      padding: clamp(32px, 4vw, 44px);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .story-card:hover {
+      transform: translateY(-4px);
+      border-color: #0071e3;
+      box-shadow: 0 16px 40px rgba(0, 113, 227, 0.08);
+      background: #ffffff;
+    }
+    .story-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: #eef6ff;
+      border: 1.5px solid #d0e4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 22px;
+    }
+    .story-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .story-card p {
+      font-size: 15.5px;
+      color: #515154;
+      line-height: 1.6;
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      background: #f8fafc;
+      border-top: 1px solid #e5e5ea;
+      border-bottom: 1px solid #e5e5ea;
+      padding: clamp(40px, 5vw, 56px) 24px;
+    }
+    .stats-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: clamp(38px, 5vw, 52px);
+      font-weight: 800;
+      color: #0071e3;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #6e6e73;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Contact / Consultation Form Section */
+    .consult-section {
+      background: #ffffff;
+      padding: clamp(60px, 7vw, 90px) 24px;
+    }
+    .contact-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #e5e5ea;
+      border-radius: var(--radius-lg);
+      padding: clamp(32px, 5vw, 48px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+    }
+    .form-label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1d1d1f;
+      margin-bottom: 8px;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: #f8fafc;
+      border: 1px solid #d2d2d7;
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      color: #1d1d1f;
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      margin-bottom: 20px;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: #0071e3;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .contact-box { padding: 26px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Glass Navigation Bar -->
+  <header class="site-navbar">
+    <div class="site-container navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="MyPalUSA Logo" class="nav-brand-logo">
+        <span class="nav-brand-text">MyPal<span>USA</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="installation.html" class="nav-link">Installation Services</a>
+        <a href="catalog.html" class="nav-link">Hardware Catalog</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:9196563524" class="nav-phone-btn">📞 (919) 656 3524</a>
+        <button type="button" onclick="openScheduleModal();" class="nav-cta-btn">Schedule Service</button>
+        <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu();" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="mobile-dropdown" id="mobileMenu">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="installation.html" class="mobile-nav-link">Installation Services</a>
+      <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
+      <a href="about.html" class="mobile-nav-link active">About Us</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="tel:9196563524" class="mobile-nav-link phone">📞 Call (919) 656 3524</a>
+      <button type="button" onclick="openScheduleModal(); toggleMobileMenu();" class="mobile-schedule-btn">Schedule Service Now &rsaquo;</button>
+    </div>
+  </header>
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="site-container">
+      <span class="hero-badge" style="display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #0071e3; background: #eef6ff; border: 1px solid #d0e4ff; padding: 5px 14px; border-radius: 20px; margin-bottom: 16px;">Our Story &amp; Mission</span>
+      <h1>Where Talent Meets Opportunity.<br><span>Great Value for Less Money.</span></h1>
+      <p class="about-lead">
+        Founded in 2023 with a sincere vision: making high-end residential installation, smart home automation, and precision craftsmanship truly accessible and affordable for every North Carolina family.
+      </p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <button type="button" onclick="openScheduleModal();" class="btn-pill primary" style="padding: 13px 28px; font-size: 15px;">Schedule Service Now &rsaquo;</button>
+        <a href="#contact-form" class="btn-pill secondary" style="padding: 13px 26px; font-size: 15px;">Send a Direct Message</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Story & Philosophy Grid -->
+  <section class="story-section">
+    <div class="site-container">
+      <div class="story-grid">
+        
+        <!-- Story Card 1 -->
+        <div class="story-card">
+          <div class="story-icon">🚀</div>
+          <h3>Started in 2023</h3>
+          <p>
+            MyPalUSA was established in 2023 in North Carolina to solve a growing problem: homeowners were forced to choose between overpriced commercial contractors and unreliable handymen. We set out to bridge that gap with certified expertise and everyday friendliness.
+          </p>
+        </div>
+
+        <!-- Story Card 2 -->
+        <div class="story-card">
+          <div class="story-icon">💎</div>
+          <h3>Great Value for Less Money</h3>
+          <p>
+            Our core mission is straightforward: premium workmanship should never cost a fortune. By optimizing our tooling, streamlining dispatch, and cutting corporate overhead, we deliver white-glove installations at prices significantly lower than big-box retail competitors.
+          </p>
+        </div>
+
+        <!-- Story Card 3 -->
+        <div class="story-card">
+          <div class="story-icon">🤝</div>
+          <h3>Good Intentions, Honest Service</h3>
+          <p>
+            We approach every project with genuine integrity. We treat your home as if it were our own — ensuring zero drywall damage, laser-level alignments, concealed wiring, and complete cleanup. Our goal is simple: helping everyone enjoy a safer, smarter, and more beautiful home.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Ribbon -->
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <div>
+        <div class="stat-number">2023</div>
+        <div class="stat-label">Year Founded</div>
+      </div>
+      <div>
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Specialized Services</div>
+      </div>
+      <div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Workmanship Guarantee</div>
+      </div>
+      <div>
+        <div class="stat-number">Triangle</div>
+        <div class="stat-label">NC Coverage Area</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry / Consultation Form -->
+  <section class="consult-section" id="contact-form">
+    <div class="site-container">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span style="font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #0071e3; margin-bottom: 10px; display: block;">Get in Touch</span>
+        <h2 style="font-size: clamp(28px, 4vw, 38px); font-weight: 800; color: #1d1d1f; letter-spacing: -0.025em; margin-bottom: 12px;">Let's Talk About Your Home.</h2>
+        <p style="font-size: 16px; color: #6e6e73; max-width: 600px; margin: 0 auto;">
+          Whether you need advice, a quick quote, or want to schedule an installation, we are here to help. Reach out directly or fill out the form below:
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been received. Our team will contact you shortly.');">
+          <div class="form-row">
+            <div>
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-input" placeholder="First &amp; Last Name" required>
+            </div>
+            <div>
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" class="form-input" placeholder="(919) 000-0000" required>
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label">Email Address *</label>
+            <input type="email" class="form-input" placeholder="you@domain.com" required>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label class="form-label">Service of Interest *</label>
+              <select class="form-select" required>
+                <option value="" disabled selected>Select service</option>
+                <option value="install-tv">TV Wall Mounting</option>
+                <option value="install-smart-switches">Smart Switches &amp; Automation</option>
+                <option value="install-thermostat">Smart Thermostats &amp; Climate</option>
+                <option value="install-smart-locks">Smart Door Locks &amp; Keyless Entry</option>
+                <option value="install-garage-door">Smart Garage Door Openers</option>
+                <option value="install-fans">Ceiling Fan &amp; Fixture Installation</option>
+                <option value="install-blinds">Window Blinds &amp; Shades</option>
+                <option value="install-curtains">Curtains &amp; Custom Drapery Rods</option>
+                <option value="install-garage-shelves">Garage Shelves &amp; Overhead Storage</option>
+                <option value="install-furniture">Furniture Assembly &amp; Wall Anchoring</option>
+                <option value="install-disposal">Garbage Disposal Installation</option>
+                <option value="install-smart-home">Smart Hubs &amp; Scenes</option>
+                <option value="general-inquiry">General Question / Custom Quote</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Property Zip Code *</label>
+              <input type="text" class="form-input" placeholder="e.g. 27519, 27601" required>
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label">Project Details / Questions</label>
+            <textarea class="form-textarea" rows="4" placeholder="Tell us about your home, number of TVs or switches, or any questions you have..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-pill primary" style="width: 100%; justify-content: center; padding: 14px; font-size: 15.5px; cursor: pointer; border: none;">
+            Send Inquiry to Team &rsaquo;
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="site-container footer-inner">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Identity -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-brand">
+            <img src="images/logo.png" alt="MyPalUSA" class="footer-logo">
+            <span class="footer-brand-title">MyPal<span>USA</span></span>
+          </a>
+          <p class="footer-tagline">
+            Professional Residential Hardware Installation &amp; Smart Home Integration. Direct Dispatch across North Carolina's Research Triangle.
+          </p>
+          <div class="footer-direct-contact">
+            <a href="tel:9196563524" class="footer-contact-link">📞 (919) 656 3524</a>
+            <a href="mailto:mypalusallc@gmail.com" class="footer-contact-link">✉️ mypalusallc@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h5>Quick Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Flagship Home</a></li>
+            <li><a href="installation.html">12 Installation Services</a></li>
+            <li><a href="catalog.html">Hardware Catalog &amp; Spec Sheets</a></li>
+            <li><a href="about.html">About Us &amp; Our Story</a></li>
+            <li><a href="#" onclick="openScheduleModal(); return false;">Direct Dispatch Request</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Popular Installations -->
+        <div class="footer-col">
+          <h5>Popular Installations</h5>
+          <ul class="footer-links">
+            <li><a href="service_tv_mounting.html">TV Wall Mounting</a></li>
+            <li><a href="service_ceiling_fans.html">Ceiling Fan Installation</a></li>
+            <li><a href="service_smart_switches.html">Smart Lighting &amp; Switches</a></li>
+            <li><a href="service_thermostats.html">Smart Climate Thermostats</a></li>
+            <li><a href="service_smart_locks.html">Keyless Deadbolts &amp; Locks</a></li>
+            <li><a href="service_blinds.html">Custom Window Treatments</a></li>
+            <li><a href="service_furniture_assembly.html">Furniture Assembly</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Service Areas & Hours -->
+        <div class="footer-col">
+          <h5>NC Service Coverage</h5>
+          <p class="footer-coverage-text">
+            Serving Raleigh, Cary, Apex, Morrisville, Wake Forest, Durham, Chapel Hill, Holly Springs, Fuquay-Varina, Garner, and Clayton.
+          </p>
+          <div class="footer-hours">
+            <strong>Operating Hours:</strong><br>
+            Monday – Saturday: 8:00 AM – 8:00 PM EST<br>
+            Sunday: By Appointment
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 MyPalUSA LLC. All rights reserved. &bull; Licensed &amp; Insured Residential Specialists</div>
+        <div class="footer-bottom-links">
+          <a href="index.html">Home</a>
+          <a href="installation.html">Installation</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="about.html">About Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schedule Modal Popup -->
+  <div class="schedule-modal-backdrop" id="scheduleModal" onclick="handleModalBackdropClick(event);">
+    <div class="schedule-modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeScheduleModal();" aria-label="Close">&times;</button>
+      
+      <span class="modal-pill">MyPalUSA Direct Dispatch</span>
+      <h3 id="modalTitle">Schedule Your Installation</h3>
+      <p id="modalSub">Connect directly with our installation team to get a quote, check availability, or schedule your appointment.</p>
+      
+      <div class="modal-contact-grid">
+        <a href="tel:9196563524" class="modal-contact-card">
+          <div class="modal-icon-badge">📞</div>
+          <div class="modal-contact-info">
+            <span class="modal-contact-title">Direct Phone &amp; SMS</span>
+            <span class="modal-contact-value">(919) 656 3524</span>
+            <span class="modal-contact-meta">Mon–Sat &bull; 8:00 AM – 8:00 PM EST</span>
+          </div>
+          <span class="modal-action-tag">Call Now &rsaquo;</span>
+        </a>
+
+        <a href="mailto:mypalusallc@gmail.com?subject=Installation%20Schedule%20Request%20-%20MyPalUSA" class="modal-contact-card">
+          <div class="modal-icon-badge">✉️</div>
+          <div class="modal-contact-info">
+            <span class="modal-contact-title">Direct Email Dispatch</span>
+            <span class="modal-contact-value">mypalusallc@gmail.com</span>
+            <span class="modal-contact-meta">Fast response within 2 hours</span>
+          </div>
+          <span class="modal-action-tag">Send Email &rsaquo;</span>
+        </a>
+      </div>
+
+      <div class="modal-guarantee-bar">
+        <span>✓ Upfront Pricing</span>
+        <span>✓ Certified Techs</span>
+        <span>✓ Zero Drywall Mess</span>
+        <span>✓ 100% Guaranteed</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      var m = document.getElementById('mobileMenu');
+      if (m) m.classList.toggle('active');
+    }
+
+    function openScheduleModal(serviceName, e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      var modal = document.getElementById('scheduleModal');
+      var title = document.getElementById('modalTitle');
+      var sub = document.getElementById('modalSub');
+      if (serviceName && title) {
+        title.textContent = 'Schedule ' + serviceName;
+        if (sub) sub.textContent = 'Ready to schedule ' + serviceName + '? Contact our lead technician directly for quick quotes and booking:';
+      } else if (title) {
+        title.textContent = 'Schedule Your Installation';
+        if (sub) sub.textContent = 'Connect directly with our installation team to get a quote, check availability, or schedule your appointment.';
+      }
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      return false;
+    }
+
+    function closeScheduleModal() {
+      var modal = document.getElementById('scheduleModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target && e.target.id === 'scheduleModal') {
+        closeScheduleModal();
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeScheduleModal();
+    });
+  </script>
+</body>
+</html>

@@ -964,3 +964,175 @@ a {
   padding-top: 14px;
   border-top: 1px solid #f0f0f2;
 }
+
+/* ================= Special Pricing & Discount Badges ================= */
+.package-discount-pill {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0071e3;
+  background: #eef6ff;
+  border: 1px solid #c7e0ff;
+  padding: 4px 10px;
+  border-radius: 980px;
+  margin-bottom: 12px;
+}
+.package-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.package-price-row .package-price {
+  margin-bottom: 0;
+}
+.package-price-sub {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #86868b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.package-card .btn-primary {
+  transition: all 0.25s ease;
+}
+.package-card .btn-primary:hover {
+  background: #3894ff !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 113, 227, 0.25);
+}
+
+/* ================= Catalog Products Section in Service Pages ================= */
+.catalog-service-section {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 4vw, 44px);
+  margin-bottom: 70px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+.catalog-service-section .section-title-wrap {
+  margin: 0 auto 28px !important;
+  text-align: center !important;
+}
+.catalog-service-section .section-title-wrap h2 {
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 700;
+  color: #1d1d1f;
+  margin: 0 auto 8px !important;
+  text-align: center !important;
+  letter-spacing: -0.02em;
+}
+.catalog-service-section .section-title-wrap p {
+  font-size: 15px;
+  color: #6e6e73;
+  margin: 0 auto !important;
+  text-align: center !important;
+  max-width: 760px;
+}
+.catalog-service-section .product-track {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.catalog-service-section .product-cell {
+  flex: 0 0 210px;
+  width: 210px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+.catalog-service-section .product-cell:hover {
+  transform: translateY(-3px);
+  border-color: #0071e3;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.1);
+}
+.catalog-service-section .cell-icon-wrap {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.catalog-service-section .cell-icon-wrap svg {
+  width: 44px;
+  height: 44px;
+  fill: #0071e3;
+}
+.catalog-service-section .cell-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #1d1d1f;
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 1.35;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.catalog-service-section .btn-amazon-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 0;
+  background-color: #ffd814;
+  border-radius: var(--radius-pill);
+  color: #0f1111;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(255, 216, 20, 0.3);
+  transition: background-color 0.15s ease;
+}
+.catalog-service-section .btn-amazon-gold:hover {
+  background-color: #f7ca00;
+}
+.catalog-service-section .btn-catalog-pill,
+.catalog-service-section .btn-view-all-pill {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0071e3;
+  box-shadow: none;
+}
+.catalog-service-section .btn-catalog-pill:hover,
+.catalog-service-section .btn-view-all-pill:hover {
+  background-color: #e2e8f0;
+}
+.catalog-service-section .product-cell.view-all-cell {
+  background: #ffffff;
+  border-style: dashed;
+  border-color: #cbd5e1;
+}
+.catalog-service-section .product-cell.view-all-cell svg {
+  fill: #64748b;
+}
+.catalog-service-section .product-cell.view-all-cell:hover {
+  border-color: #0071e3;
+  background: #f8fafc;
+}
+.catalog-service-section .product-cell.view-all-cell:hover svg {
+  fill: #0071e3;
+}
+.catalog-service-section .catalog-explore-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
