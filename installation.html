@@ -419,7 +419,6 @@
                       <div class="nav-dropdown-menu simple-menu">
             <div class="nav-dropdown-header">
               <span class="nav-dropdown-title">RESIDENTIAL INSTALLATION</span>
-              <a href="installation.html" class="nav-dropdown-view-all">All Services Hub &rsaquo;</a>
             </div>
             <div class="nav-dropdown-grid simple-list">
               <a href="service_blinds.html" class="nav-dropdown-item simple">Custom Window Blinds</a>
@@ -437,7 +436,31 @@
             </div>
           </div>
         </div>
-        <a href="home-inspection.html" class="nav-link">Home Inspection</a>
+        <!-- Home Inspection Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="home-inspection.html" class="nav-link nav-dropdown-trigger">
+            <span>Home Inspection</span>
+            <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu simple-menu inspection-menu">
+            <div class="nav-dropdown-header">
+              <span class="nav-dropdown-title">INSPECTION PACKAGES</span>
+            </div>
+            <div class="nav-dropdown-list">
+              <a href="home-inspection.html#pkg-pre-drywall" class="nav-dropdown-item simple">Pre-Drywall</a>
+              <a href="home-inspection.html#pkg-pre-purchase" class="nav-dropdown-item simple">Buyer's Pre-Purchase</a>
+              <a href="home-inspection.html#pkg-builder-warranty" class="nav-dropdown-item simple">11-Month Builder Warranty</a>
+              <a href="home-inspection.html#pkg-pre-listing" class="nav-dropdown-item simple">Seller's Pre-Listing</a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="home-inspection.html#pkg-phase-bundle" class="nav-dropdown-item simple bundle-link">
+                <span>Bundle Promotions</span>
+                <span class="dropdown-save-tag">Save </span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="catalog.html" class="nav-link">Hardware Catalog</a>
         <a href="about.html" class="nav-link">About Us</a>
       </nav>
@@ -479,7 +502,18 @@
           <a href="service_smart_hubs.html" class="mobile-sublink"><span>Smart Hubs &amp; Automation</span></a>
         </div>
       </details>
-      <a href="home-inspection.html" class="mobile-nav-link">Home Inspection</a>
+      <details class="mobile-services-accordion">
+        <summary class="mobile-nav-link">
+          Home Inspection Services <span class="accordion-arrow">▾</span>
+        </summary>
+        <div class="mobile-sublinks">
+          <a href="home-inspection.html#pkg-pre-drywall" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Pre-Drywall Inspection</span></a>
+          <a href="home-inspection.html#pkg-pre-purchase" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Buyer's Pre-Purchase Inspection</span></a>
+          <a href="home-inspection.html#pkg-builder-warranty" onclick="toggleMobileMenu();" class="mobile-sublink"><span>11-Month Builder Warranty</span></a>
+          <a href="home-inspection.html#pkg-pre-listing" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Seller's Pre-Listing Inspection</span></a>
+          <a href="home-inspection.html#pkg-phase-bundle" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Bundle Promotions</span></a>
+        </div>
+      </details>
       <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
       <a href="about.html" class="mobile-nav-link">About Us</a>
       <div class="mobile-nav-divider"></div>
