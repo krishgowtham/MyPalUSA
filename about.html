@@ -117,55 +117,6 @@
       letter-spacing: 0.05em;
     }
 
-    /* Contact / Consultation Form Section */
-    .consult-section {
-      background: #ffffff;
-      padding: clamp(60px, 7vw, 90px) 24px;
-    }
-    .contact-box {
-      max-width: 680px;
-      margin: 0 auto;
-      background: #ffffff;
-      border: 1px solid #e5e5ea;
-      border-radius: var(--radius-lg);
-      padding: clamp(32px, 5vw, 48px);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
-    }
-    .form-label {
-      display: block;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: #1d1d1f;
-      margin-bottom: 8px;
-    }
-    .form-input, .form-select, .form-textarea {
-      width: 100%;
-      background: #f8fafc;
-      border: 1px solid #d2d2d7;
-      border-radius: var(--radius-sm);
-      padding: 12px 16px;
-      color: #1d1d1f;
-      font-size: 15px;
-      font-family: inherit;
-      outline: none;
-      margin-bottom: 20px;
-      transition: all 0.2s ease;
-      box-sizing: border-box;
-    }
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: #0071e3;
-      background: #ffffff;
-      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    @media (max-width: 600px) {
-      .form-row { grid-template-columns: 1fr; }
-      .contact-box { padding: 26px 18px; }
-    }
   </style>
 </head>
 <body>
@@ -222,7 +173,7 @@
       </p>
       <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
         <button type="button" onclick="openScheduleModal();" class="btn-pill primary" style="padding: 13px 28px; font-size: 15px;">Schedule Service Now &rsaquo;</button>
-        <a href="#contact-form" class="btn-pill secondary" style="padding: 13px 26px; font-size: 15px;">Send a Direct Message</a>
+        <a href="installation.html" class="btn-pill secondary" style="padding: 13px 26px; font-size: 15px;">Explore Services &rsaquo;</a>
       </div>
     </div>
   </section>
@@ -285,74 +236,7 @@
     </div>
   </section>
 
-  <!-- Inquiry / Consultation Form -->
-  <section class="consult-section" id="contact-form">
-    <div class="site-container">
-      <div style="text-align: center; margin-bottom: 40px;">
-        <span style="font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #0071e3; margin-bottom: 10px; display: block;">Get in Touch</span>
-        <h2 style="font-size: clamp(28px, 4vw, 38px); font-weight: 800; color: #1d1d1f; letter-spacing: -0.025em; margin-bottom: 12px;">Let's Talk About Your Home.</h2>
-        <p style="font-size: 16px; color: #6e6e73; max-width: 600px; margin: 0 auto;">
-          Whether you need advice, a quick quote, or want to schedule an installation, we are here to help. Reach out directly or fill out the form below:
-        </p>
-      </div>
 
-      <div class="contact-box">
-        <form onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been received. Our team will contact you shortly.');">
-          <div class="form-row">
-            <div>
-              <label class="form-label">Full Name *</label>
-              <input type="text" class="form-input" placeholder="First &amp; Last Name" required>
-            </div>
-            <div>
-              <label class="form-label">Phone Number *</label>
-              <input type="tel" class="form-input" placeholder="(919) 000-0000" required>
-            </div>
-          </div>
-
-          <div>
-            <label class="form-label">Email Address *</label>
-            <input type="email" class="form-input" placeholder="you@domain.com" required>
-          </div>
-
-          <div class="form-row">
-            <div>
-              <label class="form-label">Service of Interest *</label>
-              <select class="form-select" required>
-                <option value="" disabled selected>Select service</option>
-                <option value="install-tv">TV Wall Mounting</option>
-                <option value="install-smart-switches">Smart Switches &amp; Automation</option>
-                <option value="install-thermostat">Smart Thermostats &amp; Climate</option>
-                <option value="install-smart-locks">Smart Door Locks &amp; Keyless Entry</option>
-                <option value="install-garage-door">Smart Garage Door Openers</option>
-                <option value="install-fans">Ceiling Fan &amp; Fixture Installation</option>
-                <option value="install-blinds">Window Blinds &amp; Shades</option>
-                <option value="install-curtains">Curtains &amp; Custom Drapery Rods</option>
-                <option value="install-garage-shelves">Garage Shelves &amp; Overhead Storage</option>
-                <option value="install-furniture">Furniture Assembly &amp; Wall Anchoring</option>
-                <option value="install-disposal">Garbage Disposal Installation</option>
-                <option value="install-smart-home">Smart Hubs &amp; Scenes</option>
-                <option value="general-inquiry">General Question / Custom Quote</option>
-              </select>
-            </div>
-            <div>
-              <label class="form-label">Property Zip Code *</label>
-              <input type="text" class="form-input" placeholder="e.g. 27519, 27601" required>
-            </div>
-          </div>
-
-          <div>
-            <label class="form-label">Project Details / Questions</label>
-            <textarea class="form-textarea" rows="4" placeholder="Tell us about your home, number of TVs or switches, or any questions you have..."></textarea>
-          </div>
-
-          <button type="submit" class="btn-pill primary" style="width: 100%; justify-content: center; padding: 14px; font-size: 15.5px; cursor: pointer; border: none;">
-            Send Inquiry to Team &rsaquo;
-          </button>
-        </form>
-      </div>
-
-    </div>
-  </section>
 
   <!-- Global Footer -->
   <footer class="site-footer">
