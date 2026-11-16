@@ -441,6 +441,7 @@ a {
 
 /* Announcement Bar */
 .site-announcement-bar {
+  display: none !important;
   background: #161617;
   color: #a1a1a6;
   font-size: 12.5px;
