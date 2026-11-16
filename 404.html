@@ -3,67 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 Page Not Found | MyPalUSA</title>
-  <meta name="description" content="The page you are looking for could not be found. Explore MyPalUSA professional installation and home enhancement services.">
+  <title>Page Not Found | MyPalUSA</title>
+  <meta name="description" content="Explore MyPalUSA professional installation and home enhancement services across North Carolina.">
   <link rel="stylesheet" href="css/apple.css">
   <style>
     .not-found-stage {
-      min-height: 65vh;
+      min-height: 72vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 24px;
+      padding: clamp(50px, 8vw, 90px) 24px;
       background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
     }
     .not-found-card {
       max-width: 620px;
+      width: 100%;
       margin: 0 auto;
       background: #ffffff;
       border: 1px solid #e5e5ea;
-      border-radius: var(--radius-lg);
-      padding: clamp(36px, 6vw, 56px) clamp(24px, 4vw, 44px);
-      box-shadow: 0 12px 36px rgba(0, 113, 227, 0.08);
+      border-radius: 28px;
+      padding: clamp(38px, 6vw, 56px) clamp(24px, 5vw, 48px);
+      box-shadow: 0 20px 60px rgba(0, 113, 227, 0.08), 0 2px 10px rgba(0, 0, 0, 0.03);
+      box-sizing: border-box;
     }
-    .not-found-badge {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #0071e3;
-      background: #eef6ff;
-      border: 1px solid #d0e4ff;
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin-bottom: 20px;
+    .error-logo-wrap {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 24px;
+      background: #ffffff;
+      border-radius: 26px;
+      border: 1.5px solid #e5e5ea;
+      box-shadow: 0 12px 28px rgba(0, 113, 227, 0.09);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      box-sizing: border-box;
     }
-    .not-found-code {
-      font-size: clamp(64px, 10vw, 96px);
+    .error-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .error-title {
+      font-size: clamp(28px, 4vw, 36px);
       font-weight: 800;
-      color: #0071e3;
-      line-height: 1;
-      letter-spacing: -0.04em;
-      margin-bottom: 12px;
-    }
-    .not-found-title {
-      font-size: clamp(24px, 4vw, 32px);
-      font-weight: 700;
       color: #1d1d1f;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
       margin-bottom: 14px;
     }
-    .not-found-desc {
+    .error-title span {
+      color: #0071e3;
+    }
+    .error-desc {
       font-size: 16px;
-      color: #6e6e73;
-      line-height: 1.55;
+      color: #515154;
+      line-height: 1.6;
       margin-bottom: 32px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .not-found-actions {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       justify-content: center;
       flex-wrap: wrap;
+      margin-bottom: 26px;
     }
     .btn-pill {
       display: inline-flex;
@@ -75,7 +84,7 @@
       transition: all 0.2s ease;
       cursor: pointer;
       border: none;
-      padding: 13px 26px;
+      padding: 13px 28px;
       font-size: 15px;
     }
     .btn-pill.primary {
@@ -84,6 +93,7 @@
     }
     .btn-pill.primary:hover {
       background: #005bb5;
+      transform: translateY(-1px);
     }
     .btn-pill.secondary {
       background: #f5f5f7;
@@ -93,6 +103,21 @@
     .btn-pill.secondary:hover {
       background: #e8e8ed;
       border-color: #86868b;
+    }
+    .error-help-strip {
+      font-size: 13.5px;
+      color: #6e6e73;
+      padding-top: 20px;
+      border-top: 1px solid #f0f0f2;
+    }
+    .error-help-strip a {
+      color: #0071e3;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 4px;
+    }
+    .error-help-strip a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -114,48 +139,47 @@
         <a href="contact.html" class="nav-link">Consultation</a>
       </nav>
 
-      <!-- Desktop Actions -->
+      <!-- Action Buttons -->
       <div class="nav-actions">
-        <a href="tel:9196563524" class="nav-phone-btn">
-          <span>📞</span> (919) 656 3524
-        </a>
-        <button type="button" class="nav-cta-btn" onclick="openScheduleModal();">
-          Schedule Service
+        <a href="tel:9196563524" class="nav-phone-btn">📞 (919) 656 3524</a>
+        <button type="button" onclick="openScheduleModal();" class="nav-cta-btn">Schedule Service</button>
+        <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu();" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
       </div>
-
-      <!-- Mobile Hamburger -->
-      <button type="button" class="nav-hamburger" onclick="toggleMobileMenu();" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
-    <div class="mobile-menu-drawer" id="mobileMenu">
-      <a href="index.html" class="mobile-nav-link" onclick="toggleMobileMenu();">Home</a>
-      <a href="installation.html" class="mobile-nav-link" onclick="toggleMobileMenu();">Installation Services</a>
-      <a href="catalog.html" class="mobile-nav-link" onclick="toggleMobileMenu();">Hardware Catalog</a>
-      <a href="contact.html" class="mobile-nav-link" onclick="toggleMobileMenu();">Consultation</a>
-      <div class="mobile-menu-actions">
-        <a href="tel:9196563524" class="mobile-phone-btn">📞 Call (919) 656 3524</a>
-        <button type="button" class="mobile-cta-btn" onclick="toggleMobileMenu(); openScheduleModal();">Schedule Service</button>
-      </div>
+    <!-- Mobile Dropdown -->
+    <div class="mobile-dropdown" id="mobileMenu">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="installation.html" class="mobile-nav-link">Installation Services</a>
+      <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
+      <a href="contact.html" class="mobile-nav-link">Consultation</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="tel:9196563524" class="mobile-nav-link phone">📞 Call (919) 656 3524</a>
+      <button type="button" onclick="openScheduleModal(); toggleMobileMenu();" class="mobile-schedule-btn">Schedule Service Now &rsaquo;</button>
     </div>
   </header>
 
-  <!-- 404 Stage -->
+  <!-- Error Stage -->
   <main class="not-found-stage">
     <div class="not-found-card">
-      <span class="not-found-badge">Error 404</span>
-      <div class="not-found-code">404</div>
-      <h1 class="not-found-title">Page Not Found</h1>
-      <p class="not-found-desc">The page you are looking for may have been moved, renamed, or is temporarily unavailable. Let's get you back on track.</p>
+      <div class="error-logo-wrap">
+        <img src="images/logo.png" alt="MyPalUSA" class="error-logo-img">
+      </div>
+      <h1 class="error-title">Looking for <span>something?</span></h1>
+      <p class="error-desc">We can’t seem to find the page you’re looking for. It may have been moved, renamed, or is temporarily unavailable.</p>
       <div class="not-found-actions">
-        <a href="index.html" class="btn-pill primary">Return to Home</a>
+        <a href="index.html" class="btn-pill primary">Go to Home Page &rsaquo;</a>
         <a href="installation.html" class="btn-pill secondary">Explore 12 Services</a>
-        <button type="button" class="btn-pill secondary" onclick="openScheduleModal();">Contact Dispatch</button>
+      </div>
+      <div class="error-help-strip">
+        <span>Need assistance? Contact dispatch directly:</span>
+        <a href="tel:9196563524">📞 (919) 656 3524</a>
       </div>
     </div>
   </main>
