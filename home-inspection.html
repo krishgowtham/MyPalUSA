@@ -1,0 +1,2864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Home Inspection Services | MyPalUSA LLC</title>
+  <meta name="description"
+    content="Comprehensive residential home inspections across North Carolina's Research Triangle. 400+ point checks, detailed photo reports, same-day delivery, and licensed inspectors.">
+  <link rel="stylesheet" href="css/apple.css">
+  <style>
+    /* Full-Page Layout & Typography Variables */
+    :root {
+      --insp-blue: #0071e3;
+      --insp-blue-hover: #0077ed;
+      --insp-blue-bg: #eff6ff;
+      --insp-dark: #0f172a;
+      --insp-slate: #1e293b;
+      --insp-gray-border: #e2e8f0;
+      --insp-text-muted: #64748b;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1d1d1f;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .fullpage-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .fluid-container {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 3.5vw, 48px);
+    }
+
+    /* 1. HERO SECTION: Full-Width Expansive Grid */
+    .insp-hero-outer {
+      width: 100%;
+      background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--insp-gray-border);
+      padding: clamp(120px, 12vw, 150px) 0 clamp(48px, 6vw, 80px);
+    }
+
+    .insp-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+    }
+
+    .insp-hero-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .insp-hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      color: #0284c7;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .insp-hero-title {
+      font-size: clamp(38px, 4.8vw, 62px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      color: var(--insp-dark);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .insp-hero-title span {
+      color: var(--insp-blue);
+      background: linear-gradient(135deg, #0071e3 0%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .insp-hero-desc {
+      font-size: clamp(16px, 1.8vw, 19px);
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 640px;
+    }
+
+    .insp-hero-btns {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .insp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--insp-blue);
+      color: #ffffff;
+      padding: 13px 28px;
+      border-radius: var(--radius-pill);
+      font-size: 15.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(0, 113, 227, 0.28);
+      border: none;
+      cursor: pointer;
+    }
+
+    .insp-btn-primary:hover {
+      background: var(--insp-blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 113, 227, 0.35);
+    }
+
+    .insp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      padding: 13px 24px;
+      border-radius: var(--radius-pill);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .insp-btn-secondary:hover {
+      border-color: var(--insp-blue);
+      color: var(--insp-blue);
+      background: #f8fafc;
+    }
+
+    /* Hero Inspection Chips Quick-Filter */
+    .hero-inspection-chips {
+      margin-bottom: 28px;
+      width: 100%;
+    }
+
+    .chips-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .chips-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      color: #1e293b;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .hero-chip:hover {
+      border-color: #0071e3;
+      color: #0071e3;
+      background: #f0f7ff;
+      transform: translateY(-1px);
+    }
+
+    .hero-chip.active {
+      border-color: #0071e3;
+      background: #eff6ff;
+      color: #0071e3;
+    }
+
+    .chip-icon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+    }
+
+    .chip-icon svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    /* Dropdown item SVG box */
+    .dropdown-item-svg-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .dropdown-item-svg-box svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .dropdown-item-svg-box.blue {
+      background: #eff6ff;
+      color: #0071e3;
+    }
+
+    .dropdown-item-svg-box.indigo {
+      background: #eef2ff;
+      color: #4f46e5;
+    }
+
+    .dropdown-item-svg-box.emerald {
+      background: #ecfdf5;
+      color: #059669;
+    }
+
+    .dropdown-item-svg-box.amber {
+      background: #fffbeb;
+      color: #d97706;
+    }
+
+    .dropdown-item-svg-box.sky {
+      background: #f0f9ff;
+      color: #0284c7;
+    }
+
+    .insp-hero-checklist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 20px;
+      width: 100%;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .hero-check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .hero-check-item span.icon {
+      color: #059669;
+      font-size: 15px;
+    }
+
+    /* Hero Right: High-End Inspection Photo Showcase Card */
+    .insp-showcase-card {
+      width: 100%;
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 24px 56px -12px rgba(15, 23, 42, 0.16), 0 2px 8px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: #0f172a;
+    }
+
+    .showcase-image-frame {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+    }
+
+    .showcase-main-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .insp-showcase-card:hover .showcase-main-photo {
+      transform: scale(1.03);
+    }
+
+    .showcase-overlay-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.22) 0%, rgba(15, 23, 42, 0.0) 35%, rgba(15, 23, 42, 0.65) 100%);
+      pointer-events: none;
+    }
+
+    /* Floating Glass Pills */
+    .glass-pill-badge {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.18), 0 2px 6px rgba(0, 0, 0, 0.06);
+      transition: all 0.25s ease;
+      z-index: 2;
+      max-width: calc(100% - 36px);
+    }
+
+    .glass-pill-badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.24);
+      background: #ffffff;
+    }
+
+    .glass-pill-badge.top-left {
+      top: 18px;
+      left: 18px;
+    }
+
+    .glass-pill-badge.top-right {
+      top: 76px;
+      right: 18px;
+    }
+
+    .glass-badge-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .glass-badge-icon svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .glass-badge-icon.blue {
+      background: #eff6ff;
+      color: #0071e3;
+    }
+
+    .glass-badge-icon.amber {
+      background: #fffbeb;
+      color: #d97706;
+    }
+
+    .glass-badge-icon.emerald {
+      background: #ecfdf5;
+      color: #059669;
+    }
+
+    .glass-badge-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .glass-badge-title {
+      font-size: 13px;
+      font-weight: 750;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+    }
+
+    .glass-badge-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    /* Floating Glass Bottom Banner */
+    .glass-banner-card {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.22);
+      z-index: 2;
+    }
+
+    .glass-banner-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .glass-banner-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: #ecfdf5;
+      color: #059669;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .glass-banner-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .glass-banner-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .glass-banner-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+    }
+
+    .glass-banner-sub {
+      font-size: 12px;
+      font-weight: 500;
+      color: #64748b;
+    }
+
+    .glass-banner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #0071e3;
+      color: #ffffff;
+      padding: 9px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 113, 227, 0.25);
+    }
+
+    .glass-banner-cta:hover {
+      background: #005bb5;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(0, 113, 227, 0.35);
+    }
+
+    @media (max-width: 600px) {
+      .showcase-image-frame {
+        height: 390px;
+      }
+      .glass-pill-badge.top-right {
+        top: 68px;
+        left: 18px;
+        right: auto;
+      }
+      .glass-banner-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 14px;
+      }
+      .glass-banner-cta {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* 2. SECTION COMMON TITLES */
+    .section-stage {
+      padding: clamp(60px, 8vw, 100px) 0;
+      width: 100%;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto clamp(36px, 5vw, 60px);
+    }
+
+    .section-header-center .pill {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--insp-blue);
+      background: var(--insp-blue-bg);
+      padding: 4px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 14px;
+    }
+
+    .section-header-center h2 {
+      font-size: clamp(32px, 3.8vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--insp-dark);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .section-header-center p {
+      font-size: clamp(16px, 1.8vw, 18px);
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    /* 3. PACKAGES: Full-Width 4-Column Responsive Grid */
+    .packages-stage {
+      background: #ffffff;
+      border-bottom: 1px solid var(--insp-gray-border);
+    }
+
+    .packages-stage .section-header-center {
+      max-width: 1140px;
+    }
+
+    .packages-stage .section-header-center p {
+      font-size: clamp(15px, 1.3vw, 16.5px);
+    }
+
+    @media (min-width: 1040px) {
+      .packages-stage .section-header-center p {
+        white-space: nowrap;
+      }
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(16px, 2vw, 24px);
+      width: 100%;
+    }
+
+    .package-card {
+      background: #ffffff;
+      border: 1px solid var(--insp-gray-border);
+      border-radius: 24px;
+      padding: clamp(24px, 2.5vw, 32px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      scroll-margin-top: 100px;
+    }
+
+    .package-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      border-color: #cbd5e1;
+    }
+
+    .package-card.featured-indigo {
+      border: 2px solid #6366f1;
+      background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
+      box-shadow: 0 10px 28px rgba(99, 102, 241, 0.08);
+    }
+
+    .package-card.featured-indigo:hover {
+      border-color: #4f46e5;
+      box-shadow: 0 18px 42px rgba(79, 70, 229, 0.16);
+    }
+
+    .package-card.featured,
+    .package-card.featured-blue {
+      border: 2px solid #0071e3;
+      background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+      box-shadow: 0 10px 28px rgba(0, 113, 227, 0.08);
+    }
+
+    .package-card.featured:hover,
+    .package-card.featured-blue:hover {
+      border-color: #005bb5;
+      box-shadow: 0 18px 42px rgba(0, 113, 227, 0.16);
+    }
+
+    .package-card.featured-emerald {
+      border: 2px solid #059669;
+      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+      box-shadow: 0 10px 28px rgba(5, 150, 105, 0.08);
+    }
+
+    .package-card.featured-emerald:hover {
+      border-color: #047857;
+      box-shadow: 0 18px 42px rgba(5, 150, 105, 0.16);
+    }
+
+    .package-card.featured-amber {
+      border: 2px solid #d97706;
+      background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+      box-shadow: 0 10px 28px rgba(217, 119, 6, 0.08);
+    }
+
+    .package-card.featured-amber:hover {
+      border-color: #b45309;
+      box-shadow: 0 18px 42px rgba(217, 119, 6, 0.16);
+    }
+
+    .featured-ribbon {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--insp-blue);
+      color: #ffffff;
+      font-size: 10.5px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 14px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      z-index: 2;
+    }
+
+    .featured-ribbon.indigo {
+      background: #4f46e5;
+    }
+
+    .featured-ribbon.amber {
+      background: #d97706;
+    }
+
+    .featured-ribbon.emerald {
+      background: #059669;
+    }
+
+    .pkg-top {
+      margin-bottom: 20px;
+    }
+
+    .pkg-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .package-card:hover .pkg-icon-wrap {
+      transform: scale(1.06);
+    }
+
+    .pkg-icon-wrap.blue {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #0071e3;
+    }
+
+    .pkg-icon-wrap.indigo {
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      color: #4f46e5;
+    }
+
+    .pkg-icon-wrap.amber {
+      background: #fffbeb;
+      border-color: #fde68a;
+      color: #d97706;
+    }
+
+    .pkg-icon-wrap.emerald {
+      background: #ecfdf5;
+      border-color: #a7f3d0;
+      color: #059669;
+    }
+
+    .pkg-icon-wrap.sky {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+      color: #0284c7;
+    }
+
+    .pkg-icon-wrap svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .pkg-title {
+      font-size: clamp(19px, 1.6vw, 22px);
+      font-weight: 750;
+      color: var(--insp-dark);
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .pkg-desc {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.55;
+    }
+
+    .pkg-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .pkg-features li {
+      font-size: 13px;
+      color: #334155;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .pkg-features li span.chk {
+      color: #059669;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* Package Price Display */
+    .pkg-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 14px 0 16px;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .pkg-price-from {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pkg-price-val {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1;
+    }
+
+    .pkg-price-sub {
+      font-size: 12px;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    /* Solid & Symmetrical Package Action Buttons */
+    .pkg-book-btn {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 12px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .pkg-book-btn.blue {
+      background: #0071e3;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(0, 113, 227, 0.25);
+    }
+
+    .pkg-book-btn.blue:hover {
+      background: #005bb5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 113, 227, 0.35);
+    }
+
+    .pkg-book-btn.indigo {
+      background: #4f46e5;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+    }
+
+    .pkg-book-btn.indigo:hover {
+      background: #4338ca;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+    }
+
+    .pkg-book-btn.emerald {
+      background: #059669;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
+    }
+
+    .pkg-book-btn.emerald:hover {
+      background: #047857;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
+    }
+
+    .pkg-book-btn.amber {
+      background: #d97706;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.25);
+    }
+
+    .pkg-book-btn.amber:hover {
+      background: #b45309;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(217, 119, 6, 0.35);
+    }
+
+    /* ==========================================================================
+       New Construction Multi-Phase Bundles (2-Phase & 3-Phase)
+       ========================================================================== */
+    .bundles-section {
+      margin-top: 56px;
+      scroll-margin-top: 100px;
+    }
+
+    .bundles-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px auto;
+    }
+
+    .bundles-header .bundle-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 5px 16px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 14px;
+    }
+
+    .bundles-header h3 {
+      font-size: clamp(24px, 2.8vw, 34px);
+      font-weight: 800;
+      color: var(--insp-slate-900);
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .bundles-header p {
+      font-size: 15.5px;
+      color: var(--insp-slate-600);
+      line-height: 1.55;
+    }
+
+    .bundles-grid-2col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .bundle-card {
+      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.14) 0%, transparent 65%), linear-gradient(175deg, #0f172a 0%, #0d1627 100%);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: clamp(28px, 3.5vw, 38px);
+      position: relative;
+      box-shadow: 0 20px 48px -12px rgba(2, 132, 199, 0.22);
+      border: 2px solid #0284c7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .bundle-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 56px -12px rgba(2, 132, 199, 0.35);
+    }
+
+    .bundle-card.featured {
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.16) 0%, transparent 65%), linear-gradient(175deg, #0f172a 0%, #0b1a19 100%);
+      border: 2px solid #059669;
+      box-shadow: 0 20px 48px -10px rgba(5, 150, 105, 0.28);
+    }
+
+    .bundle-card.featured:hover {
+      box-shadow: 0 28px 60px -10px rgba(5, 150, 105, 0.4);
+    }
+
+    .bundle-card-ribbon {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      z-index: 2;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .bundle-card-ribbon.blue {
+      background: linear-gradient(135deg, #0284c7 0%, #0071e3 100%);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .bundle-card-ribbon.emerald {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .bundle-card-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 12px;
+    }
+
+    .bundle-card-badge.blue {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .bundle-card-badge.emerald {
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+
+    .bundle-card-top h4 {
+      font-size: clamp(21px, 2.3vw, 25px);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.025em;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .bundle-card-desc {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.55;
+      margin-bottom: 24px;
+    }
+
+    .bundle-milestones-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 26px;
+      flex-grow: 1;
+    }
+
+    .bundle-milestone-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 13px 15px;
+      border-radius: 14px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .bundle-milestone-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .bundle-milestone-item.blue-stage {
+      background: rgba(2, 132, 199, 0.08);
+      border-color: rgba(56, 189, 248, 0.28);
+    }
+
+    .bundle-milestone-item.accent-stage {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: rgba(245, 158, 11, 0.28);
+    }
+
+    .phase-pill {
+      background: #0071e3;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 9px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      margin-top: 1px;
+    }
+
+    .phase-pill.blue {
+      background: #0284c7;
+    }
+
+    .phase-pill.emerald {
+      background: #059669;
+    }
+
+    .phase-pill.amber {
+      background: #d97706;
+    }
+
+    .phase-pill.slate {
+      background: #475569;
+    }
+
+    .milestone-item-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 3px;
+      line-height: 1.35;
+    }
+
+    .milestone-item-text p {
+      font-size: 12.5px;
+      color: #cbd5e1;
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    .bundle-pricing-action {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .bundle-pricing-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .bundle-price-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .bundle-price-from {
+      font-size: 12px;
+      color: #94a3b8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .bundle-amount {
+      font-size: 32px;
+      font-weight: 900;
+      color: #38bdf8;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .bundle-amount.emerald {
+      color: #34d399;
+    }
+
+    .bundle-regular-struck {
+      font-size: 15px;
+      color: #94a3b8;
+      text-decoration: line-through;
+      font-weight: 600;
+    }
+
+    .bundle-save-pill {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .bundle-save-pill.green {
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+    }
+
+    .bundle-save-pill.gold {
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+    }
+
+    .bundle-cta-btn {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 13px 24px;
+      border-radius: 12px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .bundle-cta-btn .cta-arrow {
+      font-size: 18px;
+      line-height: 1;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .bundle-cta-btn:hover .cta-arrow {
+      transform: translateX(3px);
+    }
+
+    .bundle-cta-btn.blue-btn {
+      background: #0071e3;
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(0, 113, 227, 0.35);
+    }
+
+    .bundle-cta-btn.blue-btn:hover {
+      background: #005bb5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 113, 227, 0.45);
+    }
+
+    .bundle-cta-btn.emerald-btn {
+      background: #059669;
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
+    }
+
+    .bundle-cta-btn.emerald-btn:hover {
+      background: #047857;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.45);
+    }
+
+    .bundle-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #cbd5e1;
+    }
+
+    .bundle-card-footer svg {
+      color: #38bdf8;
+      flex-shrink: 0;
+    }
+
+    .bundle-card.featured .bundle-card-footer svg {
+      color: #34d399;
+    }
+
+    @media (max-width: 900px) {
+      .bundles-grid-2col {
+        grid-template-columns: 1fr;
+      }
+      .bundle-card.featured {
+        margin-top: 14px;
+      }
+    }
+
+    /* 4. WHAT WE INSPECT: Full-Width 4-Column Grid */
+    .systems-stage {
+      background: #f8fafc;
+      border-bottom: 1px solid var(--insp-gray-border);
+    }
+
+    .systems-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(16px, 2vw, 24px);
+      width: 100%;
+    }
+
+    .system-card {
+      background: #ffffff;
+      border: 1px solid var(--insp-gray-border);
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .system-card:hover {
+      transform: translateY(-3px);
+      border-color: #cbd5e1;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .system-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .system-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0071e3;
+      flex-shrink: 0;
+    }
+
+    .system-icon-box.amber {
+      background: #fffbeb;
+      border-color: #fef3c7;
+      color: #d97706;
+    }
+
+    .system-icon-box.sky {
+      background: #f0f9ff;
+      border-color: #e0f2fe;
+      color: #0284c7;
+    }
+
+    .system-icon-box.cyan {
+      background: #ecfeff;
+      border-color: #cffafe;
+      color: #0891b2;
+    }
+
+    .system-icon-box.slate {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+      color: #475569;
+    }
+
+    .system-icon-box.indigo {
+      background: #eef2ff;
+      border-color: #e0e7ff;
+      color: #4f46e5;
+    }
+
+    .system-icon-box.teal {
+      background: #f0fdfa;
+      border-color: #ccfbf1;
+      color: #0d9488;
+    }
+
+    .system-icon-box.emerald {
+      background: #ecfdf5;
+      border-color: #d1fae5;
+      color: #059669;
+    }
+
+    .system-icon-box svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .system-card-header h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--insp-dark);
+      margin: 0;
+      line-height: 1.25;
+    }
+
+    .system-card p {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.55;
+      margin: 0 0 14px 0;
+    }
+
+    .system-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .system-tags span {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    /* 5. PROCESS ROADMAP: Full-Width 4-Step Pipeline */
+    .process-stage {
+      background: #ffffff;
+      border-bottom: 1px solid var(--insp-gray-border);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .step-card {
+      background: #f8fafc;
+      border: 1px solid var(--insp-gray-border);
+      border-radius: 20px;
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .step-number {
+      font-size: 38px;
+      font-weight: 900;
+      color: #cbd5e1;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .step-card h4 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--insp-dark);
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* 6. DIGITAL REPORT SHOWCASE: Full-Width High-Tech Card */
+    .report-stage {
+      background: #ffffff;
+      border-bottom: 1px solid var(--insp-gray-border);
+    }
+
+    .report-card-full {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 32px;
+      padding: clamp(36px, 6vw, 64px) clamp(24px, 5vw, 60px);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(36px, 5vw, 64px);
+      align-items: center;
+      box-shadow: 0 24px 60px -15px rgba(15, 23, 42, 0.4);
+    }
+
+    .report-card-left h3 {
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    .report-card-left p {
+      font-size: 16.5px;
+      color: #94a3b8;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .report-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .report-metric-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .report-metric-box strong {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .report-metric-box p {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* 7. FAQ ACCORDION: Full Responsive Container */
+    .faq-stage {
+      background: #fbfbfd;
+      border-bottom: 1px solid var(--insp-gray-border);
+    }
+
+    .faq-full-container {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-accordion-card {
+      background: #ffffff;
+      border: 1px solid var(--insp-gray-border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .faq-accordion-card:hover {
+      border-color: #cbd5e1;
+    }
+
+    .faq-accordion-card summary {
+      padding: 22px 26px;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #0f172a;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-accordion-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-accordion-card summary .arrow {
+      font-size: 13px;
+      color: #94a3b8;
+      transition: transform 0.2s ease;
+    }
+
+    .faq-accordion-card[open] summary .arrow {
+      transform: rotate(180deg);
+      color: var(--insp-blue);
+    }
+
+    .faq-accordion-content {
+      padding: 0 26px 22px 26px;
+      font-size: 15px;
+      color: #64748b;
+      line-height: 1.65;
+    }
+
+    /* 8. FINAL CTA BANNER: Full-Width Gradient */
+    .final-cta-outer {
+      width: 100%;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      padding: clamp(60px, 8vw, 90px) 0;
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .final-cta-inner h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+    }
+
+    .final-cta-inner p {
+      font-size: clamp(16px, 1.8vw, 18px);
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    /* RESPONSIVE BREAKPOINTS (Mobile & Tablet) */
+    @media (max-width: 1100px) {
+      .insp-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bundle-content {
+        grid-template-columns: 1fr;
+      }
+
+      .systems-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .report-card-full {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .milestone-arrow {
+        display: none;
+      }
+
+      .systems-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .insp-hero-checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .report-metrics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main Glass Navigation Bar -->
+  <header class="site-navbar">
+    <div class="site-container navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="MyPalUSA Logo" class="nav-brand-logo">
+        <span class="nav-brand-text">MyPal<span>USA</span> <span class="brand-llc">LLC</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown-wrapper">
+          <a href="installation.html" class="nav-link nav-dropdown-trigger">
+            <span>Installation Services</span>
+            <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu simple-menu">
+            <div class="nav-dropdown-header">
+              <span class="nav-dropdown-title">RESIDENTIAL INSTALLATION</span>
+              <a href="installation.html" class="nav-dropdown-view-all">All Services Hub &rsaquo;</a>
+            </div>
+            <div class="nav-dropdown-grid simple-list">
+              <a href="service_blinds.html" class="nav-dropdown-item simple">Custom Window Blinds</a>
+              <a href="service_ceiling_fans.html" class="nav-dropdown-item simple">Wobble-Free Ceiling Fans</a>
+              <a href="service_tv_mounting.html" class="nav-dropdown-item simple">TV Wall Mounting</a>
+              <a href="service_furniture_assembly.html" class="nav-dropdown-item simple">Furniture Assembly</a>
+              <a href="service_curtains.html" class="nav-dropdown-item simple">Tailored Drapery &amp; Rods</a>
+              <a href="service_smart_switches.html" class="nav-dropdown-item simple">Smart Dimmer Switches</a>
+              <a href="service_thermostats.html" class="nav-dropdown-item simple">Smart Thermostats</a>
+              <a href="service_smart_locks.html" class="nav-dropdown-item simple">Keyless Smart Deadbolts</a>
+              <a href="service_garage_door.html" class="nav-dropdown-item simple">Smart Garage Openers</a>
+              <a href="service_garage_shelves.html" class="nav-dropdown-item simple">Overhead Garage Shelves</a>
+              <a href="service_garbage_disposal.html" class="nav-dropdown-item simple">Garbage Disposals</a>
+              <a href="service_smart_hubs.html" class="nav-dropdown-item simple">Smart Hubs &amp; Automation</a>
+            </div>
+            <div class="nav-dropdown-footer">
+              <a href="installation.html" class="nav-dropdown-cta">
+                <span>Explore All 12 Installation Services &amp; Upfront Pricing</span>
+                <span class="cta-arrow">&rsaquo;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Home Inspection Mega Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="home-inspection.html" class="nav-link nav-dropdown-trigger active">
+            <span>Home Inspection</span>
+            <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" style="min-width: 320px;">
+            <div class="nav-dropdown-header">
+              <span class="nav-dropdown-title">INSPECTION PACKAGES</span>
+              <a href="home-inspection.html" class="nav-dropdown-view-all">All Services Hub &rsaquo;</a>
+            </div>
+            <div class="nav-dropdown-grid" style="grid-template-columns: 1fr; gap: 8px;">
+              <a href="home-inspection.html#pkg-pre-drywall" class="nav-dropdown-item">
+                <span class="dropdown-item-svg-box indigo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                  </svg>
+                </span>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Pre-Drywall (Rough-In)</span>
+                  <span class="dropdown-item-desc">Framing, electrical &amp; plumbing before drywall</span>
+                </div>
+              </a>
+              <a href="home-inspection.html#pkg-pre-purchase" class="nav-dropdown-item">
+                <span class="dropdown-item-svg-box blue">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                </span>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Buyer's Pre-Purchase</span>
+                  <span class="dropdown-item-desc">Due diligence structural &amp; mechanical check</span>
+                </div>
+              </a>
+              <a href="home-inspection.html#pkg-builder-warranty" class="nav-dropdown-item">
+                <span class="dropdown-item-svg-box emerald">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                  </svg>
+                </span>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">11-Month Builder Warranty</span>
+                  <span class="dropdown-item-desc">Pre-expiration punch-list for builder repairs</span>
+                </div>
+              </a>
+              <a href="home-inspection.html#pkg-pre-listing" class="nav-dropdown-item">
+                <span class="dropdown-item-svg-box amber">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    <line x1="9" y1="12" x2="15" y2="12"></line>
+                    <line x1="9" y1="16" x2="15" y2="16"></line>
+                  </svg>
+                </span>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">Seller's Pre-Listing</span>
+                  <span class="dropdown-item-desc">Move-in ready certification to prevent delays</span>
+                </div>
+              </a>
+              <a href="home-inspection.html#pkg-phase-bundle" class="nav-dropdown-item">
+                <span class="dropdown-item-svg-box sky">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                    </path>
+                  </svg>
+                </span>
+                <div class="dropdown-item-text">
+                  <span class="dropdown-item-title">2 &amp; 3-Phase Builder Bundles</span>
+                  <span class="dropdown-item-desc">Pre-drywall, final &amp; warranty savings</span>
+                </div>
+              </a>
+            </div>
+            <div class="nav-dropdown-footer">
+              <a href="home-inspection.html" class="nav-dropdown-cta">
+                <span>View Full 400+ Point Inspection Checklist</span>
+                <span class="cta-arrow">&rsaquo;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="catalog.html" class="nav-link">Hardware Catalog</a>
+        <a href="about.html" class="nav-link">About Us</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:9196563524" class="nav-phone-btn"><span class="btn-icon">📞</span><span>(919) 656 3524</span></a>
+        <button type="button" onclick="openScheduleModal('Home Inspection');" class="nav-cta-btn">Book
+          Inspection</button>
+        <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu();" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="mobile-dropdown" id="mobileMenu">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <details class="mobile-services-accordion">
+        <summary class="mobile-nav-link">
+          Installation Services <span class="accordion-arrow">▾</span>
+        </summary>
+        <div class="mobile-sublinks">
+          <a href="installation.html" class="mobile-sublink all-link">All Services Overview &rsaquo;</a>
+          <a href="service_blinds.html" class="mobile-sublink"><span>Custom Window Blinds</span></a>
+          <a href="service_ceiling_fans.html" class="mobile-sublink"><span>Wobble-Free Ceiling Fans</span></a>
+          <a href="service_tv_mounting.html" class="mobile-sublink"><span>TV Wall Mounting</span></a>
+          <a href="service_furniture_assembly.html" class="mobile-sublink"><span>Furniture Assembly</span></a>
+          <a href="service_curtains.html" class="mobile-sublink"><span>Tailored Drapery &amp; Rods</span></a>
+          <a href="service_smart_switches.html" class="mobile-sublink"><span>Smart Dimmer Switches</span></a>
+          <a href="service_thermostats.html" class="mobile-sublink"><span>Smart Thermostats</span></a>
+          <a href="service_smart_locks.html" class="mobile-sublink"><span>Keyless Smart Deadbolts</span></a>
+          <a href="service_garage_door.html" class="mobile-sublink"><span>Smart Garage Openers</span></a>
+          <a href="service_garage_shelves.html" class="mobile-sublink"><span>Overhead Garage Shelving</span></a>
+          <a href="service_garbage_disposal.html" class="mobile-sublink"><span>Garbage Disposal</span></a>
+          <a href="service_smart_hubs.html" class="mobile-sublink"><span>Smart Hubs &amp; Automation</span></a>
+        </div>
+      </details>
+      <details class="mobile-services-accordion" open>
+        <summary class="mobile-nav-link active">
+          Home Inspection Services <span class="accordion-arrow">▾</span>
+        </summary>
+        <div class="mobile-sublinks">
+          <a href="home-inspection.html#pkg-pre-drywall" onclick="toggleMobileMenu();"
+            class="mobile-sublink"><span>Pre-Drywall (Rough-In) Inspection</span></a>
+          <a href="home-inspection.html#pkg-pre-purchase" onclick="toggleMobileMenu();"
+            class="mobile-sublink"><span>Buyer's Pre-Purchase Inspection</span></a>
+          <a href="home-inspection.html#pkg-builder-warranty" onclick="toggleMobileMenu();"
+            class="mobile-sublink"><span>11-Month Builder Warranty</span></a>
+          <a href="home-inspection.html#pkg-pre-listing" onclick="toggleMobileMenu();"
+            class="mobile-sublink"><span>Seller's Pre-Listing Inspection</span></a>
+          <a href="home-inspection.html#pkg-phase-bundle" onclick="toggleMobileMenu();"
+            class="mobile-sublink"><span>2 &amp; 3-Phase Builder Bundles</span></a>
+        </div>
+      </details>
+      <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="tel:9196563524" class="mobile-nav-link phone"><span class="btn-icon">📞</span><span>Call (919) 656
+          3524</span></a>
+      <button type="button" onclick="openScheduleModal('Home Inspection'); toggleMobileMenu();"
+        class="mobile-schedule-btn">Book Inspection Now &rsaquo;</button>
+    </div>
+  </header>
+
+  <div class="fullpage-wrapper">
+
+    <!-- 1. FULL-WIDTH HERO SECTION -->
+    <section class="insp-hero-outer">
+      <div class="fluid-container">
+        <div class="insp-hero-grid">
+
+          <!-- Left Column -->
+          <div class="insp-hero-left">
+            <span class="insp-hero-pill">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>RESIDENTIAL ASSURANCE &amp; SAFETY</span>
+            </span>
+            <h1 class="insp-hero-title">Comprehensive <span>Home Inspection.</span></h1>
+            <p class="insp-hero-desc">
+              Objective, tech-driven property evaluations across North Carolina's Research Triangle. Specializing in
+              Buyer's Pre-Purchase, New Construction Pre-Drywall, 11-Month Builder Warranty, and Seller Pre-Listing
+              inspections.
+            </p>
+
+            <div class="insp-hero-btns">
+              <button type="button" onclick="openScheduleModal('Home Inspection');" class="insp-btn-primary">
+                <span>Book Your Inspection Now</span>
+                <span style="font-size: 17px;">&rsaquo;</span>
+              </button>
+              <a href="tel:9196563524" class="insp-btn-secondary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <span>Call (919) 656 3524</span>
+              </a>
+            </div>
+            <div class="insp-hero-checklist">
+              <div class="hero-check-item">
+                <span class="icon">✓</span>
+                <span>400+ Point Resale &amp; Buyer Due Diligence</span>
+              </div>
+              <div class="hero-check-item">
+                <span class="icon">✓</span>
+                <span>Pre-Drywall Framing &amp; Rough-In Checks</span>
+              </div>
+              <div class="hero-check-item">
+                <span class="icon">✓</span>
+                <span>Moisture &amp; Water Intrusion Checks</span>
+              </div>
+              <div class="hero-check-item">
+                <span class="icon">✓</span>
+                <span>11-Month Builder Warranty Punch-Lists</span>
+              </div>
+              <div class="hero-check-item">
+                <span class="icon">✓</span>
+                <span>Same-Day Digital PDF Reports with Photos</span>
+              </div>
+              <div class="hero-check-item">
+                <span class="icon">✓</span>
+                <span>NC Licensed &amp; Fully Insured</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: High-End Inspection Photo Showcase Card -->
+          <div class="insp-hero-right">
+            <div class="insp-showcase-card">
+              <div class="showcase-image-frame">
+                <img src="images/home_inspection_hero.jpg" alt="Certified Home Inspector in North Carolina" class="showcase-main-photo">
+                <div class="showcase-overlay-gradient"></div>
+
+                <!-- Floating Glass Badge 1: Top Left -->
+                <div class="glass-pill-badge top-left">
+                  <div class="glass-badge-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                  </div>
+                  <div class="glass-badge-text">
+                    <span class="glass-badge-title">NC Licensed &amp; Insured</span>
+                    <span class="glass-badge-sub">Standards Board Certified</span>
+                  </div>
+                </div>
+
+                <!-- Floating Glass Badge 2: Staggered Right -->
+                <div class="glass-pill-badge top-right">
+                  <div class="glass-badge-icon emerald">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  </div>
+                  <div class="glass-badge-text">
+                    <span class="glass-badge-title">Same-Day Digital Report</span>
+                    <span class="glass-badge-sub">High-Resolution Photo Summary</span>
+                  </div>
+                </div>
+
+                <!-- Floating Glass Bottom Banner -->
+                <div class="glass-banner-card">
+                  <div class="glass-banner-left">
+                    <div class="glass-banner-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <div class="glass-banner-info">
+                      <span class="glass-banner-title">400+ Point Inspection</span>
+                      <span class="glass-banner-sub">Same-day digital report with high-res photos</span>
+                    </div>
+                  </div>
+                  <button type="button" onclick="openScheduleModal('Home Inspection');" class="glass-banner-cta">
+                    <span>Check Openings</span>
+                    <span>&rsaquo;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PACKAGES STAGE: Full-Width 4-Column Responsive Grid + Phase Bundle -->
+    <section class="section-stage packages-stage">
+      <div class="fluid-container">
+        <div class="section-header-center">
+          <span class="pill">INSPECTION PACKAGES</span>
+          <h2>Tailored for Every Real Estate Milestone</h2>
+          <p>Whether buying an existing home, building new from the ground up, verifying builder warranty items, or preparing to sell.</p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Package 1: Pre-Drywall (Rough-In) Inspection -->
+          <div class="package-card featured-indigo" id="pkg-pre-drywall">
+            <span class="featured-ribbon indigo">New Build Essential</span>
+            <div class="pkg-top">
+              <div class="pkg-icon-wrap indigo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="3" y1="15" x2="21" y2="15"></line>
+                </svg>
+              </div>
+              <h3 class="pkg-title">Pre-Drywall (Rough-In)</h3>
+              <p class="pkg-desc">
+                Conducted right before insulation and drywall cover the walls. Your single chance to verify framing,
+                wiring, plumbing, and ducts exposed.
+              </p>
+            </div>
+            <ul class="pkg-features">
+              <li><span class="chk">✓</span> Stud spacing, load headers &amp; hurricane tie-downs</li>
+              <li><span class="chk">✓</span> Rough plumbing supply, DWV slopes &amp; strike plates</li>
+              <li><span class="chk">✓</span> Electrical wire routing through studs &amp; junction boxes</li>
+              <li><span class="chk">✓</span> HVAC supply/return trunk line sealing &amp; bath vents</li>
+              <li><span class="chk">✓</span> Exterior housewrap, window flashing &amp; wall sheathing</li>
+            </ul>
+            <div class="pkg-price-row">
+              <span class="pkg-price-from">From</span>
+              <span class="pkg-price-val" style="color: #4f46e5;">$325</span>
+              <span class="pkg-price-sub">&bull; Rough-in framing</span>
+            </div>
+            <button type="button" onclick="openScheduleModal('Pre-Drywall (Rough-In) Inspection');" class="pkg-book-btn indigo">
+              <span>Book Pre-Drywall</span>
+              <span>&rsaquo;</span>
+            </button>
+          </div>
+
+          <!-- Package 2: Buyer Pre-Purchase -->
+          <div class="package-card featured-blue" id="pkg-pre-purchase">
+            <span class="featured-ribbon">Most Requested</span>
+            <div class="pkg-top">
+              <div class="pkg-icon-wrap blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+              <h3 class="pkg-title">Buyer's Pre-Purchase</h3>
+              <p class="pkg-desc">
+                Conducted during your NC due diligence period. Gain complete clarity on structural, mechanical, and
+                safety conditions before closing.
+              </p>
+            </div>
+            <ul class="pkg-features">
+              <li><span class="chk">✓</span> Full attic, roof, foundation &amp; crawlspace access</li>
+              <li><span class="chk">✓</span> Electrical service panel, Arc-Fault &amp; GFCI trip tests</li>
+              <li><span class="chk">✓</span> HVAC heating/cooling Delta-T airflow splits</li>
+              <li><span class="chk">✓</span> Moisture meter testing for plumbing &amp; roof leaks</li>
+              <li><span class="chk">✓</span> Realtor-ready repair report delivered in 24 hrs</li>
+            </ul>
+            <div class="pkg-price-row">
+              <span class="pkg-price-from">From</span>
+              <span class="pkg-price-val" style="color: #0071e3;">$395</span>
+              <span class="pkg-price-sub">&bull; Base inspection</span>
+            </div>
+            <button type="button" onclick="openScheduleModal('Buyer Pre-Purchase Inspection');" class="pkg-book-btn blue">
+              <span>Book Buyer Inspection</span>
+              <span>&rsaquo;</span>
+            </button>
+          </div>
+
+          <!-- Package 3: 11-Month Builder Warranty -->
+          <div class="package-card featured-emerald" id="pkg-builder-warranty">
+            <span class="featured-ribbon emerald">Warranty Milestone</span>
+            <div class="pkg-top">
+              <div class="pkg-icon-wrap emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="M9 12l2 2 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="pkg-title">11-Month Builder Warranty</h3>
+              <p class="pkg-desc">
+                Conducted around month 11 of your 1-year builder warranty. Document settlement cracks and flaws so the
+                builder fixes them on their dime.
+              </p>
+            </div>
+            <ul class="pkg-features">
+              <li><span class="chk">✓</span> Attic insulation settling &amp; duct disconnect checks</li>
+              <li><span class="chk">✓</span> Drywall stress fractures, truss uplift &amp; door alignment</li>
+              <li><span class="chk">✓</span> Breaker panel torque, Arc-Fault trip &amp; GFCI safety</li>
+              <li><span class="chk">✓</span> Exterior grading swales, drainage pooling &amp; downspouts</li>
+              <li><span class="chk">✓</span> Builder-formatted claim punch-list with photos</li>
+            </ul>
+            <div class="pkg-price-row">
+              <span class="pkg-price-from">From</span>
+              <span class="pkg-price-val" style="color: #059669;">$345</span>
+              <span class="pkg-price-sub">&bull; Builder claim report</span>
+            </div>
+            <button type="button" onclick="openScheduleModal('11-Month Builder Warranty Inspection');" class="pkg-book-btn emerald">
+              <span>Book Warranty Inspection</span>
+              <span>&rsaquo;</span>
+            </button>
+          </div>
+
+          <!-- Package 4: Seller Pre-Listing -->
+          <div class="package-card featured-amber" id="pkg-pre-listing">
+            <span class="featured-ribbon amber">Move-In Certified</span>
+            <div class="pkg-top">
+              <div class="pkg-icon-wrap amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                  <line x1="9" y1="12" x2="15" y2="12"></line>
+                  <line x1="9" y1="16" x2="15" y2="16"></line>
+                </svg>
+              </div>
+              <h3 class="pkg-title">Seller's Pre-Listing</h3>
+              <p class="pkg-desc">
+                Identify maintenance red flags before putting your home on the market. Prevent deals from stalling or
+                falling through during contract.
+              </p>
+            </div>
+            <ul class="pkg-features">
+              <li><span class="chk">✓</span> Proactive disclosure review to avoid price concessions</li>
+              <li><span class="chk">✓</span> Exterior siding, grading slope, gutters &amp; deck check</li>
+              <li><span class="chk">✓</span> Plumbing fixture flow, drains &amp; water heater valves</li>
+              <li><span class="chk">✓</span> Prioritized punch-list of cosmetic vs. major repairs</li>
+              <li><span class="chk">✓</span> Speeds closing and gives buyers contingency confidence</li>
+            </ul>
+            <div class="pkg-price-row">
+              <span class="pkg-price-from">From</span>
+              <span class="pkg-price-val" style="color: #d97706;">$375</span>
+              <span class="pkg-price-sub">&bull; Pre-market certified</span>
+            </div>
+            <button type="button" onclick="openScheduleModal('Seller Pre-Listing Inspection');" class="pkg-book-btn amber">
+              <span>Book Pre-Listing</span>
+              <span>&rsaquo;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- New Construction Milestone Inspection Bundles -->
+        <div class="bundles-section" id="pkg-phase-bundle">
+          <div class="bundles-header">
+            <span class="bundle-badge">BUILDER MILESTONE SAVINGS BUNDLES</span>
+            <h3>Protect Your New Construction Investment</h3>
+            <p>Combine your critical inspection milestones for full builder accountability from bare framing to your 1-year warranty walk-through.</p>
+          </div>
+
+          <div class="bundles-grid-2col">
+            <!-- Bundle 1: 2-Phase Bundle -->
+            <div class="bundle-card" id="pkg-bundle-2phase">
+              <span class="bundle-card-ribbon blue">2-Phase Essential Package</span>
+              <div class="bundle-card-top">
+                <h4>Pre-Drywall + Pre-Closing Final</h4>
+                <p class="bundle-card-desc">
+                  Dual-milestone assurance for new home builds. Inspect structural framing and rough-in utilities before sheetrock, followed by a complete move-in evaluation before closing.
+                </p>
+              </div>
+
+              <div class="bundle-milestones-list">
+                <div class="bundle-milestone-item">
+                  <span class="phase-pill blue">Phase 1</span>
+                  <div class="milestone-item-text">
+                    <strong>Pre-Drywall Rough-In Inspection</strong>
+                    <p>Load headers, stud spacing, plumbing DWV slopes, wiring &amp; HVAC duct runs before walls close.</p>
+                  </div>
+                </div>
+
+                <div class="bundle-milestone-item">
+                  <span class="phase-pill blue">Phase 2</span>
+                  <div class="milestone-item-text">
+                    <strong>Final Pre-Closing Inspection</strong>
+                    <p>400+ point full operational check, moisture intrusion testing &amp; punch-list for superintendent sign-off.</p>
+                  </div>
+                </div>
+
+                <div class="bundle-milestone-item blue-stage">
+                  <span class="phase-pill blue">Included</span>
+                  <div class="milestone-item-text">
+                    <strong>Superintendent Walkthrough Punch-List</strong>
+                    <p>Itemized repair summary delivered in 24 hrs formatted specifically for builder sign-off.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bundle-pricing-action">
+                <div class="bundle-pricing-row">
+                  <div class="bundle-price-wrap">
+                    <span class="bundle-price-from">From</span>
+                    <span class="bundle-amount">$500</span>
+                    <span class="bundle-regular-struck">$720</span>
+                  </div>
+                  <span class="bundle-save-pill green">Save $220 Combo Discount</span>
+                </div>
+                <button type="button" onclick="openScheduleModal('2-Phase Pre-Drywall &amp; Final Pre-Closing Bundle');" class="bundle-cta-btn blue-btn">
+                  <span>Inquire 2-Phase Bundle</span>
+                  <span class="cta-arrow">&rsaquo;</span>
+                </button>
+              </div>
+
+              <div class="bundle-card-footer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Reports delivered within 24 hrs formatted for builder punch-lists</span>
+              </div>
+            </div>
+
+            <!-- Bundle 2: 3-Phase Lifecycle Bundle -->
+            <div class="bundle-card featured" id="pkg-bundle-3phase">
+              <span class="bundle-card-ribbon emerald">3-Phase Maximum Protection</span>
+              <div class="bundle-card-top">
+                <h4>Pre-Drywall + Pre-Closing + 11-Month Warranty</h4>
+                <p class="bundle-card-desc">
+                  Complete 360&deg; builder accountability from groundbreaking through your first full year. Hold the builder responsible for all construction and settlement defects.
+                </p>
+              </div>
+
+              <div class="bundle-milestones-list">
+                <div class="bundle-milestone-item">
+                  <span class="phase-pill emerald">Phase 1</span>
+                  <div class="milestone-item-text">
+                    <strong>Pre-Drywall Rough-In Inspection</strong>
+                    <p>Bare-framing structural integrity, hurricane straps, DWV plumbing &amp; electrical routing.</p>
+                  </div>
+                </div>
+
+                <div class="bundle-milestone-item">
+                  <span class="phase-pill emerald">Phase 2</span>
+                  <div class="milestone-item-text">
+                    <strong>Final Pre-Closing Inspection</strong>
+                    <p>400+ point systems diagnostic, moisture testing &amp; move-in punch-list before signing.</p>
+                  </div>
+                </div>
+
+                <div class="bundle-milestone-item accent-stage">
+                  <span class="phase-pill amber">Phase 3</span>
+                  <div class="milestone-item-text">
+                    <strong>11-Month Builder Warranty Inspection</strong>
+                    <p>Attic insulation settling, drywall stress fractures, truss uplift &amp; builder-paid repair claims.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bundle-pricing-action">
+                <div class="bundle-pricing-row">
+                  <div class="bundle-price-wrap">
+                    <span class="bundle-price-from">From</span>
+                    <span class="bundle-amount emerald">$650</span>
+                    <span class="bundle-regular-struck">$1,065</span>
+                  </div>
+                  <span class="bundle-save-pill gold">Save $415 Combo Discount</span>
+                </div>
+                <button type="button" onclick="openScheduleModal('3-Phase Pre-Drywall, Pre-Closing &amp; 11-Month Warranty Bundle');" class="bundle-cta-btn emerald-btn">
+                  <span>Inquire 3-Phase Bundle</span>
+                  <span class="cta-arrow">&rsaquo;</span>
+                </button>
+              </div>
+
+              <div class="bundle-card-footer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full 1-year warranty coverage on the builder's dime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- 3. WHAT WE INSPECT: Full-Width 4-Column Responsive Grid -->
+  <section class="section-stage systems-stage">
+    <div class="fluid-container">
+      <div class="section-header-center">
+        <span class="pill">COMPREHENSIVE CHECKLIST</span>
+        <h2>400+ Point Whole-Home Systems Evaluation</h2>
+        <p>Every critical system is rigorously tested using industry-standard diagnostic tools and visual examination.
+        </p>
+      </div>
+
+      <div class="systems-grid">
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon-box slate">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 12l10-9 10 9"></path>
+                <path d="M6 12v7a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-7"></path>
+              </svg>
+            </div>
+            <h4>Roofing &amp; Attic</h4>
+          </div>
+          <p>Architectural shingles, flashing, drip edges, chimney boots, soffits, ridge vents, and insulation R-values.
+          </p>
+          <div class="system-tags">
+            <span>Shingles</span><span>Attic Ventilation</span><span>Insulation Depth</span>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon-box amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h4>Electrical Panels</h4>
+          </div>
+          <p>Main panels, sub-panels, wiring types (Romex/aluminum), grounding rods, GFCI/AFCI circuits, and breakers.
+          </p>
+          <div class="system-tags">
+            <span>200A Service</span><span>AFCI/GFCI</span><span>Safety Tested</span>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon-box sky">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v12"></path>
+                <path d="M6 12h12"></path>
+              </svg>
+            </div>
+            <h4>HVAC &amp; Climate</h4>
+          </div>
+          <p>Heat pump compressor, furnace heat exchangers, emergency heat strips, ductwork airflow, and delta-T splits.
+          </p>
+          <div class="system-tags">
+            <span>Temp Splits</span><span>Duct Integrity</span><span>Filters</span>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon-box cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <h4>Plumbing &amp; Water</h4>
+          </div>
+          <p>Supply pipes (copper/PEX), sewer line drainage, water heater TPR valves, expansion tanks, and static PSI.
+          </p>
+          <div class="system-tags">
+            <span>Static PSI</span><span>Water Heater</span><span>Drainage</span>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon-box slate">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="3" y1="15" x2="21" y2="15"></line>
+                <line x1="9" y1="9" x2="9" y2="21"></line>
+                <line x1="15" y1="3" x2="15" y2="15"></line>
+              </svg>
+            </div>
+            <h4>Foundation &amp; Piers</h4>
+          </div>
+          <p>Poured concrete walls, block piers, sill plates, floor joists, subfloor deflection, and structural
+            settlement.</p>
+          <div class="system-tags">
+            <span>Crawlspace</span><span>Masonry</span><span>Sill Plates</span>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon-box indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <path d="M14 2v6h6"></path>
+                <circle cx="12" cy="15" r="2"></circle>
+              </svg>
+            </div>
+            <h4>Crawlspace &amp; Moisture</h4>
+          </div>
+          <p>6-mil poly vapor barriers, dehumidifier operation, sump pumps, foundation vents, and wood moisture content.
+          </p>
+          <div class="system-tags">
+            <span>Moisture %</span><span>Sump Pumps</span><span>Vapor Barrier</span>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon-box teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="12" y1="3" x2="12" y2="21"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+              </svg>
+            </div>
+            <h4>Doors &amp; Windows</h4>
+          </div>
+          <p>Insulated glass seals, sash balances, egress safety, exterior caulking, wood rot, and weatherstripping.</p>
+          <div class="system-tags">
+            <span>Glass Seals</span><span>Egress Safety</span><span>Rot Checks</span>
+          </div>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon-box emerald">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 20h18"></path>
+                <path d="M3 16l6-6 4 4 8-8"></path>
+                <polyline points="15 6 21 6 21 12"></polyline>
+              </svg>
+            </div>
+            <h4>Grading &amp; Lot</h4>
+          </div>
+          <p>Ground slope away from foundation, downspout extensions, patio settling, retaining walls, and tree
+            clearances.</p>
+          <div class="system-tags">
+            <span>Ground Slope</span><span>Downspouts</span><span>Retaining Walls</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PROCESS ROADMAP: Full-Width 4-Step Pipeline -->
+  <section class="section-stage process-stage">
+    <div class="fluid-container">
+      <div class="section-header-center">
+        <span class="pill">HOW IT WORKS</span>
+        <h2>Simple, Transparent 4-Step Process</h2>
+        <p>From initial booking to in-depth walk-through, we make property evaluations smooth and stress-free.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h4>Schedule &amp; Coordinate</h4>
+          <p>Contact our dispatch team. We coordinate entry with the listing agent, seller, or builder to confirm
+            immediate access.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h4>3 to 4 Hour On-Site Audit</h4>
+          <p>Our licensed inspector conducts a thorough 400+ point assessment of every accessible system from roof to
+            crawlspace.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h4>Buyer Walk-Through</h4>
+          <p>Join us on-site for the final 45 minutes. We review major discoveries, locate shut-off valves, and answer
+            all questions.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h4>24-Hour Digital Report</h4>
+          <p>Receive your mobile-friendly PDF report complete with high-resolution photos, severity tags, and
+            contractor-ready notes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DIGITAL REPORT SHOWCASE: Full-Width High-Tech Card -->
+  <section class="section-stage report-stage">
+    <div class="fluid-container">
+      <div class="report-card-full">
+        <div class="report-card-left">
+          <span
+            style="display: inline-block; color: #38bdf8; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px;">MODERN
+            REPORTING TECH</span>
+          <h3>Interactive Digital Reports Built for Swift Negotiations.</h3>
+          <p>
+            Forget static 80-page text files. Our modern digital reports categorize issues by severity so your real
+            estate agent can generate a repair request addendum in minutes.
+          </p>
+          <button type="button" onclick="openScheduleModal('Home Inspection');" class="insp-btn-primary">
+            <span>Book An Inspection Slot</span>
+            <span style="font-size: 17px;">&rsaquo;</span>
+          </button>
+        </div>
+
+        <div class="report-metrics-grid">
+          <div class="report-metric-box">
+            <strong>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span>Safety Hazards</span>
+            </strong>
+            <p>Critical issues that require immediate professional attention before occupancy.</p>
+          </div>
+          <div class="report-metric-box">
+            <strong>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span>Major Defects</span>
+            </strong>
+            <p>High-ticket items like aging roofs or failing HVAC units that impact value.</p>
+          </div>
+          <div class="report-metric-box">
+            <strong>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span>Maintenance Items</span>
+            </strong>
+            <p>Minor adjustments, missing caulking, and seasonal upkeep guidelines.</p>
+          </div>
+          <div class="report-metric-box">
+            <strong>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+              <span>High-Res Photo Captures</span>
+            </strong>
+            <p>Annotated arrows and high-definition zoomed photos showing exact locations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ ACCORDION: Full Responsive Container -->
+  <section class="section-stage faq-stage">
+    <div class="fluid-container">
+      <div class="section-header-center">
+        <span class="pill">COMMON QUESTIONS</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about scheduling, preparation, and reports.</p>
+      </div>
+
+      <div class="faq-full-container">
+        <details class="faq-accordion-card" open>
+          <summary>
+            <span>What is a Pre-Drywall Inspection and when should it be scheduled?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <div class="faq-accordion-content">
+            A Pre-Drywall (also known as Rough-In or Framing) Inspection occurs during new home construction after
+            framing, electrical wiring, plumbing supply/DWV pipes, and HVAC ductwork are installed, but immediately
+            <em>before</em> insulation and drywall are hung. This is your single opportunity to inspect the structural
+            bones, load-bearing headers, hurricane strapping, and mechanical routing while everything is fully exposed.
+          </div>
+        </details>
+
+        <details class="faq-accordion-card">
+          <summary>
+            <span>How does a Buyer's Pre-Purchase Inspection differ from a Pre-Drywall Inspection?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <div class="faq-accordion-content">
+            A <strong>Buyer's Pre-Purchase Inspection</strong> evaluates a completed home (either existing resale or
+            newly finished construction) during your contract due diligence window. It focuses on whole-home operational
+            systems, appliances, roof, crawlspace, plumbing, and cosmetic/mechanical defects. A
+            <strong>Pre-Drywall Inspection</strong> evaluates the raw framing, rough MEP (mechanical, electrical,
+            plumbing) systems, and structural integrity before sheetrock closes off access.
+          </div>
+        </details>
+
+        <details class="faq-accordion-card">
+          <summary>
+            <span>Why should I get an 11-Month Builder Warranty Inspection?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <div class="faq-accordion-content">
+            Most new home builders provide a 1-year comprehensive warranty. Over the first year, homes settle, resulting
+            in drywall cracks, door sticking, attic duct disconnections, and grading shifts. An 11-Month Warranty
+            Inspection gives you an unbiased, professional punch-list with high-resolution photos that you submit
+            directly to your builder before their 12-month obligation expires.
+          </div>
+        </details>
+
+        <details class="faq-accordion-card">
+          <summary>
+            <span>How long does a full home inspection take?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <div class="faq-accordion-content">
+            A standard single-family residential inspection takes between 3 and 4 hours depending on the home's square
+            footage, foundation type (slab vs. crawlspace), and age. We take the time necessary to thoroughly examine
+            all accessible spaces.
+          </div>
+        </details>
+
+        <details class="faq-accordion-card">
+          <summary>
+            <span>Should I attend the inspection in person?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <div class="faq-accordion-content">
+            We strongly recommend attending the final 45 to 60 minutes for the on-site walk-through. Our inspector will
+            explain all findings in plain English, show you emergency water and electrical shut-offs, and answer any
+            questions before the report is finalized.
+          </div>
+        </details>
+
+        <details class="faq-accordion-card">
+          <summary>
+            <span>How quickly will I receive my digital inspection report?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <div class="faq-accordion-content">
+            We deliver your complete, high-resolution digital PDF report within 24 hours of inspection completion (often same-day). Every report includes high-resolution color photos, categorized defect severity, and an executive repair punch-list formatted specifically for real estate contract negotiations.
+          </div>
+        </details>
+
+        <details class="faq-accordion-card">
+          <summary>
+            <span>What geographic areas in North Carolina do you cover?</span>
+            <span class="arrow">▼</span>
+          </summary>
+          <div class="faq-accordion-content">
+            We service the entire North Carolina Research Triangle and surrounding municipalities: Raleigh, Cary, Apex,
+            Morrisville, Wake Forest, Durham, Chapel Hill, Holly Springs, Fuquay-Varina, Garner, and Clayton.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FINAL CTA BANNER: Full-Width Gradient -->
+  <section class="final-cta-outer">
+    <div class="fluid-container">
+      <div class="final-cta-inner">
+        <h2>Protect Your Property Investment.</h2>
+        <p>Connect with our dispatch desk to check real-time availability and secure your inspection appointment.</p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <button type="button" onclick="openScheduleModal('Home Inspection');" class="insp-btn-primary"
+            style="padding: 14px 34px; font-size: 16px;">
+            <span>Schedule Inspection Now</span>
+            <span style="font-size: 17px;">&rsaquo;</span>
+          </button>
+          <a href="tel:9196563524" class="insp-btn-secondary"
+            style="background: rgba(255, 255, 255, 0.1); color: #ffffff; border-color: rgba(255, 255, 255, 0.25); padding: 14px 28px; font-size: 15px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>Call (919) 656 3524</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- Modern Dark Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Identity -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-brand">
+            <img src="images/logo.png" alt="MyPalUSA" class="footer-logo">
+            <span class="footer-brand-text">MyPal<span>USA</span> <span class="brand-llc">LLC</span></span>
+          </a>
+          <p class="footer-tagline">
+            Professional Residential Hardware Installation, Smart Home Integration &amp; Property Inspections. Direct
+            Dispatch across North Carolina's Research Triangle.
+          </p>
+          <div class="footer-direct-contact">
+            <a href="tel:9196563524" class="footer-contact-link"><span class="btn-icon">📞</span><span>(919) 656
+                3524</span></a>
+            <a href="mailto:mypalusallc@gmail.com" class="footer-contact-link"><span
+                class="btn-icon">✉️</span><span>mypalusallc@gmail.com</span></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Service Areas & Hours -->
+        <div class="footer-col">
+          <h5>NC Service Coverage</h5>
+          <p class="footer-coverage-text">
+            Serving Raleigh, Cary, Apex, Morrisville, Wake Forest, Durham, Chapel Hill, Holly Springs, Fuquay-Varina,
+            Garner, and Clayton.
+          </p>
+          <div class="footer-hours">
+            <strong>Operating Hours:</strong><br>
+            Monday – Saturday: 8:00 AM – 8:00 PM EST<br>
+            Sunday: By Appointment
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 MyPalUSA LLC. All rights reserved. &bull; Licensed &amp; Insured Residential Specialists</div>
+        <div class="footer-bottom-links">
+          <a href="index.html">Home</a>
+          <a href="installation.html">Installation</a>
+          <a href="home-inspection.html" class="active">Home Inspection</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="about.html">About Us</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schedule Modal Popup -->
+  <div class="schedule-modal-backdrop" id="scheduleModal" onclick="handleModalBackdropClick(event);">
+    <div class="schedule-modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeScheduleModal();" aria-label="Close">&times;</button>
+
+      <span class="modal-pill">MyPalUSA LLC Direct Dispatch</span>
+      <h3 id="modalTitle">Schedule Home Inspection</h3>
+      <p id="modalSub">Connect directly with our inspection and dispatch team to check availability and book your
+        appointment.</p>
+
+      <div class="modal-contact-grid">
+        <a href="tel:9196563524" class="modal-contact-card">
+          <div class="modal-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+          </div>
+          <div class="modal-contact-info">
+            <span class="modal-contact-title">Direct Phone &amp; SMS</span>
+            <span class="modal-contact-value">(919) 656 3524</span>
+            <span class="modal-contact-meta">Mon–Sat &bull; 8:00 AM – 8:00 PM EST</span>
+          </div>
+          <div class="modal-action-col">
+            <span class="modal-action-tag">Call Now &rsaquo;</span>
+            <button type="button" class="modal-copy-btn" onclick="copyContactText('(919) 656 3524', this, event);"
+              title="Copy Phone Number">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </a>
+
+        <a href="mailto:mypalusallc@gmail.com?subject=Home%20Inspection%20Booking%20Request%20-%20MyPalUSA"
+          id="modalEmailLink" class="modal-contact-card">
+          <div class="modal-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div class="modal-contact-info">
+            <span class="modal-contact-title">Direct Email Dispatch</span>
+            <span class="modal-contact-value">mypalusallc@gmail.com</span>
+            <span class="modal-contact-meta">Fast response within 2 hours</span>
+          </div>
+          <div class="modal-action-col">
+            <span class="modal-action-tag">Send Email &rsaquo;</span>
+            <button type="button" class="modal-copy-btn"
+              onclick="copyContactText('mypalusallc@gmail.com', this, event);" title="Copy Email Address">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </a>
+      </div>
+
+      <div class="modal-guarantee-bar">
+        <span>✓ 400+ Point Inspection</span>
+        <span>✓ Full Photo Reports</span>
+        <span>✓ 24-Hr Digital Report</span>
+        <span>✓ 100% Guaranteed</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      var m = document.getElementById('mobileMenu');
+      if (m) m.classList.toggle('active');
+    }
+
+    function copyContactText(text, btn, e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      function setCopied() {
+        if (!btn) return;
+        btn.classList.add('copied');
+        var origHTML = btn.innerHTML;
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copied!</span>';
+        setTimeout(function () {
+          btn.classList.remove('copied');
+          btn.innerHTML = origHTML;
+        }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(setCopied).catch(function () {
+          fallbackCopy(text);
+          setCopied();
+        });
+      } else {
+        fallbackCopy(text);
+        setCopied();
+      }
+      function fallbackCopy(str) {
+        var ta = document.createElement('textarea');
+        ta.value = str;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (err) { }
+        document.body.removeChild(ta);
+      }
+      return false;
+    }
+
+    function openScheduleModal(serviceName, e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      var modal = document.getElementById('scheduleModal');
+      var title = document.getElementById('modalTitle');
+      var sub = document.getElementById('modalSub');
+      var emailLink = document.getElementById('modalEmailLink');
+      if (serviceName && title) {
+        title.textContent = 'Schedule ' + serviceName;
+        if (sub) sub.textContent = 'Ready to book ' + serviceName + '? Contact our lead inspection coordinator directly:';
+        if (emailLink) {
+          emailLink.href = 'mailto:mypalusallc@gmail.com?subject=' + encodeURIComponent(serviceName + ' Booking Request - MyPalUSA');
+        }
+      } else if (title) {
+        title.textContent = 'Schedule Home Inspection';
+        if (sub) sub.textContent = 'Connect directly with our inspection and dispatch team to check availability and book your appointment.';
+        if (emailLink) {
+          emailLink.href = 'mailto:mypalusallc@gmail.com?subject=Home%20Inspection%20Booking%20Request%20-%20MyPalUSA';
+        }
+      }
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      return false;
+    }
+
+    function closeScheduleModal() {
+      var modal = document.getElementById('scheduleModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target && e.target.id === 'scheduleModal') {
+        closeScheduleModal();
+      }
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeScheduleModal();
+    });
+  </script>
+</body>
+
+</html>
