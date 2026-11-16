@@ -217,6 +217,7 @@
 
   
   /* Schedule Modal Styles */
+  .schedule-modal-backdrop,
   .modal-backdrop {
     position: fixed;
     top: 0;
@@ -236,10 +237,12 @@
     padding: 20px;
     box-sizing: border-box;
   }
+  .schedule-modal-backdrop.active,
   .modal-backdrop.active {
     opacity: 1;
     visibility: visible;
   }
+  .schedule-modal-card,
   .modal-card {
     background: #ffffff;
     border-radius: 26px;
@@ -254,6 +257,7 @@
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     box-sizing: border-box;
   }
+  .schedule-modal-backdrop.active .schedule-modal-card,
   .modal-backdrop.active .modal-card {
     transform: translateY(0) scale(1);
   }
