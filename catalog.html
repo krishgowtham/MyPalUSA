@@ -39,21 +39,25 @@
 
     /* Accordions Re-Imagined for Apple Light Aesthetic */
     .apple-catalog-shelf {
-      max-width: 1040px;
+      width: 100%;
+      max-width: 100% !important;
       margin: 0 auto;
-      padding: 30px 0 80px;
+      padding: 36px clamp(20px, 4vw, 64px) 80px;
       display: flex;
       flex-direction: column;
       gap: 24px;
+      box-sizing: border-box;
     }
 
     details.apple-accordion {
+      width: 100%;
       background: #ffffff;
       border: 1px solid #e5e5ea;
       border-radius: var(--radius-lg);
       overflow: hidden;
       transition: all 0.25s ease;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      box-sizing: border-box;
     }
     details.apple-accordion[open] {
       border-color: #d2d2d7;
@@ -126,6 +130,7 @@
       display: flex;
       gap: 16px;
       overflow-x: auto;
+      flex-wrap: wrap;
       padding-bottom: 10px;
     }
     .product-cell {
@@ -281,8 +286,8 @@
   </section>
 
   <!-- Accordion Shelf -->
-  <section style="background: #fbfbfd;">
-    <div class="apple-container apple-catalog-shelf">
+  <section style="background: #fbfbfd; width: 100%;">
+    <div class="apple-catalog-shelf">
 
       <!-- ACCORDION 1: Smart Switches -->
       <details class="apple-accordion" open>
