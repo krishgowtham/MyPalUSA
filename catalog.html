@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware Catalog | MyPalUSA</title>
+  <meta name="description" content="Tested and verified smart switches, designer paddle switches, TV wall mounts, and plates.">
+  <link rel="stylesheet" href="css/apple.css">
+  <style>
+    .catalog-stage {
+      background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+      color: #1d1d1f;
+      padding: 80px 24px 50px;
+      text-align: center;
+      border-bottom: 1px solid #e5e5ea;
+    }
+
+    /* Accordions Re-Imagined for Apple Light Aesthetic */
+    .apple-catalog-shelf {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 30px 0 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    details.apple-accordion {
+      background: #ffffff;
+      border: 1px solid #e5e5ea;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+    details.apple-accordion[open] {
+      border-color: #d2d2d7;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+    summary.apple-accordion-summary {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 600;
+      color: #1d1d1f;
+      padding: 24px 30px;
+      cursor: pointer;
+      background: #ffffff;
+      user-select: none;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid transparent;
+      transition: background 0.15s ease;
+    }
+    details[open] summary.apple-accordion-summary {
+      border-bottom: 1px solid #f0f0f2;
+      background: #fbfbfd;
+    }
+    summary.apple-accordion-summary::-webkit-details-marker {
+      display: none;
+    }
+    summary.apple-accordion-summary::after {
+      content: '❯';
+      font-size: 14px;
+      color: #86868b;
+      transition: transform 0.25s ease;
+    }
+    details[open] summary.apple-accordion-summary::after {
+      transform: rotate(90deg);
+      color: #0071e3;
+    }
+
+    .apple-accordion-content {
+      padding: 30px;
+      background: #ffffff;
+    }
+    .accordion-intro {
+      font-size: 14px;
+      color: #6e6e73;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f0f0f2;
+    }
+
+    /* Subtopic Brand */
+    .brand-section {
+      margin-bottom: 28px;
+    }
+    .brand-section:last-child {
+      margin-bottom: 0;
+    }
+    .brand-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+
+    /* Modern Apple Product Row */
+    .product-track {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+    .product-cell {
+      flex: 0 0 185px;
+      width: 185px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 22px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+    .product-cell:hover {
+      transform: translateY(-3px);
+      border-color: #0071e3;
+      background: #f1f5f9;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .product-cell.view-all-cell {
+      background: #ffffff;
+      border-style: dashed;
+    }
+    .product-cell.view-all-cell svg {
+      fill: #64748b;
+    }
+
+    .cell-icon-wrap {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .cell-icon-wrap svg {
+      width: 50px;
+      height: 50px;
+      fill: #0071e3;
+    }
+    .cell-name {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1d1d1f;
+      text-align: center;
+      margin-bottom: 14px;
+      line-height: 1.3;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-amazon-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 8px 0;
+      background-color: #ffd814;
+      border-radius: var(--radius-pill);
+      color: #0f1111;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(255, 216, 20, 0.3);
+      transition: background-color 0.15s ease;
+    }
+    .btn-amazon-gold:hover {
+      background-color: #f7ca00;
+    }
+    .btn-view-all-pill {
+      background-color: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: #0071e3;
+    }
+    .btn-view-all-pill:hover {
+      background-color: #e2e8f0;
+    }
+
+    .cell-divider {
+      width: 1px;
+      height: 140px;
+      background-color: #e2e8f0;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+  <div class="site-announcement-bar">
+    <div class="site-container announcement-inner">
+      <span>Where Talent Meets Opportunity &bull; Premier Home Enhancement &amp; Installation Services Across North Carolina</span>
+      <a href="tel:9196563524">📞 Direct Dispatch: (919) 656 3524</a>
+    </div>
+  </div>
+
+  <!-- Main Glass Navigation Bar -->
+  <header class="site-navbar">
+    <div class="site-container navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="MyPalUSA Logo" class="nav-brand-logo">
+        <span class="nav-brand-text">MyPal<span>USA</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="installation.html" class="nav-link ">Installation Services</a>
+        <a href="catalog.html" class="nav-link active">Hardware Catalog</a>
+        <a href="contact.html" class="nav-link ">Consultation</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:9196563524" class="nav-phone-btn">📞 (919) 656 3524</a>
+        <button type="button" onclick="openScheduleModal();" class="nav-cta-btn">Schedule Service</button>
+        <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu();" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="mobile-dropdown" id="mobileMenu">
+      <a href="index.html" class="mobile-nav-link ">Home</a>
+      <a href="installation.html" class="mobile-nav-link ">Installation Services</a>
+      <a href="catalog.html" class="mobile-nav-link active">Hardware Catalog</a>
+      <a href="contact.html" class="mobile-nav-link ">Consultation</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="tel:9196563524" class="mobile-nav-link phone">📞 Call (919) 656 3524</a>
+      <button type="button" onclick="openScheduleModal(); toggleMobileMenu();" class="mobile-schedule-btn">Schedule Service Now &rsaquo;</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="catalog-stage">
+    <div class="apple-container">
+      <span class="eyebrow eyebrow-accent">Hardware Recommendations</span>
+      <h1 class="headline-giant">
+        Tested & Verified.<br>
+        <span class="gradient-text-blue">Curated for your home.</span>
+      </h1>
+      <p class="subhead-lead">
+        Hand-selected switches, dimmers, full-motion brackets, and designer wall plates verified for quality, safety, and longevity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Accordion Shelf -->
+  <section style="background: #fbfbfd;">
+    <div class="apple-container apple-catalog-shelf">
+
+      <!-- ACCORDION 1: Smart Switches -->
+      <details class="apple-accordion" open>
+        <summary class="apple-accordion-summary">Smart Switches & Lighting Automation</summary>
+        <div class="apple-accordion-content">
+          <div class="accordion-intro">
+            Modernize your home with wireless, Matter-compatible app and voice-activated switches.
+          </div>
+
+          <!-- Leviton -->
+          <div class="brand-section">
+            <div class="brand-label">Leviton Decora Smart</div>
+            <div class="product-track">
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
+                </div>
+                <div class="cell-name">Single Pole Switch</div>
+                <a href="https://amzn.to/4gynUjw" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2l3 3.5h-2V13h-2V10.5H9L12 7zm0 10l-3-3.5h2V11h2v2.5h2L12 17z"/></svg>
+                </div>
+                <div class="cell-name">3-Way Multi-Location</div>
+                <a href="https://amzn.to/4631XTL" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell view-all-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </div>
+                <div class="cell-name">More Leviton</div>
+                <a href="https://amzn.to/4giwy4A" target="_blank" class="btn-amazon-gold btn-view-all-pill">View all</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kasa -->
+          <div class="brand-section">
+            <div class="brand-label">Kasa Smart (TP-Link)</div>
+            <div class="product-track">
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
+                </div>
+                <div class="cell-name">Single Pole Switch</div>
+                <a href="https://amzn.to/4i9VNIG" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2l3 3.5h-2V13h-2V10.5H9L12 7zm0 10l-3-3.5h2V11h2v2.5h2L12 17z"/></svg>
+                </div>
+                <div class="cell-name">3-Way Switch</div>
+                <a href="https://amzn.to/4gxbmce" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="cell-divider"></div>
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M16 2v4h-1v2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3V6H8V2h2v4h4V2h2zm-1 8H9a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-3 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                </div>
+                <div class="cell-name">Smart Plug</div>
+                <a href="https://amzn.to/3SBSiR1" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell view-all-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </div>
+                <div class="cell-name">More Kasa</div>
+                <a href="https://amzn.to/4bMyyRe" target="_blank" class="btn-amazon-gold btn-view-all-pill">View all</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SONOFF -->
+          <div class="brand-section">
+            <div class="brand-label">SONOFF (Matter & Zigbee)</div>
+            <div class="product-track">
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-6.36 2.64l1.42 1.42a7 7 0 0 1 9.88 0l1.42-1.42A9 9 0 0 0 12 3zm0 4a5 5 0 0 0-3.54 1.46l1.42 1.42a3 3 0 0 1 4.24 0l1.42-1.42A5 5 0 0 0 12 7zm0 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
+                </div>
+                <div class="cell-name">Wi-Fi Switch</div>
+                <a href="https://amzn.to/4ckFhlu" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 2L4 6v12l8 4 8-4V6l-8-4zm0 2.3l5.5 2.75L12 9.8 6.5 7.05 12 4.3zM6 8.8l5 2.5v5.9l-5-2.5V8.8zm12 5.9l-5 2.5v-5.9l5-2.5v5.9z"/></svg>
+                </div>
+                <div class="cell-name">Matter Protocol</div>
+                <a href="https://amzn.to/4ckFhlu" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 11.5L4 8.5V17l8 5 8-5V8.5l-8 5z"/></svg>
+                </div>
+                <div class="cell-name">Zigbee Protocol</div>
+                <a href="https://amzn.to/3TP8Zc9" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell view-all-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </div>
+                <div class="cell-name">More SONOFF</div>
+                <a href="https://amzn.to/4bQypfs" target="_blank" class="btn-amazon-gold btn-view-all-pill">View all</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Legrand -->
+          <div class="brand-section">
+            <div class="brand-label">Legrand Radiant</div>
+            <div class="product-track">
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
+                </div>
+                <div class="cell-name">Single Pole</div>
+                <a href="https://amzn.to/4wvVQCo" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2l3 3.5h-2V13h-2V10.5H9L12 7zm0 10l-3-3.5h2V11h2v2.5h2L12 17z"/></svg>
+                </div>
+                <div class="cell-name">3-Way Switch</div>
+                <a href="https://amzn.to/4wvVQCo" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell view-all-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </div>
+                <div class="cell-name">More Legrand</div>
+                <a href="https://amzn.to/4x6goT0" target="_blank" class="btn-amazon-gold btn-view-all-pill">View all</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- ACCORDION 2: Paddle Switches -->
+      <details class="apple-accordion" open>
+        <summary class="apple-accordion-summary">Designer Paddle Switches (Non-Smart)</summary>
+        <div class="apple-accordion-content">
+          <div class="accordion-intro">
+            Elevate every room with sleek designer rocker paddle switches.
+          </div>
+
+          <!-- Leviton -->
+          <div class="brand-section">
+            <div class="brand-label">Leviton Decora</div>
+            <div class="product-track">
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
+                </div>
+                <div class="cell-name">Single Pole</div>
+                <a href="https://amzn.to/4gynUjw" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2l3 3.5h-2V13h-2V10.5H9L12 7zm0 10l-3-3.5h2V11h2v2.5h2L12 17z"/></svg>
+                </div>
+                <div class="cell-name">3-Way</div>
+                <a href="https://amzn.to/4631XTL" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell view-all-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </div>
+                <div class="cell-name">More Leviton</div>
+                <a href="https://amzn.to/4wr3RZ7" target="_blank" class="btn-amazon-gold btn-view-all-pill">View all</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- GE -->
+          <div class="brand-section">
+            <div class="brand-label">GE Designer</div>
+            <div class="product-track">
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
+                </div>
+                <div class="cell-name">Single Pole</div>
+                <a href="https://amzn.to/4x6dKwy" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 3v14h8V5H8zm4 2l3 3.5h-2V13h-2V10.5H9L12 7zm0 10l-3-3.5h2V11h2v2.5h2L12 17z"/></svg>
+                </div>
+                <div class="cell-name">3-Way</div>
+                <a href="https://amzn.to/4zh8Yha" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+              <div class="product-cell view-all-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                </div>
+                <div class="cell-name">More GE</div>
+                <a href="https://amzn.to/4bSvF1j" target="_blank" class="btn-amazon-gold btn-view-all-pill">View all</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- ACCORDION 3: TV Mounting & Wall Plates -->
+      <details class="apple-accordion" open>
+        <summary class="apple-accordion-summary">TV Mounting & Wall Plates</summary>
+        <div class="apple-accordion-content">
+          <div class="accordion-intro">
+            Heavy-duty mounting hardware and seamless designer plates.
+          </div>
+
+          <div class="brand-section">
+            <div class="product-track">
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 3H3c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h5v2H5v2h14v-2h-3v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12H3V5h18v10z"/>
+                    <path d="M10 8h4v2h-4zm0 3h4v2h-4z"/>
+                  </svg>
+                </div>
+                <div class="cell-name">Full Motion TV Mount</div>
+                <a href="https://link.amazon/B0aRxP7A7" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+
+              <div class="cell-divider"></div>
+
+              <div class="product-cell">
+                <div class="cell-icon-wrap">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm4 5h4a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/>
+                  </svg>
+                </div>
+                <div class="cell-name">Screwless Wall Plate</div>
+                <a href="https://link.amazon/A09TWRrto" target="_blank" class="btn-amazon-gold">View on Amazon</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-brand">
+            <img src="images/logo.png" alt="MyPalUSA Logo" class="footer-logo">
+            <span class="footer-brand-text">MyPal<span>USA</span></span>
+          </a>
+          <p class="footer-bio">
+            Where Talent Meets Opportunity. Premier residential enhancement and certified installation contractors across North Carolina. Triangle area certified technicians with upfront pricing and zero drywall mess.
+          </p>
+          <div class="footer-contact-direct">
+            <a href="tel:9196563524">📞 (919) 656 3524</a>
+            <a href="mailto:mypalusallc@gmail.com">✉️ mypalusallc@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Core Disciplines -->
+        <div class="footer-col">
+          <h5>Core Disciplines</h5>
+          <ul class="footer-links">
+            <li><a href="installation.html#tv">Media &amp; TV Mounting</a></li>
+            <li><a href="installation.html#smart-switches">Smart Home &amp; Lighting</a></li>
+            <li><a href="installation.html#thermostats">Climate &amp; Thermostats</a></li>
+            <li><a href="installation.html#smart-locks">Keyless Smart Locks</a></li>
+            <li><a href="installation.html#blinds">Custom Window Blinds</a></li>
+            <li><a href="installation.html#curtains">Tailored Drapery &amp; Rods</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: 12 Services -->
+        <div class="footer-col">
+          <h5>12 Services</h5>
+          <ul class="footer-links">
+            <li><a href="service_tv_mounting.html">TV Wall Mounting</a></li>
+            <li><a href="service_smart_switches.html">Smart Dimmer Switches</a></li>
+            <li><a href="service_thermostats.html">Nest / Ecobee Thermostats</a></li>
+            <li><a href="service_smart_locks.html">Biometric Smart Deadbolts</a></li>
+            <li><a href="service_garage_door.html">Smart Garage Openers</a></li>
+            <li><a href="service_ceiling_fans.html">Wobble-Free Ceiling Fans</a></li>
+            <li><a href="service_garage_shelves.html">Ceiling Garage Shelving</a></li>
+            <li><a href="service_furniture_assembly.html">Furniture Assembly</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Service Areas & Hours -->
+        <div class="footer-col">
+          <h5>NC Service Coverage</h5>
+          <p class="footer-coverage-text">
+            Serving Raleigh, Cary, Apex, Morrisville, Wake Forest, Durham, Chapel Hill, Holly Springs, Fuquay-Varina, Garner, and Clayton.
+          </p>
+          <div class="footer-hours">
+            <strong>Operating Hours:</strong><br>
+            Monday – Saturday: 8:00 AM – 8:00 PM EST<br>
+            Sunday: By Appointment
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 MyPalUSA LLC. All rights reserved. &bull; Licensed &amp; Insured Residential Specialists</div>
+        <div class="footer-bottom-links">
+          <a href="index.html">Home</a>
+          <a href="installation.html">Installation</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schedule Modal Popup -->
+  <div class="schedule-modal-backdrop" id="scheduleModal" onclick="handleModalBackdropClick(event);">
+    <div class="schedule-modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeScheduleModal();" aria-label="Close">&times;</button>
+      
+      <span class="modal-pill">MyPalUSA Direct Dispatch</span>
+      <h3 id="modalTitle">Schedule Your Installation</h3>
+      <p id="modalSub">Connect directly with our installation team to get a quote, check availability, or schedule your appointment.</p>
+      
+      <div class="modal-contact-grid">
+        <a href="tel:9196563524" class="modal-contact-card">
+          <div class="modal-icon-badge">📞</div>
+          <div class="modal-contact-info">
+            <span class="modal-contact-title">Direct Phone &amp; SMS</span>
+            <span class="modal-contact-value">(919) 656 3524</span>
+            <span class="modal-contact-meta">Mon–Sat &bull; 8:00 AM – 8:00 PM EST</span>
+          </div>
+          <span class="modal-action-tag">Call Now &rsaquo;</span>
+        </a>
+
+        <a href="mailto:mypalusallc@gmail.com?subject=Installation%20Schedule%20Request%20-%20MyPalUSA" class="modal-contact-card">
+          <div class="modal-icon-badge">✉️</div>
+          <div class="modal-contact-info">
+            <span class="modal-contact-title">Direct Email Dispatch</span>
+            <span class="modal-contact-value">mypalusallc@gmail.com</span>
+            <span class="modal-contact-meta">Fast response within 2 hours</span>
+          </div>
+          <span class="modal-action-tag">Send Email &rsaquo;</span>
+        </a>
+      </div>
+
+      <div class="modal-guarantee-bar">
+        <span>✓ Upfront Pricing</span>
+        <span>✓ Certified Techs</span>
+        <span>✓ Zero Drywall Mess</span>
+        <span>✓ 100% Guaranteed</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      var m = document.getElementById('mobileMenu');
+      if (m) m.classList.toggle('active');
+    }
+
+    function openScheduleModal(serviceName, e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      var modal = document.getElementById('scheduleModal');
+      var title = document.getElementById('modalTitle');
+      var sub = document.getElementById('modalSub');
+      if (serviceName && title) {
+        title.textContent = 'Schedule ' + serviceName;
+        if (sub) sub.textContent = 'Ready to schedule ' + serviceName + '? Contact our lead technician directly for quick quotes and booking:';
+      } else if (title) {
+        title.textContent = 'Schedule Your Installation';
+        if (sub) sub.textContent = 'Connect directly with our installation team to get a quote, check availability, or schedule your appointment.';
+      }
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      return false;
+    }
+
+    function closeScheduleModal() {
+      var modal = document.getElementById('scheduleModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target && e.target.id === 'scheduleModal') {
+        closeScheduleModal();
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeScheduleModal();
+    });
+  </script>
+</body>
+</html>
