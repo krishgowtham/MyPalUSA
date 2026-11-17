@@ -992,101 +992,90 @@
       margin: 0;
     }
 
-    .bundle-flow {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 14px 16px;
-      margin-bottom: 18px;
-    }
-
-    .bundle-flow-title {
-      display: block;
-      font-size: 11px;
-      font-weight: 750;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #64748b;
-      margin-bottom: 8px;
-    }
-
-    .bundle-flow-steps {
+    .bundle-inspection-items {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
+      margin: 16px 0 18px 0;
     }
 
-    .flow-step {
+    .inspection-item-box {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 12.5px;
-      font-weight: 600;
-      color: #1e293b;
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
-      padding: 5px 10px;
-      border-radius: 8px;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 6px 12px;
+      border-radius: 9px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
     }
 
-    .flow-step strong {
+    .bundle-card:hover .inspection-item-box {
+      border-color: #cbd5e1;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .inspection-item-box .item-num {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 17px;
-      height: 17px;
+      width: 19px;
+      height: 19px;
       border-radius: 50%;
       background: #0071e3;
       color: #ffffff;
-      font-size: 10px;
+      font-size: 10.5px;
       font-weight: 800;
+      flex-shrink: 0;
     }
 
-    .bundle-card.featured .flow-step strong {
+    .bundle-card.featured .inspection-item-box .item-num {
       background: #059669;
     }
 
-    .flow-sep {
+    .inspection-item-plus {
       color: #94a3b8;
       font-weight: 700;
       font-size: 14px;
+      user-select: none;
     }
 
     .bundle-bullets {
       list-style: none;
       padding: 0;
-      margin: 0 0 20px 0;
+      margin: 8px 0 24px 0;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 12px;
       flex-grow: 1;
     }
 
     .bundle-bullets li {
-      font-size: 13px;
+      font-size: 13.5px;
       color: var(--insp-slate-700);
       display: flex;
       align-items: flex-start;
-      gap: 8px;
-      line-height: 1.4;
+      gap: 10px;
+      line-height: 1.45;
+    }
+
+    .bundle-bullets li strong {
+      color: var(--insp-slate-900);
+      font-weight: 750;
     }
 
     .bundle-bullets li .chk {
       color: #059669;
-      font-weight: 700;
-      font-size: 13px;
+      font-weight: 800;
+      font-size: 14px;
       flex-shrink: 0;
-    }
-
-    .bundle-pricing-action {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      line-height: 1.3;
     }
 
     .bundle-pricing-row {
@@ -1095,6 +1084,10 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 8px;
+      padding-top: 18px;
+      margin-top: auto;
+      margin-bottom: 14px;
+      border-top: 1px solid #e2e8f0;
     }
 
     .bundle-price-wrap {
@@ -1159,8 +1152,8 @@
       gap: 8px;
       font-size: 14.5px;
       font-weight: 700;
-      padding: 12px 20px;
-      border-radius: 10px;
+      padding: 13px 20px;
+      border-radius: var(--radius-pill);
       white-space: nowrap;
       cursor: pointer;
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -2034,89 +2027,98 @@
           </div>
 
           <div class="bundles-grid-2col">
-            <!-- Bundle 1: 2-Phase Bundle -->
+            <!-- Bundle 1: 2 Inspections -->
             <div class="bundle-card" id="pkg-bundle-2phase">
               <div class="bundle-card-top">
-                <span class="bundle-card-ribbon blue">2-Phase Bundle</span>
-                <h4>Pre-Drywall + Final Pre-Check</h4>
-                <p class="bundle-card-desc">From open framing through final move-in walkthrough.</p>
+                <span class="bundle-card-ribbon blue">2 Inspections</span>
+                <h4>New Build Essentials</h4>
+                <p class="bundle-card-desc">Comprehensive two-stage protection from open framing to closing walkthrough.</p>
               </div>
 
-              <div class="bundle-flow">
-                <span class="bundle-flow-title">Milestones Combined</span>
-                <div class="bundle-flow-steps">
-                  <span class="flow-step"><strong>1</strong> Pre-Drywall</span>
-                  <span class="flow-sep">+</span>
-                  <span class="flow-step"><strong>2</strong> Final Pre-Check</span>
+              <!-- Inspection item boxes -->
+              <div class="bundle-inspection-items">
+                <div class="inspection-item-box">
+                  <span class="item-num">1</span>
+                  <span>Pre-Drywall</span>
+                </div>
+                <span class="inspection-item-plus">+</span>
+                <div class="inspection-item-box">
+                  <span class="item-num">2</span>
+                  <span>Final Pre-Check</span>
                 </div>
               </div>
 
               <ul class="bundle-bullets">
-                <li><span class="chk">✓</span> Detailed builder-formatted repair punch-list delivered in 24 hours</li>
-                <li><span class="chk">✓</span> Complete check of framing, rough-in utilities &amp; move-in systems</li>
+                <li><span class="chk">✓</span> Framing, MEP rough-ins &amp; plate penetrations</li>
+                <li><span class="chk">✓</span> Move-in systems diagnostic &amp; attic-to-foundation check</li>
+                <li><span class="chk">✓</span> Detailed builder-formatted repair punch-list in 24 hours</li>
                 <li><span class="chk">✓</span> Ready for your pre-closing superintendent walkthrough</li>
               </ul>
 
-              <div class="bundle-pricing-action">
-                <div class="bundle-pricing-row">
-                  <div class="bundle-price-wrap">
-                    <span class="bundle-price-from">From</span>
-                    <span class="bundle-amount">$500</span>
-                    <span class="bundle-regular-struck">$720</span>
-                  </div>
-                  <span class="bundle-save-pill blue">Save $220</span>
+              <div class="bundle-pricing-row">
+                <div class="bundle-price-wrap">
+                  <span class="bundle-price-from">From</span>
+                  <span class="bundle-amount">$500</span>
+                  <span class="bundle-regular-struck">$720</span>
                 </div>
-                <button type="button" onclick="openScheduleModal('2-Phase Pre-Drywall &amp; Final Pre-Check Bundle');"
-                  class="bundle-cta-btn blue-btn">
-                  <span>Book 2-Phase Bundle</span>
-                  <span class="cta-arrow">&rsaquo;</span>
-                </button>
+                <span class="bundle-save-pill blue">Save $220</span>
               </div>
+
+              <button type="button" onclick="openScheduleModal('2-Inspection New Build Essentials Bundle');"
+                class="bundle-cta-btn blue-btn">
+                <span>Book 2-Inspection Bundle</span>
+                <span class="cta-arrow">&rsaquo;</span>
+              </button>
             </div>
 
-            <!-- Bundle 2: 3-Phase Lifecycle Bundle -->
+            <!-- Bundle 2: 3 Inspections -->
             <div class="bundle-card featured" id="pkg-bundle-3phase">
               <div class="bundle-card-top">
-                <span class="bundle-card-ribbon emerald">3-Phase Bundle · Best Value</span>
-                <h4>Pre-Drywall + Final Pre-Check + 11-Month Warranty</h4>
-                <p class="bundle-card-desc">Full 360° protection through your builder's 1-year warranty expiration.</p>
+                <span class="bundle-card-ribbon emerald">3 Inspections · Best Value</span>
+                <h4>Complete Builder Shield</h4>
+                <p class="bundle-card-desc">Total 360° protection through your builder's 1-year warranty expiration.</p>
               </div>
 
-              <div class="bundle-flow">
-                <span class="bundle-flow-title">Milestones Combined</span>
-                <div class="bundle-flow-steps">
-                  <span class="flow-step"><strong>1</strong> Pre-Drywall</span>
-                  <span class="flow-sep">+</span>
-                  <span class="flow-step"><strong>2</strong> Final Pre-Check</span>
-                  <span class="flow-sep">+</span>
-                  <span class="flow-step"><strong>3</strong> 11-Month Warranty</span>
+              <!-- Inspection item boxes -->
+              <div class="bundle-inspection-items">
+                <div class="inspection-item-box">
+                  <span class="item-num">1</span>
+                  <span>Pre-Drywall</span>
+                </div>
+                <span class="inspection-item-plus">+</span>
+                <div class="inspection-item-box">
+                  <span class="item-num">2</span>
+                  <span>Final Pre-Check</span>
+                </div>
+                <span class="inspection-item-plus">+</span>
+                <div class="inspection-item-box">
+                  <span class="item-num">3</span>
+                  <span>11-Month Warranty</span>
                 </div>
               </div>
 
               <ul class="bundle-bullets">
-                <li><span class="chk">✓</span> Everything in 2-Phase, plus your 11-month builder warranty evaluation
-                </li>
-                <li><span class="chk">✓</span> Catches structural settling, truss uplift &amp; drywall cracks before
-                  warranty expires</li>
-                <li><span class="chk">✓</span> Holds builder fully accountable for all repairs on their dime</li>
+                <li><span class="chk">✓</span> Includes Pre-Drywall &amp; Final Pre-Check, plus 11-month builder punch-list</li>
+                <li><span class="chk">✓</span> Attic insulation settling, duct seals &amp; crawlspace vapor checks</li>
+                <li><span class="chk">✓</span> Catches structural settling, truss uplift &amp; drywall cracks</li>
+                <li><span class="chk">✓</span> Holds builder fully accountable for repairs on their dime</li>
               </ul>
 
-              <div class="bundle-pricing-action">
-                <div class="bundle-pricing-row">
-                  <div class="bundle-price-wrap">
-                    <span class="bundle-price-from">From</span>
-                    <span class="bundle-amount emerald">$650</span>
-                    <span class="bundle-regular-struck">$1,065</span>
-                  </div>
-                  <span class="bundle-save-pill emerald">Save $415</span>
+              <div class="bundle-pricing-row">
+                <div class="bundle-price-wrap">
+                  <span class="bundle-price-from">From</span>
+                  <span class="bundle-amount emerald">$650</span>
+                  <span class="bundle-regular-struck">$1,065</span>
                 </div>
-                <button type="button"
-                  onclick="openScheduleModal('3-Phase Pre-Drywall, Final Pre-Check &amp; 11-Month Warranty Bundle');"
-                  class="bundle-cta-btn emerald-btn">
-                  <span>Book 3-Phase Bundle</span>
-                  <span class="cta-arrow">&rsaquo;</span>
-                </button>
+                <span class="bundle-save-pill emerald">Save $415</span>
               </div>
+
+              <button type="button"
+                onclick="openScheduleModal('3-Inspection Complete Builder Shield Bundle');"
+                class="bundle-cta-btn emerald-btn">
+                <span>Book 3-Inspection Bundle</span>
+                <span class="cta-arrow">&rsaquo;</span>
+              </button>
             </div>
           </div>
         </div>
