@@ -261,9 +261,9 @@
     }
 
     .insp-hero-checklist {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
       width: 100%;
       padding-top: 24px;
       border-top: 1px solid #e2e8f0;
@@ -1583,6 +1583,163 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ==========================================================================
+       HERO BEFORE/AFTER SLIDER (INSIDE PRE-DRYWALL VS. OUTSIDE COMPLETED HOME)
+       ========================================================================== */
+    .insp-slider-wrapper {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: pan-y;
+      background: #0f172a;
+      cursor: ew-resize;
+    }
+
+    @media (max-width: 992px) {
+      .insp-slider-wrapper {
+        height: 420px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .insp-slider-wrapper {
+        height: 340px;
+      }
+    }
+
+    .insp-slider-img-after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+
+    .insp-slider-clip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      border-right: 3px solid #ffffff;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.45);
+      z-index: 2;
+    }
+
+    .insp-slider-img-before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .insp-slider-badge {
+      position: absolute;
+      top: 18px;
+      background: rgba(15, 23, 42, 0.88);
+      color: #38bdf8;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      z-index: 5;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+    }
+
+    .insp-slider-badge.before {
+      left: 18px;
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .insp-slider-badge.after {
+      right: 18px;
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .insp-slider-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0071e3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 113, 227, 0.6);
+      cursor: ew-resize;
+      z-index: 10;
+      pointer-events: none;
+      border: 3.5px solid #0071e3;
+    }
+
+    .insp-slider-handle .handle-icon {
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      display: inline-block;
+      user-select: none;
+    }
+
+    .insp-slider-hint-pill {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #f1f5f9;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 999px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+      pointer-events: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .insp-slider-hint-pill .hint-pulse {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+      animation: hintBeaconPulse 2s infinite ease-in-out;
+    }
+
+    @keyframes hintBeaconPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+    }
+
   </style>
 </head>
 
@@ -1763,23 +1920,11 @@
                 <span>Call (919) 656 3524</span>
               </a>
             </div>
-            <!-- 6-Point Inspection Value Stack -->
+            <!-- Inspection Value Stack -->
             <div class="insp-hero-checklist">
               <div class="hero-check-item">
                 <span class="icon">✓</span>
                 <span>400+ Point Resale &amp; Buyer Due Diligence</span>
-              </div>
-              <div class="hero-check-item">
-                <span class="icon">✓</span>
-                <span>Pre-Drywall Framing Checks</span>
-              </div>
-              <div class="hero-check-item">
-                <span class="icon">✓</span>
-                <span>Moisture &amp; Water Intrusion Checks</span>
-              </div>
-              <div class="hero-check-item">
-                <span class="icon">✓</span>
-                <span>11-Month Builder Warranty Punch-Lists</span>
               </div>
               <div class="hero-check-item">
                 <span class="icon">✓</span>
@@ -1792,62 +1937,29 @@
             </div>
           </div>
 
-          <!-- Right: High-End Inspection Photo Showcase Card -->
+          <!-- Right: Interactive Pre-Drywall vs. Completed Home Inspection Slider -->
           <div class="insp-hero-right">
             <div class="insp-showcase-card">
-              <div class="showcase-image-frame">
-                <img src="images/home_inspection_hero.jpg" alt="Licensed NC Home Inspector in North Carolina" class="showcase-main-photo">
-                <div class="showcase-overlay-gradient"></div>
+              <div class="insp-slider-wrapper" id="inspSliderWrapper">
+                <!-- Finished Interior Image (Base) -->
+                <img class="insp-slider-img-after" id="inspAfterImg" src="images/finished_interior_hero.jpg" alt="Finished Pre-Purchase Home Inspection">
+                <div class="insp-slider-badge after">Finished Pre-Purchase</div>
 
-                <!-- Floating Glass Badge 1: Top Left -->
-                <div class="glass-pill-badge top-left">
-                  <div class="glass-badge-icon blue">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                      <path d="M9 12l2 2 4-4"></path>
-                    </svg>
-                  </div>
-                  <div class="glass-badge-text">
-                    <span class="glass-badge-title">NC Licensed &amp; Insured</span>
-                    <span class="glass-badge-sub">NCHILB Licensed &amp; Liability Protected</span>
-                  </div>
+                <!-- Pre-Drywall Framing Image (Clipped Left Layer) -->
+                <div class="insp-slider-clip" id="inspSliderClip">
+                  <img class="insp-slider-img-before" id="inspBeforeImg" src="images/pre_drywall_hero.jpg" alt="Pre-Drywall Framing Inspection">
+                  <div class="insp-slider-badge before">Pre-Drywall</div>
                 </div>
 
-                <!-- Floating Glass Badge 2: Staggered Right -->
-                <div class="glass-pill-badge top-right">
-                  <div class="glass-badge-icon emerald">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                      <polyline points="14 2 14 8 20 8"></polyline>
-                      <line x1="16" y1="13" x2="8" y2="13"></line>
-                      <line x1="16" y1="17" x2="8" y2="17"></line>
-                      <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                  </div>
-                  <div class="glass-badge-text">
-                    <span class="glass-badge-title">Same-Day Digital Report</span>
-                    <span class="glass-badge-sub">High-Resolution Photo Summary</span>
-                  </div>
+                <!-- Central Draggable Handle -->
+                <div class="insp-slider-handle" id="inspSliderHandle">
+                  <span class="handle-icon">&#10094;&#10095;</span>
                 </div>
 
-                <!-- Floating Glass Bottom Banner -->
-                <div class="glass-banner-card">
-                  <div class="glass-banner-left">
-                    <div class="glass-banner-icon">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                    </div>
-                    <div class="glass-banner-info">
-                      <span class="glass-banner-title">400+ Point Inspection</span>
-                      <span class="glass-banner-sub">Same-day digital report with high-res photos</span>
-                    </div>
-                  </div>
-                  <button type="button" onclick="openScheduleModal('Home Inspection');" class="glass-banner-cta">
-                    <span>Check Openings</span>
-                    <span>&rsaquo;</span>
-                  </button>
+                <!-- Subtle Bottom Hint -->
+                <div class="insp-slider-hint-pill">
+                  <span class="hint-pulse"></span>
+                  <span>Drag slider to inspect Pre-Drywall vs. Finished Pre-Purchase</span>
                 </div>
               </div>
             </div>
@@ -1898,7 +2010,6 @@
             <div class="pkg-price-row">
               <span class="pkg-price-from">From</span>
               <span class="pkg-price-val" style="color: #4f46e5;">$325</span>
-              <span class="pkg-price-sub">&bull; Rough-in framing</span>
             </div>
             <button type="button" onclick="openScheduleModal('Pre-Drywall Inspection');"
               class="pkg-book-btn indigo">
@@ -1934,7 +2045,6 @@
             <div class="pkg-price-row">
               <span class="pkg-price-from">From</span>
               <span class="pkg-price-val" style="color: #0071e3;">$395</span>
-              <span class="pkg-price-sub">&bull; Base inspection</span>
             </div>
             <button type="button" onclick="openScheduleModal('Buyer Pre-Purchase Inspection');"
               class="pkg-book-btn blue">
@@ -1970,7 +2080,6 @@
             <div class="pkg-price-row">
               <span class="pkg-price-from">From</span>
               <span class="pkg-price-val" style="color: #059669;">$345</span>
-              <span class="pkg-price-sub">&bull; Builder claim report</span>
             </div>
             <button type="button" onclick="openScheduleModal('11-Month Builder Warranty Inspection');"
               class="pkg-book-btn emerald">
@@ -2008,7 +2117,6 @@
             <div class="pkg-price-row">
               <span class="pkg-price-from">From</span>
               <span class="pkg-price-val" style="color: #d97706;">$375</span>
-              <span class="pkg-price-sub">&bull; Pre-listing evaluation</span>
             </div>
             <button type="button" onclick="openScheduleModal('Seller Pre-Listing Inspection');"
               class="pkg-book-btn amber">
@@ -2747,6 +2855,80 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeScheduleModal();
     });
+
+    /* ==========================================================================
+       HERO BEFORE/AFTER SLIDER (INSIDE PRE-DRYWALL VS. OUTSIDE COMPLETED HOME)
+       ========================================================================== */
+    (function initInspSlider() {
+      var wrapper = document.getElementById('inspSliderWrapper');
+      var clip = document.getElementById('inspSliderClip');
+      var handle = document.getElementById('inspSliderHandle');
+      var beforeImg = document.getElementById('inspBeforeImg');
+      if (!wrapper || !clip || !handle || !beforeImg) return;
+
+      var isDragging = false;
+
+      function syncWidth() {
+        if (wrapper && beforeImg) {
+          beforeImg.style.width = wrapper.offsetWidth + 'px';
+        }
+      }
+
+      function setPosition(percent) {
+        if (percent < 5) percent = 5;
+        if (percent > 95) percent = 95;
+        clip.style.width = percent + '%';
+        handle.style.left = percent + '%';
+      }
+
+      function onMove(clientX) {
+        var rect = wrapper.getBoundingClientRect();
+        var x = clientX - rect.left;
+        var percent = (x / rect.width) * 100;
+        setPosition(percent);
+      }
+
+      wrapper.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        onMove(e.clientX);
+      });
+
+      window.addEventListener('mouseup', function() {
+        isDragging = false;
+      });
+
+      window.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        onMove(e.clientX);
+      });
+
+      wrapper.addEventListener('touchstart', function(e) {
+        if (!e.touches || !e.touches[0]) return;
+        isDragging = true;
+        onMove(e.touches[0].clientX);
+      }, { passive: true });
+
+      window.addEventListener('touchend', function() {
+        isDragging = false;
+      });
+
+      window.addEventListener('touchmove', function(e) {
+        if (!isDragging || !e.touches || !e.touches[0]) return;
+        onMove(e.touches[0].clientX);
+      }, { passive: true });
+
+      window.addEventListener('resize', syncWidth);
+
+      // Initialize
+      syncWidth();
+      setPosition(50);
+      if (beforeImg.complete) {
+        syncWidth();
+      } else {
+        beforeImg.addEventListener('load', syncWidth);
+      }
+    })();
+
   </script>
 </body>
 

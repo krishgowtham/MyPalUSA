@@ -61,22 +61,186 @@
       color: #cbd5e1;
     }
 
-    /* Content Layout */
+    /* Full-Page Content Layout Architecture */
     .terms-layout {
-      padding: 60px 0 100px;
+      width: 100%;
+      padding: clamp(36px, 4.5vw, 56px) 0 clamp(80px, 8vw, 120px);
       background: #fbfbfd;
     }
     .terms-container {
-      max-width: 960px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 clamp(20px, 3.5vw, 48px);
+      display: grid;
+      grid-template-columns: 310px minmax(0, 1fr);
+      gap: clamp(28px, 3.5vw, 52px);
+      align-items: start;
+    }
+
+    /* Sticky Sidebar Table of Contents */
+    .terms-sidebar {
+      position: sticky;
+      top: 96px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+    }
+    .terms-sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .terms-sidebar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .terms-toc-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 22px 18px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    }
+    .terms-toc-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .terms-toc-badge {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0071e3;
+    }
+    .terms-toc-count {
+      font-size: 11.5px;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+    .terms-toc-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .terms-toc-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #475569;
+      text-decoration: none;
+      padding: 7px 10px;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+      line-height: 1.35;
+    }
+    .terms-toc-link:hover {
+      background: #f1f5f9;
+      color: #0071e3;
+    }
+    .terms-toc-link.active {
+      background: #eff6ff;
+      color: #0071e3;
+      font-weight: 700;
+    }
+    .terms-toc-link .toc-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      background: #f1f5f9;
+      color: #64748b;
+      font-size: 10.5px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .terms-toc-link.active .toc-num {
+      background: #0071e3;
+      color: #ffffff;
+    }
+
+    .terms-sidebar-help {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .terms-sidebar-help .help-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .terms-sidebar-help p {
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .terms-sidebar-help .help-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0071e3;
+      text-decoration: none;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      transition: all 0.2s ease;
+    }
+    .terms-sidebar-help .help-btn:hover {
+      background: #0071e3;
+      color: #ffffff;
+    }
+
+    /* Right Content Pane */
+    .terms-content-pane {
+      width: 100%;
+      min-width: 0;
     }
     .terms-paper {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 24px;
-      padding: 48px 56px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      padding: clamp(32px, 4vw, 56px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+    .terms-section {
+      scroll-margin-top: 100px;
+    }
+
+    @media (max-width: 1024px) {
+      .terms-container {
+        grid-template-columns: 1fr;
+      }
+      .terms-sidebar {
+        position: static;
+        max-height: none;
+        overflow-y: visible;
+        margin-bottom: 16px;
+      }
+      .terms-toc-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+    }
+    @media (max-width: 640px) {
+      .terms-toc-nav {
+        grid-template-columns: 1fr;
+      }
+      .terms-paper {
+        padding: 24px 18px;
+        border-radius: 18px;
+      }
     }
 
     .terms-preamble {
@@ -404,7 +568,43 @@
   <!-- Content Section -->
   <main class="terms-layout">
     <div class="terms-container">
-      <div class="terms-paper">
+
+      <!-- Left: Sticky Table of Contents Sidebar -->
+      <aside class="terms-sidebar">
+        <div class="terms-toc-card">
+          <div class="terms-toc-header">
+            <span class="terms-toc-badge">Index</span>
+            <span class="terms-toc-count">16 Sections</span>
+          </div>
+          <nav class="terms-toc-nav">
+            <a href="#section-1" class="terms-toc-link"><span class="toc-num">1</span> Services Provided</a>
+            <a href="#section-2" class="terms-toc-link"><span class="toc-num">2</span> Quotes &amp; Pricing</a>
+            <a href="#section-3" class="terms-toc-link"><span class="toc-num">3</span> Payment Terms</a>
+            <a href="#section-4" class="terms-toc-link"><span class="toc-num">4</span> Client Responsibilities</a>
+            <a href="#section-5" class="terms-toc-link"><span class="toc-num">5</span> Scheduling &amp; Delays</a>
+            <a href="#section-6" class="terms-toc-link"><span class="toc-num">6</span> Site Conditions &amp; Defects</a>
+            <a href="#section-7" class="terms-toc-link"><span class="toc-num">7</span> Warranty &amp; Guarantees</a>
+            <a href="#section-8" class="terms-toc-link"><span class="toc-num">8</span> Limitation of Liability</a>
+            <a href="#section-9" class="terms-toc-link"><span class="toc-num">9</span> Indemnification</a>
+            <a href="#section-10" class="terms-toc-link"><span class="toc-num">10</span> Insurance Coverage</a>
+            <a href="#section-11" class="terms-toc-link"><span class="toc-num">11</span> Governing Law (NC)</a>
+            <a href="#section-12" class="terms-toc-link"><span class="toc-num">12</span> Entire Agreement</a>
+            <a href="#section-13" class="terms-toc-link"><span class="toc-num">13</span> Severability</a>
+            <a href="#section-14" class="terms-toc-link"><span class="toc-num">14</span> Amendments</a>
+            <a href="#section-15" class="terms-toc-link"><span class="toc-num">15</span> Acceptance of Terms</a>
+            <a href="#section-16" class="terms-toc-link"><span class="toc-num">16</span> Affiliate Disclosure</a>
+          </nav>
+          <div class="terms-sidebar-help">
+            <div class="help-title">Questions about our terms?</div>
+            <p>Our dispatch &amp; operations team is here to assist.</p>
+            <a href="tel:9196563524" class="help-btn">📞 (919) 656 3524</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right: Comprehensive Terms Document -->
+      <div class="terms-content-pane">
+        <div class="terms-paper">
 
         <!-- Preamble -->
         <div class="terms-preamble">
@@ -412,7 +612,7 @@
         </div>
 
         <!-- Section 1 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-1">
           <h2 class="terms-heading"><span class="terms-num">1</span> Services Provided</h2>
           <p class="terms-text">
             MyPalUSA LLC agrees to perform installation services as detailed in the agreed-upon proposal, quote, or work order ("Scope of Work"). Any changes to the Scope of Work must be agreed upon in writing by both parties and may result in adjustments to the price and schedule.
@@ -420,7 +620,7 @@
         </div>
 
         <!-- Section 2 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-2">
           <h2 class="terms-heading"><span class="terms-num">2</span> Quotes and Pricing</h2>
           <ul class="terms-sublist">
             <li data-letter="a.">All quotes provided by MyPalUSA LLC are valid for <strong>30 days</strong> from the date of issuance unless otherwise stated in writing.</li>
@@ -430,7 +630,7 @@
         </div>
 
         <!-- Section 3 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-3">
           <h2 class="terms-heading"><span class="terms-num">3</span> Payment Terms</h2>
           <ul class="terms-sublist">
             <li data-letter="a.">Unless otherwise agreed in writing, full payment is due upon completion of the installation services.</li>
@@ -441,7 +641,7 @@
         </div>
 
         <!-- Section 4 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-4">
           <h2 class="terms-heading"><span class="terms-num">4</span> Client Responsibilities</h2>
           <p class="terms-text">The Client agrees to:</p>
           <ul class="terms-sublist">
@@ -455,7 +655,7 @@
         </div>
 
         <!-- Section 5 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-5">
           <h2 class="terms-heading"><span class="terms-num">5</span> Scheduling and Delays</h2>
           <ul class="terms-sublist">
             <li data-letter="a.">MyPalUSA LLC will make reasonable efforts to complete the installation within the estimated timeframe. However, all dates and arrival windows are estimates and not strict guarantees.</li>
@@ -474,7 +674,7 @@
         </div>
 
         <!-- Section 6 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-6">
           <h2 class="terms-heading"><span class="terms-num">6</span> Site Conditions and Concealed Defects</h2>
           <ul class="terms-sublist">
             <li data-letter="a.">MyPalUSA LLC is not responsible for pre-existing or latent defects in the Client's property, including but not limited to structural deterioration, non-code compliant electrical wiring, hidden plumbing/gas pipes, termite damage, or unsuitable drywall/framing surfaces.</li>
@@ -483,7 +683,7 @@
         </div>
 
         <!-- Section 7 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-7">
           <h2 class="terms-heading"><span class="terms-num">7</span> Warranty and Guarantees</h2>
           <ul class="terms-sublist">
             <li data-letter="a.">MyPalUSA LLC warrants that all installation services will be performed in a professional and workmanlike manner, in accordance with recognized industry standards.</li>
@@ -502,7 +702,7 @@
         </div>
 
         <!-- Section 8 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-8">
           <h2 class="terms-heading"><span class="terms-num">8</span> Limitation of Liability</h2>
           <ul class="terms-sublist">
             <li data-letter="a.">To the fullest extent permitted by applicable law, MyPalUSA LLC's total aggregate liability for any claim arising out of or relating to these services, whether in contract, tort (including negligence), or otherwise, shall not exceed the total amount paid by the Client to MyPalUSA LLC for the specific services giving rise to the claim.</li>
@@ -511,7 +711,7 @@
         </div>
 
         <!-- Section 9 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-9">
           <h2 class="terms-heading"><span class="terms-num">9</span> Indemnification</h2>
           <p class="terms-text">
             The Client agrees to indemnify, defend, and hold harmless MyPalUSA LLC, its officers, employees, contractors, and agents from and against any and all claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with the Client's breach of these Terms &amp; Conditions, the Client's negligence or willful misconduct, or any third-party claims arising from the Client's use of the installed services or equipment.
@@ -519,7 +719,7 @@
         </div>
 
         <!-- Section 10 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-10">
           <h2 class="terms-heading"><span class="terms-num">10</span> Insurance</h2>
           <p class="terms-text">
             MyPalUSA LLC maintains commercial general liability insurance. We recommend that the Client maintain appropriate homeowner's, renter's, or commercial property insurance to cover their property and any potential liabilities.
@@ -527,7 +727,7 @@
         </div>
 
         <!-- Section 11 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-11">
           <h2 class="terms-heading"><span class="terms-num">11</span> Governing Law and Dispute Resolution</h2>
           <ul class="terms-sublist">
             <li data-letter="a.">This Agreement shall be governed by and construed in accordance with the laws of the <strong>State of North Carolina</strong>, without regard to its conflict of law principles.</li>
@@ -538,7 +738,7 @@
         </div>
 
         <!-- Section 12 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-12">
           <h2 class="terms-heading"><span class="terms-num">12</span> Entire Agreement</h2>
           <p class="terms-text">
             These Terms &amp; Conditions, together with any agreed-upon Scope of Work, proposal, or written work order, constitute the entire agreement between MyPalUSA LLC and the Client regarding the services provided and supersede all prior and contemporaneous agreements, proposals, representations, and understandings, whether written or oral.
@@ -546,7 +746,7 @@
         </div>
 
         <!-- Section 13 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-13">
           <h2 class="terms-heading"><span class="terms-num">13</span> Severability</h2>
           <p class="terms-text">
             If any provision of these Terms &amp; Conditions is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall remain in full force and effect.
@@ -554,7 +754,7 @@
         </div>
 
         <!-- Section 14 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-14">
           <h2 class="terms-heading"><span class="terms-num">14</span> Amendments</h2>
           <p class="terms-text">
             These Terms &amp; Conditions may only be amended in writing and signed or formally agreed to by authorized representatives of both MyPalUSA LLC and the Client.
@@ -562,7 +762,7 @@
         </div>
 
         <!-- Section 15 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-15">
           <h2 class="terms-heading"><span class="terms-num">15</span> Acceptance of Terms</h2>
           <p class="terms-text">
             By accepting a quote, signing an estimate or invoice, scheduling an appointment, or allowing MyPalUSA LLC technicians to commence work, the Client acknowledges that they have read, understood, and agree to be bound by these Terms &amp; Conditions.
@@ -570,7 +770,7 @@
         </div>
 
         <!-- Section 16 -->
-        <div class="terms-section">
+        <div class="terms-section" id="section-16">
           <h2 class="terms-heading"><span class="terms-num">16</span> External Links &amp; Affiliate Disclosure</h2>
           <p class="terms-text">
             Our website or digital materials may contain links to third-party websites, hardware products, or services. If you click on an external link and make a purchase or take a specified action, MyPalUSA LLC may receive a small affiliate commission or referral fee at no additional cost to you. MyPalUSA LLC is not responsible for the content, privacy policies, or practices of any third-party websites or services linked from our platform.
@@ -593,6 +793,7 @@
           </div>
         </div>
 
+        </div>
       </div>
     </div>
   </main>
@@ -778,6 +979,36 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeScheduleModal();
     });
+  </script>
+
+  <script>
+    (function initTermsToc() {
+      var links = document.querySelectorAll('.terms-toc-link');
+      var sections = document.querySelectorAll('.terms-section[id]');
+      if (!links.length || !sections.length) return;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.getAttribute('id');
+            links.forEach(function(link) {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: '-80px 0px -70% 0px',
+        threshold: 0
+      });
+
+      sections.forEach(function(sec) {
+        observer.observe(sec);
+      });
+    })();
   </script>
 </body>
 </html>
