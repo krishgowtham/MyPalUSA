@@ -77,6 +77,154 @@
       text-align: center;
       background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
     }
+    /* Blended Hero Banner */
+    .detail-hero.blended-hero {
+      position: relative;
+      width: 100%;
+      min-height: 520px;
+      overflow: hidden;
+      background-color: #f8fafc;
+      padding: clamp(56px, 7vw, 90px) 0 clamp(48px, 6vw, 76px);
+      text-align: left;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .blended-hero-bg-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      background-position: right center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .blended-hero-gradient-veil {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(
+        to right,
+        #f8fafc 0%,
+        #f8fafc 38%,
+        rgba(248, 250, 252, 0.95) 48%,
+        rgba(248, 250, 252, 0.60) 65%,
+        rgba(248, 250, 252, 0.15) 85%,
+        transparent 100%
+      );
+    }
+
+    .blended-hero-bottom-blend {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+    }
+
+    .blended-hero-content {
+      position: relative;
+      z-index: 5;
+      max-width: 680px;
+    }
+
+    .detail-hero.blended-hero h1 {
+      font-size: clamp(30px, 3.8vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.18;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+      text-align: left;
+    }
+
+    .detail-hero.blended-hero p.lead {
+      font-size: clamp(15.5px, 1.4vw, 18.5px);
+      line-height: 1.55;
+      color: #4a5568;
+      margin: 0 0 28px;
+      max-width: 100%;
+      text-align: left;
+    }
+
+    .detail-hero.blended-hero .hero-btn-group {
+      justify-content: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .blended-hero-badges {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 6px;
+      font-size: 13.5px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .blended-hero-badge-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    @media (max-width: 1024px) {
+      .blended-hero-bg-img {
+        width: 60%;
+      }
+      .blended-hero-gradient-veil {
+        background: linear-gradient(
+          to right,
+          #f8fafc 0%,
+          #f8fafc 42%,
+          rgba(248, 250, 252, 0.94) 58%,
+          rgba(248, 250, 252, 0.55) 75%,
+          transparent 100%
+        );
+      }
+    }
+
+    @media (max-width: 768px) {
+      .detail-hero.blended-hero {
+        min-height: auto;
+        padding-top: 50px;
+      }
+      .blended-hero-bg-img {
+        width: 100%;
+        opacity: 0.22;
+      }
+      .blended-hero-gradient-veil {
+        background: linear-gradient(
+          to bottom,
+          rgba(248, 250, 252, 0.96) 0%,
+          rgba(248, 250, 252, 0.88) 100%
+        );
+      }
+      .blended-hero-content {
+        max-width: 100%;
+      }
+      .detail-hero.blended-hero .hero-btn-group {
+        flex-direction: column;
+        width: 100%;
+      }
+      .detail-hero.blended-hero .hero-btn-group a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
     .detail-container {
       max-width: 1440px;
       width: 100%;
@@ -97,21 +245,21 @@
       margin-bottom: 18px;
     }
     .detail-hero h1 {
-      font-size: clamp(32px, 4.5vw, 56px);
+      font-size: clamp(28px, 3.4vw, 48px);
       font-weight: 700;
       letter-spacing: -0.025em;
-      line-height: 1.15;
+      line-height: 1.2;
       color: #1d1d1f;
       margin-bottom: 18px;
-      max-width: 960px;
+      max-width: 1300px;
       margin-left: auto;
       margin-right: auto;
     }
     .detail-hero p.lead {
-      font-size: clamp(17px, 2vw, 21px);
+      font-size: clamp(15.5px, 1.4vw, 19px);
       line-height: 1.55;
       color: #6e6e73;
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto 36px;
     }
     .hero-btn-group {
@@ -734,20 +882,40 @@
     </div>
   </div>
 
-  <!-- Detail Hero -->
-  <section class="detail-hero">
-    <div class="detail-container">
-      <span class="eyebrow-teal">Intelligent Lighting</span>
-      <h1>Architectural Control. Matter, HomeKit & Multi-Way Precision.</h1>
-      <p class="lead">Automated lighting scenes, neutral wire calibration, and flush screwless decorator finishes.</p>
+    <!-- Detail Hero: Blended Photography Banner -->
+  <section class="detail-hero blended-hero">
+    <!-- Photographic Background Layer - Visible More Towards Right Side -->
+    <div class="blended-hero-bg-img" style="background-image: url('images/smart_home_auto.jpg');"></div>
 
-      <div class="hero-btn-group">
+    <!-- Soft Horizontal & Bottom Gradient Veils -->
+    <div class="blended-hero-gradient-veil"></div>
+    <div class="blended-hero-bottom-blend"></div>
+
+    <div class="detail-container" style="position: relative; z-index: 5; width: 100%;">
+      <div class="blended-hero-content">
+        <span class="eyebrow-teal">Intelligent Lighting</span>
+        <h1>Architectural Control. Matter, HomeKit & Multi-Way Precision.</h1>
+        <p class="lead">Automated lighting scenes, neutral wire calibration, and flush screwless decorator finishes.</p>
+
+        <div class="hero-btn-group">
         <a href="tel:9196563524" class="btn-hero-primary"><span class="btn-icon">📞</span><span>Call (919) 656 3524</span></a>
         <a href="javascript:void(0)" onclick="openScheduleModal('Smart Switches & Automation');" class="btn-hero-primary"><span class="btn-icon">📅</span><span>Schedule Installation &rsaquo;</span></a>
       </div>
 
-      <div class="hero-image-wrap">
-        <img src="images/smart_home_auto.jpg" alt="Smart Switches & Automation by MyPalUSA">
+        <div class="blended-hero-badges">
+          <span class="blended-hero-badge-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>No Neutral Wire Solutions</span>
+          </span>
+          <span class="blended-hero-badge-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Matter & Apple HomeKit Certified</span>
+          </span>
+          <span class="blended-hero-badge-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Multi-Way & Dimmer Calibration</span>
+          </span>
+        </div>
       </div>
     </div>
   </section>
