@@ -646,6 +646,17 @@
       box-shadow: 0 18px 42px rgba(217, 119, 6, 0.16);
     }
 
+    .package-card.featured-teal {
+      border: 2px solid #0d9488;
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(13, 148, 136, 0.08);
+    }
+
+    .package-card.featured-teal:hover {
+      border-color: #0f766e;
+      box-shadow: 0 18px 42px rgba(13, 148, 136, 0.16);
+    }
+
     .featured-ribbon {
       position: absolute;
       top: -12px;
@@ -670,6 +681,10 @@
 
     .featured-ribbon.amber {
       background: #d97706;
+    }
+
+    .featured-ribbon.teal {
+      background: #0d9488;
     }
 
     .featured-ribbon.emerald {
@@ -719,6 +734,12 @@
       background: #fffbeb;
       border-color: #fde68a;
       color: #d97706;
+    }
+
+    .pkg-icon-wrap.teal {
+      background: #f0fdfa;
+      border-color: #99f6e4;
+      color: #0d9488;
     }
 
     .pkg-icon-wrap.sky {
@@ -865,6 +886,18 @@
       background: #b45309;
       transform: translateY(-2px);
       box-shadow: 0 6px 18px rgba(217, 119, 6, 0.35);
+    }
+
+    .pkg-book-btn.teal {
+      background: #0d9488;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(13, 148, 136, 0.25);
+    }
+
+    .pkg-book-btn.teal:hover {
+      background: #0f766e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(13, 148, 136, 0.35);
     }
 
     /* ==========================================================================
@@ -2108,10 +2141,10 @@
           </div>
 
           <!-- Package 4: Seller Pre-Listing -->
-          <div class="package-card featured-amber" id="pkg-pre-listing">
-            <span class="featured-ribbon amber">Listing Ready</span>
+          <div class="package-card featured-teal" id="pkg-pre-listing">
+            <span class="featured-ribbon teal">Listing Ready</span>
             <div class="pkg-top">
-              <div class="pkg-icon-wrap amber">
+              <div class="pkg-icon-wrap teal">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round">
                   <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
@@ -2135,10 +2168,10 @@
             </ul>
             <div class="pkg-price-row">
               <span class="pkg-price-from">From</span>
-              <span class="pkg-price-val" style="color: #d97706;">$375</span>
+              <span class="pkg-price-val" style="color: #0d9488;">$375</span>
             </div>
             <button type="button" onclick="openScheduleModal('Seller Pre-Listing Inspection');"
-              class="pkg-book-btn amber">
+              class="pkg-book-btn teal">
               <span>Book Pre-Listing</span>
               <span>&rsaquo;</span>
             </button>
