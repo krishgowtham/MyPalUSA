@@ -1792,6 +1792,110 @@
       50% { opacity: 0.4; transform: scale(1.3); }
     }
 
+
+    /* ==========================================================================
+       CINEMATIC LIGHT HERO BANNER (Home Blended on Right Side)
+       ========================================================================== */
+    .insp-hero-outer.insp-hero-banner {
+      position: relative;
+      width: 100%;
+      min-height: 580px;
+      overflow: hidden;
+      background-color: #f0f7ff;
+      border-bottom: 1px solid var(--insp-gray-border);
+      padding: clamp(110px, 11vw, 140px) 0 clamp(56px, 6.5vw, 84px);
+      display: flex;
+      align-items: center;
+    }
+
+    /* Photographic Background Layer - Visible More Towards Right Side */
+    .hero-banner-bg-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      background-image: url('images/home_banner_bg.jpg');
+      background-position: right center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Velvet Horizontal Gradient Veil */
+    .hero-banner-gradient-veil {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      /* Solid light blue on left (where text sits), smoothly revealing the home on the right */
+      background: linear-gradient(
+        to right,
+        #f0f7ff 0%,
+        #f0f7ff 38%,
+        rgba(240, 247, 255, 0.94) 48%,
+        rgba(240, 247, 255, 0.55) 65%,
+        rgba(240, 247, 255, 0.15) 85%,
+        transparent 100%
+      );
+    }
+
+    /* Bottom Soft Blend into Next Section */
+    .hero-banner-bottom-blend {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 90px;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+    }
+
+    .hero-banner-content-wrap {
+      position: relative;
+      z-index: 5;
+      max-width: 650px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-banner-bg-img {
+        width: 60%;
+      }
+      .hero-banner-gradient-veil {
+        background: linear-gradient(
+          to right,
+          #f0f7ff 0%,
+          #f0f7ff 42%,
+          rgba(240, 247, 255, 0.92) 56%,
+          rgba(240, 247, 255, 0.5) 75%,
+          transparent 100%
+        );
+      }
+    }
+
+    @media (max-width: 860px) {
+      .insp-hero-outer.insp-hero-banner {
+        min-height: auto;
+        padding-top: 100px;
+      }
+      .hero-banner-bg-img {
+        width: 100%;
+        opacity: 0.28;
+      }
+      .hero-banner-gradient-veil {
+        background: linear-gradient(
+          to bottom,
+          rgba(240, 247, 255, 0.96) 0%,
+          rgba(240, 247, 255, 0.9) 100%
+        );
+      }
+      .hero-banner-content-wrap {
+        max-width: 100%;
+      }
+    }
+
   </style>
 </head>
 
@@ -1935,88 +2039,65 @@
 
   <div class="fullpage-wrapper">
 
-    <!-- 1. FULL-WIDTH HERO SECTION -->
-    <section class="insp-hero-outer">
-      <div class="fluid-container">
-        <div class="insp-hero-grid">
+    <!-- 1. CINEMATIC LIGHT HERO BANNER (Home Blended on Right Side) -->
+    <section class="insp-hero-outer insp-hero-banner">
+      <!-- Background Image Layer: Visible prominently towards right side -->
+      <div class="hero-banner-bg-img"></div>
 
-          <!-- Left Column -->
-          <div class="insp-hero-left">
-            <span class="insp-hero-pill">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      <!-- Velvet Horizontal & Vertical Gradient Blend -->
+      <div class="hero-banner-gradient-veil"></div>
+      <div class="hero-banner-bottom-blend"></div>
+
+      <div class="fluid-container" style="position: relative; z-index: 5; width: 100%;">
+        <div class="hero-banner-content-wrap">
+          <span class="insp-hero-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>RESIDENTIAL ASSURANCE &amp; SAFETY</span>
+          </span>
+
+          <h1 class="insp-hero-title">Comprehensive <span>Home Inspection.</span></h1>
+
+          <p class="insp-hero-desc">
+            Objective, tech-driven property evaluations across North Carolina's Research Triangle. Specializing in
+            Buyer's Pre-Purchase, New Construction Pre-Drywall, 11-Month Builder Warranty, and Seller Pre-Listing
+            inspections.
+          </p>
+
+          <div class="insp-hero-btns">
+            <button type="button" onclick="openScheduleModal('Home Inspection');" class="insp-btn-primary">
+              <span>Book Your Inspection Now</span>
+              <span style="font-size: 17px;">&rsaquo;</span>
+            </button>
+            <a href="tel:9196563524" class="insp-btn-secondary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
               </svg>
-              <span>RESIDENTIAL ASSURANCE &amp; SAFETY</span>
-            </span>
-            <h1 class="insp-hero-title">Comprehensive <span>Home Inspection.</span></h1>
-            <p class="insp-hero-desc">
-              Objective, tech-driven property evaluations across North Carolina's Research Triangle. Specializing in
-              Buyer's Pre-Purchase, New Construction Pre-Drywall, 11-Month Builder Warranty, and Seller Pre-Listing
-              inspections.
-            </p>
-
-            <div class="insp-hero-btns">
-              <button type="button" onclick="openScheduleModal('Home Inspection');" class="insp-btn-primary">
-                <span>Book Your Inspection Now</span>
-                <span style="font-size: 17px;">&rsaquo;</span>
-              </button>
-              <a href="tel:9196563524" class="insp-btn-secondary">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                  </path>
-                </svg>
-                <span>Call (919) 656 3524</span>
-              </a>
-            </div>
-            <!-- Inspection Value Stack -->
-            <div class="insp-hero-checklist">
-              <div class="hero-check-item">
-                <span class="icon">✓</span>
-                <span>400+ Point Resale &amp; Buyer Due Diligence</span>
-              </div>
-              <div class="hero-check-item">
-                <span class="icon">✓</span>
-                <span>Same-Day Digital PDF Reports with Photos</span>
-              </div>
-              <div class="hero-check-item">
-                <span class="icon">✓</span>
-                <span>NC Licensed &amp; Fully Insured</span>
-              </div>
-            </div>
+              <span>Call (919) 656 3524</span>
+            </a>
           </div>
 
-          <!-- Right: Interactive Pre-Drywall vs. Completed Home Inspection Slider -->
-          <div class="insp-hero-right">
-            <div class="insp-showcase-card">
-              <div class="insp-slider-wrapper" id="inspSliderWrapper">
-                <!-- Finished Interior Image (Base) -->
-                <img class="insp-slider-img-after" id="inspAfterImg" src="images/finished_interior_hero.jpg" alt="Finished Pre-Purchase Home Inspection">
-                <div class="insp-slider-badge after">Finished Pre-Purchase</div>
-
-                <!-- Pre-Drywall Framing Image (Clipped Left Layer) -->
-                <div class="insp-slider-clip" id="inspSliderClip">
-                  <img class="insp-slider-img-before" id="inspBeforeImg" src="images/pre_drywall_hero.jpg" alt="Pre-Drywall Framing Inspection">
-                  <div class="insp-slider-badge before">Pre-Drywall</div>
-                </div>
-
-                <!-- Central Draggable Handle -->
-                <div class="insp-slider-handle" id="inspSliderHandle">
-                  <span class="handle-icon">&#10094;&#10095;</span>
-                </div>
-
-                <!-- Subtle Bottom Hint -->
-                <div class="insp-slider-hint-pill">
-                  <span class="hint-pulse"></span>
-                  <span>Drag slider to inspect Pre-Drywall vs. Finished Pre-Purchase</span>
-                </div>
-              </div>
+          <!-- Inspection Value Stack -->
+          <div class="insp-hero-checklist">
+            <div class="hero-check-item">
+              <span class="icon">✓</span>
+              <span>400+ Point Resale &amp; Buyer Due Diligence</span>
+            </div>
+            <div class="hero-check-item">
+              <span class="icon">✓</span>
+              <span>Same-Day Digital PDF Reports with Photos</span>
+            </div>
+            <div class="hero-check-item">
+              <span class="icon">✓</span>
+              <span>NC Licensed &amp; Fully Insured</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>
