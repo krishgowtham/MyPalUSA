@@ -49,30 +49,71 @@
     }
 
     .about-hero {
-      background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
-      color: #1d1d1f;
-      padding: clamp(60px, 8vw, 96px) 24px clamp(40px, 5vw, 64px);
+      position: relative;
+      background:
+        radial-gradient(850px 520px at 85% 25%, rgba(0, 113, 227, 0.42) 0%, rgba(99, 102, 241, 0.22) 42%, transparent 75%),
+        radial-gradient(700px 450px at 15% 20%, rgba(14, 165, 233, 0.28) 0%, rgba(59, 130, 246, 0.10) 45%, transparent 68%),
+        radial-gradient(900px 400px at 50% 10%, rgba(30, 58, 138, 0.35) 0%, transparent 70%),
+        linear-gradient(155deg, #090e1a 0%, #0b152d 38%, #0f1c3f 70%, #080d1a 100%);
+      color: #ffffff;
+      padding: clamp(65px, 8vw, 95px) 24px clamp(50px, 6vw, 75px);
       text-align: center;
-      border-bottom: 1px solid #e5e5ea;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: 6%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.45) 0%, rgba(56, 189, 248, 0.22) 45%, transparent 70%);
+      filter: blur(65px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      left: 8%;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(168, 85, 247, 0.18) 45%, transparent 70%);
+      filter: blur(70px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .about-hero .apple-container {
+      position: relative;
+      z-index: 2;
     }
     .about-hero h1 {
-      font-size: clamp(36px, 5.5vw, 62px);
+      font-size: clamp(38px, 5.5vw, 64px);
       font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      color: #1d1d1f;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      margin-bottom: 16px;
+      color: #ffffff;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
     }
     .about-hero h1 span {
-      color: #0071e3;
+      background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 45%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
     .about-lead {
-      font-size: clamp(17px, 1.8vw, 20px);
-      color: #515154;
-      max-width: 1040px;
-      margin: 0 auto 36px;
+      font-size: clamp(16px, 2vw, 19px);
+      color: #cbd5e1;
+      max-width: 760px;
+      margin: 0 auto;
       line-height: 1.6;
       font-weight: 400;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     /* Core Story Grid */
@@ -184,17 +225,14 @@
           </a>
           <div class="nav-dropdown-menu simple-menu inspection-menu">
             <div class="nav-dropdown-header">
-              <span class="nav-dropdown-title">INSPECTION PACKAGES</span>
+              <span class="nav-dropdown-title">HOME INSPECTION</span>
             </div>
             <div class="nav-dropdown-list">
-              <a href="home-inspection.html#pkg-pre-drywall" class="nav-dropdown-item simple">Pre-Drywall</a>
-              <a href="home-inspection.html#pkg-pre-purchase" class="nav-dropdown-item simple">Buyer's Pre-Purchase</a>
-              <a href="home-inspection.html#pkg-builder-warranty" class="nav-dropdown-item simple">11-Month Builder Warranty</a>
-              <a href="home-inspection.html#pkg-pre-listing" class="nav-dropdown-item simple">Seller's Pre-Listing</a>
+              <a href="home-inspection.html#packages" class="nav-dropdown-item simple">Inspection Packages</a>
               <div class="nav-dropdown-divider"></div>
               <a href="home-inspection.html#pkg-phase-bundle" class="nav-dropdown-item simple bundle-link">
                 <span>Bundle Promotions</span>
-                <span class="dropdown-save-tag">Save </span>
+                <span class="dropdown-save-tag">Save $415</span>
               </a>
             </div>
           </div>
@@ -226,11 +264,8 @@
           Home Inspection Services <span class="accordion-arrow">▾</span>
         </summary>
         <div class="mobile-sublinks">
-          <a href="home-inspection.html#pkg-pre-drywall" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Pre-Drywall Inspection</span></a>
-          <a href="home-inspection.html#pkg-pre-purchase" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Buyer's Pre-Purchase Inspection</span></a>
-          <a href="home-inspection.html#pkg-builder-warranty" onclick="toggleMobileMenu();" class="mobile-sublink"><span>11-Month Builder Warranty</span></a>
-          <a href="home-inspection.html#pkg-pre-listing" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Seller's Pre-Listing Inspection</span></a>
-          <a href="home-inspection.html#pkg-phase-bundle" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Bundle Promotions</span></a>
+          <a href="home-inspection.html#packages" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Inspection Packages</span></a>
+          <a href="home-inspection.html#pkg-phase-bundle" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Bundle Promotions (Save $415)</span></a>
         </div>
       </details>
       <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
@@ -243,16 +278,12 @@
 
   <!-- About Hero -->
   <section class="about-hero">
-    <div class="site-container">
-      <span class="hero-badge" style="display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #0071e3; background: #eef6ff; border: 1px solid #d0e4ff; padding: 5px 14px; border-radius: 20px; margin-bottom: 16px;">Our Story &amp; Mission</span>
+    <div class="apple-container">
+      <span class="hero-badge" style="display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #60a5fa; background: rgba(30, 58, 138, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(96, 165, 250, 0.35); padding: 6px 18px; border-radius: 980px; margin-bottom: 18px; box-shadow: 0 4px 18px rgba(0, 113, 227, 0.25);">Our Story &amp; Mission</span>
       <h1>Where Talent Meets Opportunity.<br><span>Great Value for Less Money.</span></h1>
       <p class="about-lead">
         Founded in 2023 with a sincere vision: making high-end residential installation, smart home automation, and precision craftsmanship truly accessible and affordable for every North Carolina family.
       </p>
-      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-        <button type="button" onclick="openScheduleModal();" class="btn-pill primary" style="padding: 13px 28px; font-size: 15px;">Schedule Service Now &rsaquo;</button>
-        <a href="installation.html" class="btn-pill secondary" style="padding: 13px 26px; font-size: 15px;">Explore Services &rsaquo;</a>
-      </div>
     </div>
   </section>
 
@@ -373,7 +404,7 @@
       
       <div class="modal-contact-grid">
         <a href="tel:9196563524" class="modal-contact-card">
-          <div class="modal-icon-badge">📞</div>
+          <div class="modal-icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
           <div class="modal-contact-info">
             <span class="modal-contact-title">Direct Phone &amp; SMS</span>
             <span class="modal-contact-value">(919) 656 3524</span>
@@ -389,7 +420,7 @@
         </a>
 
         <a href="mailto:mypalusallc@gmail.com?subject=Installation%20Schedule%20Request%20-%20MyPalUSA" class="modal-contact-card">
-          <div class="modal-icon-badge">✉️</div>
+          <div class="modal-icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
           <div class="modal-contact-info">
             <span class="modal-contact-title">Direct Email Dispatch</span>
             <span class="modal-contact-value">mypalusallc@gmail.com</span>

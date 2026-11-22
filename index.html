@@ -26,76 +26,343 @@
     padding: 0;
   }
 
-  /* 1. Hero Section (Image 2 Match: Blue Theme + Logo Card) */
-  .hero-outer {
+  /* 1. Hero Section (Unified Dark Midnight Mesh Gradient + Floating Backlit Logo Card) */
+  .hero-outer.hero-banner-home {
+    position: relative;
     width: 100%;
-    background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
-    border-bottom: 1px solid #e5e5ea;
-    padding: clamp(48px, 6vw, 76px) clamp(20px, 4vw, 48px);
+    min-height: 560px;
+    background:
+      radial-gradient(850px 520px at 85% 30%, rgba(0, 113, 227, 0.42) 0%, rgba(99, 102, 241, 0.22) 42%, transparent 75%),
+      radial-gradient(700px 450px at 15% 20%, rgba(14, 165, 233, 0.28) 0%, rgba(59, 130, 246, 0.10) 45%, transparent 68%),
+      radial-gradient(900px 400px at 50% 10%, rgba(30, 58, 138, 0.35) 0%, transparent 70%),
+      linear-gradient(155deg, #090e1a 0%, #0b152d 38%, #0f1c3f 70%, #080d1a 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: clamp(65px, 8vw, 95px) 0 clamp(55px, 7vw, 85px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
   }
+
+  .hero-outer.hero-banner-home::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: 8%;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(0, 113, 227, 0.45) 0%, rgba(56, 189, 248, 0.22) 45%, transparent 70%);
+    filter: blur(65px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-outer.hero-banner-home::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    left: 8%;
+    width: 440px;
+    height: 440px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(168, 85, 247, 0.18) 45%, transparent 70%);
+    filter: blur(70px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Two-column layout: 60% Content on Left, 40% Logo Showcase on Right */
   .hero-inner {
-    max-width: 1280px;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 1320px;
     margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 48px);
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     gap: clamp(32px, 5vw, 64px);
     align-items: center;
   }
+
   .hero-badge {
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #0071e3;
-    background: #eef6ff;
-    border: 1px solid #d0e4ff;
-    padding: 5px 14px;
-    border-radius: 20px;
-    margin-bottom: 16px;
+    color: #60a5fa;
+    background: rgba(30, 58, 138, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    padding: 6px 18px;
+    border-radius: 980px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 18px rgba(0, 113, 227, 0.25);
+  }
+  .hero-content {
+    max-width: 620px;
   }
   .hero-content h2 {
     font-size: clamp(36px, 4.5vw, 56px);
     font-weight: 800;
     letter-spacing: -0.03em;
-    line-height: 1.1;
-    color: #1d1d1f;
+    line-height: 1.12;
+    color: #ffffff;
     margin-bottom: 16px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
   }
   .hero-content h2 span {
-    color: #0071e3;
+    background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 45%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
   }
   .hero-content p {
     font-size: clamp(16px, 2vw, 18.5px);
-    color: #6e6e73;
-    line-height: 1.55;
+    color: #cbd5e1;
+    line-height: 1.6;
     margin-bottom: 28px;
     max-width: 580px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
   .hero-btns {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
   }
-  .hero-image-pane {
+
+  /* Right 40% Showcase: 3D Standing Logo on Orbital Portal Rings */
+  .hero-3d-stage {
+    position: relative;
     width: 100%;
-    background: #ffffff;
-    border: 1px solid #e5e5ea;
-    border-radius: 22px;
-    box-shadow: 0 16px 40px rgba(0, 113, 227, 0.08);
-    padding: clamp(28px, 4.5vw, 48px);
+    max-width: 500px;
+    height: 460px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 320px;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    margin: 0 auto;
   }
-  .hero-logo-img {
+
+  /* Core Ambient Radial Aura */
+  .portal-orb-glow {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 113, 227, 0.45) 0%, rgba(99, 102, 241, 0.28) 45%, rgba(56, 189, 248, 0.12) 70%, transparent 85%);
+    filter: blur(40px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Concentric Portal Rings (Inspired by 3D Avatar Portal) */
+  .portal-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .portal-ring-outer {
+    width: 420px;
+    height: 420px;
+    border: 2px dashed rgba(56, 189, 248, 0.35);
+    box-shadow: 0 0 35px rgba(0, 113, 227, 0.25), inset 0 0 30px rgba(0, 113, 227, 0.15);
+    animation: portalSpinClockwise 45s linear infinite;
+  }
+
+  .portal-ring-middle {
+    width: 370px;
+    height: 370px;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, rgba(0, 113, 227, 0.6), rgba(168, 85, 247, 0.5), rgba(56, 189, 248, 0.45)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    box-shadow: 0 0 25px rgba(0, 113, 227, 0.3);
+  }
+
+  .portal-ring-inner {
+    width: 320px;
+    height: 320px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    background: radial-gradient(circle, rgba(15, 28, 63, 0.85) 0%, rgba(11, 21, 45, 0.95) 75%);
+    box-shadow: inset 0 0 35px rgba(0, 113, 227, 0.35);
+  }
+
+  @keyframes portalSpinClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* 3D Elevated Standing Logo Card */
+  .logo-3d-card {
+    position: relative;
+    z-index: 10;
+    width: 390px;
+    max-width: 88%;
+    background: #ffffff;
+    border-radius: 26px;
+    padding: 30px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: perspective(1000px) rotateY(-8deg) rotateX(4deg) translateZ(35px);
+    box-shadow:
+      -18px 26px 65px -8px rgba(0, 0, 0, 0.75),
+      0 0 50px rgba(0, 113, 227, 0.4),
+      0 0 100px rgba(99, 102, 241, 0.25),
+      inset 0 1px 1px rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+  }
+
+  .hero-3d-stage:hover .logo-3d-card {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) translateZ(55px);
+    box-shadow:
+      -22px 32px 80px -6px rgba(0, 0, 0, 0.85),
+      0 0 65px rgba(0, 113, 227, 0.55),
+      0 0 120px rgba(99, 102, 241, 0.35);
+  }
+
+  .logo-3d-img {
     width: 100%;
-    max-width: 480px;
+    max-width: 330px;
     height: auto;
-    max-height: 280px;
     object-fit: contain;
     display: block;
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.12));
+  }
+
+  /* Floating 3D Badges with Icons (Matching Reference) */
+  .float-3d-badge {
+    position: absolute;
+    z-index: 15;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 113, 227, 0.25);
+    transition: transform 0.4s ease;
+  }
+
+  .badge-shield {
+    top: 24px;
+    left: -10px;
+    transform: translateZ(65px) rotate(-2deg);
+    animation: badgeFloatA 6s ease-in-out infinite;
+  }
+
+  .badge-guarantee {
+    bottom: 26px;
+    right: -8px;
+    transform: translateZ(60px) rotate(2deg);
+    animation: badgeFloatB 6.5s ease-in-out infinite 1s;
+  }
+
+  @keyframes badgeFloatA {
+    0%, 100% { transform: translateZ(65px) rotate(-2deg) translateY(0); }
+    50% { transform: translateZ(65px) rotate(-2deg) translateY(-8px); }
+  }
+
+  @keyframes badgeFloatB {
+    0%, 100% { transform: translateZ(60px) rotate(2deg) translateY(0); }
+    50% { transform: translateZ(60px) rotate(2deg) translateY(8px); }
+  }
+
+  .badge-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .shield-glow {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(5, 150, 105, 0.45));
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #34d399;
+  }
+
+  .check-glow {
+    background: linear-gradient(135deg, rgba(0, 113, 227, 0.3), rgba(59, 130, 246, 0.5));
+    border: 1px solid rgba(96, 165, 250, 0.5);
+    color: #60a5fa;
+  }
+
+  .badge-text-box {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .badge-micro-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #94a3b8;
+  }
+
+  .badge-main-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  @media (max-width: 960px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hero-content {
+      max-width: 100%;
+    }
+    .hero-3d-stage {
+      height: 380px;
+      max-width: 420px;
+      margin-top: 15px;
+    }
+    .portal-ring-outer {
+      width: 330px;
+      height: 330px;
+    }
+    .portal-ring-middle {
+      width: 290px;
+      height: 290px;
+    }
+    .portal-ring-inner {
+      width: 250px;
+      height: 250px;
+    }
+    .portal-orb-glow {
+      width: 270px;
+      height: 270px;
+    }
+    .logo-3d-card {
+      width: 310px;
+      padding: 22px;
+      transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateZ(25px);
+    }
+    .badge-shield {
+      left: 0;
+      top: 10px;
+    }
+    .badge-guarantee {
+      right: 0;
+      bottom: 15px;
+    }
   }
 
   /* Pill Buttons (Blue Theme) */
@@ -125,6 +392,25 @@
   .btn-pill.secondary:hover {
     background: #e8e8ed;
     border-color: #86868b;
+  }
+  .hero-content .btn-pill.primary {
+    box-shadow: 0 4px 16px rgba(0, 113, 227, 0.4);
+  }
+  .hero-content .btn-pill.primary:hover {
+    box-shadow: 0 6px 22px rgba(0, 113, 227, 0.5);
+    transform: translateY(-1px);
+  }
+  .hero-content .btn-pill.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .hero-content .btn-pill.secondary:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
   }
 
   /* 2. Minimalist Disciplines Overview */
@@ -574,13 +860,10 @@
           </a>
           <div class="nav-dropdown-menu simple-menu inspection-menu">
             <div class="nav-dropdown-header">
-              <span class="nav-dropdown-title">INSPECTION PACKAGES</span>
+              <span class="nav-dropdown-title">HOME INSPECTION</span>
             </div>
             <div class="nav-dropdown-list">
-              <a href="home-inspection.html#pkg-pre-drywall" class="nav-dropdown-item simple">Pre-Drywall</a>
-              <a href="home-inspection.html#pkg-pre-purchase" class="nav-dropdown-item simple">Buyer's Pre-Purchase</a>
-              <a href="home-inspection.html#pkg-builder-warranty" class="nav-dropdown-item simple">11-Month Builder Warranty</a>
-              <a href="home-inspection.html#pkg-pre-listing" class="nav-dropdown-item simple">Seller's Pre-Listing</a>
+              <a href="home-inspection.html#packages" class="nav-dropdown-item simple">Inspection Packages</a>
               <div class="nav-dropdown-divider"></div>
               <a href="home-inspection.html#pkg-phase-bundle" class="nav-dropdown-item simple bundle-link">
                 <span>Bundle Promotions</span>
@@ -635,11 +918,8 @@
           Home Inspection Services <span class="accordion-arrow">▾</span>
         </summary>
         <div class="mobile-sublinks">
-          <a href="home-inspection.html#pkg-pre-drywall" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Pre-Drywall Inspection</span></a>
-          <a href="home-inspection.html#pkg-pre-purchase" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Buyer's Pre-Purchase Inspection</span></a>
-          <a href="home-inspection.html#pkg-builder-warranty" onclick="toggleMobileMenu();" class="mobile-sublink"><span>11-Month Builder Warranty</span></a>
-          <a href="home-inspection.html#pkg-pre-listing" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Seller's Pre-Listing Inspection</span></a>
-          <a href="home-inspection.html#pkg-phase-bundle" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Bundle Promotions</span></a>
+          <a href="home-inspection.html#packages" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Inspection Packages</span></a>
+          <a href="home-inspection.html#pkg-phase-bundle" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Bundle Promotions (Save $415)</span></a>
         </div>
       </details>
       <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
@@ -653,9 +933,10 @@
 <div class="mypal-fullpage">
 
 
-  <!-- 1. Hero Section (Image 2 Exact Match: Blue Theme + Fully Padded Logo Card) -->
-  <section class="hero-outer">
+  <!-- 1. Hero Section (Unified Dark Midnight Mesh Gradient + Floating Backlit Logo Card) -->
+  <section class="hero-outer hero-banner-home">
     <div class="hero-inner">
+      <!-- Left Column: Content & Direct Actions -->
       <div class="hero-content">
         <span class="hero-badge">Where Talent Meets Opportunity</span>
         <h2>Precision Installation.<br><span>Flawless Execution.</span></h2>
@@ -665,8 +946,19 @@
           <a href="installation.html" class="btn-pill secondary" style="padding: 13px 26px; font-size: 15px;">Explore Services &rsaquo;</a>
         </div>
       </div>
-      <div class="hero-image-pane">
-        <img src="images/hero_home.jpg" alt="MyPalUSA Logo" class="hero-logo-img">
+
+      <!-- Right 40% Column: 3D Standing Logo on Orbital Portal Rings -->
+      <div class="hero-3d-stage">
+        <!-- Concentric Orbital Glowing Rings / Portal (Matching Reference) -->
+        <div class="portal-ring portal-ring-outer"></div>
+        <div class="portal-ring portal-ring-middle"></div>
+        <div class="portal-ring portal-ring-inner"></div>
+        <div class="portal-orb-glow"></div>
+
+        <!-- The 3D Elevated Standing Logo Card -->
+        <div class="logo-3d-card">
+          <img src="images/hero_home.jpg" alt="MyPalUSA Logo" class="logo-3d-img">
+        </div>
       </div>
     </div>
   </section>
