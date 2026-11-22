@@ -20,6 +20,7 @@
       margin: 0;
       padding: 0;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
     .sub-nav {
       position: sticky;
@@ -77,155 +78,160 @@
       text-align: center;
       background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
     }
-    /* Blended Hero Banner */
-            .detail-hero.blended-hero {
+        /* Dark Luxury Honeycomb Hero */
+    .detail-hero.blended-hero.honeycomb-hero {
       position: relative;
       width: 100%;
-      min-height: 520px;
-      overflow: hidden;
-      /* Image-specific background: seamlessly matches the photograph's ambient room environment */
-      background-color: var(--hero-bg-base, #f6f7f6);
+      min-height: 560px;
+      overflow: visible;
       background:
-        radial-gradient(ellipse 900px 560px at 0% 25%, var(--hero-ambient, rgba(255, 255, 255, 0.90)) 0%, transparent 70%),
-        linear-gradient(to right, var(--hero-bg-base, #f6f7f6) 0%, var(--hero-bg-base, #f6f7f6) 100%);
-      padding: clamp(56px, 7vw, 90px) 0 clamp(48px, 6vw, 76px);
+        radial-gradient(ellipse 900px 600px at 80% 50%, rgba(0, 113, 227, 0.22) 0%, rgba(56, 189, 248, 0.08) 45%, transparent 75%),
+        radial-gradient(circle 600px at 15% 20%, rgba(30, 58, 138, 0.35) 0%, transparent 65%),
+        linear-gradient(135deg, #060b16 0%, #0a1122 50%, #0d172e 100%);
+      padding: clamp(68px, 8vw, 104px) 0;
       text-align: left;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    }
-.blended-hero-bg-img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 70%;
-      height: 100%;
-      background-position: right center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: 0;
-      pointer-events: none;
-          /* Soft feathered mask: smoothly dissolves the image's left edge into the specific background */
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.20) 14%, rgba(0, 0, 0, 0.85) 38%, #000000 65%);
-      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.20) 14%, rgba(0, 0, 0, 0.85) 38%, #000000 65%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 10;
     }
 
-    .blended-hero-gradient-veil {
+    .honeycomb-hero-glow {
       position: absolute;
       inset: 0;
-      z-index: 1;
+      background: radial-gradient(circle at 75% 50%, rgba(56, 189, 248, 0.12) 0%, transparent 55%);
       pointer-events: none;
-      /* Seamlessly fades using the exact color of the image's background */
-      background: linear-gradient(
-        to right,
-        var(--hero-bg-base, #f6f7f6) 0%,
-        var(--hero-bg-base, #f6f7f6) 32%,
-        var(--hero-veil-mid, rgba(246, 247, 246, 0.85)) 50%,
-        var(--hero-veil-edge, rgba(246, 247, 246, 0.35)) 70%,
-        transparent 90%
-      );
+      z-index: 1;
     }
 
-    .blended-hero-bottom-blend {
+    /* Single Massive Honeycomb Showcase - Slided towards left, fully contained on right side */
+    .honeycomb-showcase-wrap {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 80px;
+      right: clamp(35px, 4.5vw, 95px);
+      top: 50%;
+      transform: translateY(-50%) perspective(1200px) rotateY(-20deg) rotateX(7deg) rotateZ(-3deg);
+      transform-style: preserve-3d;
+      width: clamp(480px, 44vw, 680px);
+      height: clamp(520px, 48vw, 740px);
       z-index: 2;
       pointer-events: none;
-      background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.7) 45%, #ffffff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 35px 70px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 50px rgba(0, 113, 227, 0.45));
     }
 
-    .blended-hero-content {
+    /* Outer Glowing Precision Border - Classic Pointed Honeycomb Geometry */
+    .honeycomb-outer-frame {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, #7dd3fc 0%, #38bdf8 30%, #0071e3 60%, rgba(255, 255, 255, 0.7) 75%, #0284c7 100%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
+    }
+
+    /* Inner Photography Masked into Vertical Pointed Honeycomb Hexagon */
+    .honeycomb-inner-img {
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    /* Subtle geometric tech orbit ring */
+    .honeycomb-accent-ring {
+      position: absolute;
+      width: 108%;
+      height: 108%;
+      border: 1.5px dashed rgba(56, 189, 248, 0.25);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+      animation: rotateSlow 50s linear infinite;
+    }
+
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .detail-hero.blended-hero.honeycomb-hero .blended-hero-content {
       position: relative;
       z-index: 5;
-      max-width: 680px;
+      max-width: 620px;
     }
 
-    .detail-hero.blended-hero h1 {
-      font-size: clamp(30px, 3.8vw, 48px);
+    .detail-hero.blended-hero.honeycomb-hero h1 {
+      color: #ffffff;
+      font-size: clamp(32px, 4vw, 50px);
       font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.18;
-      color: #1d1d1f;
-      margin-bottom: 16px;
-      margin-left: 0;
-      margin-right: 0;
-      max-width: 100%;
-      text-align: left;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
     }
 
-    .detail-hero.blended-hero p.lead {
-      font-size: clamp(15.5px, 1.4vw, 18.5px);
-      line-height: 1.55;
-      color: #4a5568;
-      margin: 0 0 28px;
-      max-width: 100%;
-      text-align: left;
+    .detail-hero.blended-hero.honeycomb-hero p.lead {
+      color: #cbd5e1;
+      font-size: clamp(16px, 1.35vw, 19px);
+      line-height: 1.6;
+      margin-bottom: 28px;
     }
 
-    .detail-hero.blended-hero .hero-btn-group {
-      justify-content: flex-start;
-      margin-bottom: 24px;
+    .detail-hero.blended-hero.honeycomb-hero .blended-hero-badges {
+      color: #94a3b8;
     }
 
-    .blended-hero-badges {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-top: 6px;
-      font-size: 13.5px;
-      color: #64748b;
+    .detail-hero.blended-hero.honeycomb-hero .blended-hero-badge-item span {
+      color: #e2e8f0;
       font-weight: 500;
     }
 
-    .blended-hero-badge-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
+    .detail-hero.blended-hero.honeycomb-hero .eyebrow-teal {
+      background:
+        linear-gradient(#070d18, #070d18) padding-box,
+        linear-gradient(135deg, #7dd3fc 0%, #38bdf8 45%, #0071e3 100%) border-box;
+      border: 1.8px solid transparent;
+      color: #e0f2fe;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
     }
 
     @media (max-width: 1024px) {
-      .blended-hero-bg-img {
-        width: 60%;
+      .honeycomb-showcase-wrap {
+        width: 400px;
+        height: 440px;
+        right: 20px;
+        opacity: 0.90;
+        transform: translateY(-50%) perspective(1000px) rotateY(-14deg) rotateX(5deg);
       }
-      .blended-hero-gradient-veil {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      /* Seamlessly fades using the exact color of the image's background */
-      background: linear-gradient(
-        to right,
-        var(--hero-bg-base, #f6f7f6) 0%,
-        var(--hero-bg-base, #f6f7f6) 32%,
-        var(--hero-veil-mid, rgba(246, 247, 246, 0.85)) 50%,
-        var(--hero-veil-edge, rgba(246, 247, 246, 0.35)) 70%,
-        transparent 90%
-      );
-    }
     }
 
     @media (max-width: 768px) {
-      .detail-hero.blended-hero {
+      .detail-hero.blended-hero.honeycomb-hero {
         min-height: auto;
         padding-top: 50px;
+        padding-bottom: 40px;
+        overflow: hidden;
       }
-      .blended-hero-bg-img {
-        width: 100%;
-        opacity: 0.22;
+      .honeycomb-showcase-wrap {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: perspective(800px) rotateY(-6deg) rotateX(4deg);
+        width: clamp(280px, 80vw, 340px);
+        height: clamp(310px, 88vw, 380px);
+        margin: 32px auto 0;
       }
-      .blended-hero-gradient-veil {
-        background: linear-gradient(
-          to bottom,
-          rgba(224, 242, 254, 0.97) 0%,
-          rgba(235, 246, 255, 0.92) 50%,
-          rgba(245, 250, 255, 0.85) 100%
-        );
-      }
-      .blended-hero-content {
+      .detail-hero.blended-hero.honeycomb-hero .blended-hero-content {
         max-width: 100%;
       }
       .detail-hero.blended-hero .hero-btn-group {
@@ -237,6 +243,7 @@
         justify-content: center;
       }
     }
+
     .detail-container {
       max-width: 1440px;
       width: 100%;
@@ -909,13 +916,18 @@
   </div>
 
     <!-- Detail Hero: Blended Photography Banner -->
-  <section class="detail-hero blended-hero">
-    <!-- Photographic Background Layer - Visible More Towards Right Side -->
-    <div class="blended-hero-bg-img" style="background-image: url('images/furniture_assembly.jpg');"></div>
+  <!-- Detail Hero: Dark Modern Honeycomb Showcase -->
+  <section class="detail-hero blended-hero honeycomb-hero">
+    <div class="honeycomb-hero-glow"></div>
 
-    <!-- Soft Horizontal & Bottom Gradient Veils -->
-    <div class="blended-hero-gradient-veil"></div>
-    <div class="blended-hero-bottom-blend"></div>
+    <!-- Single Massive Honeycomb Photo Frame Spacing Out of Banner -->
+    <div class="honeycomb-showcase-wrap">
+      <div class="honeycomb-outer-frame">
+        <div class="honeycomb-inner-img" style="background-image: url('images/furniture_assembly.jpg');"></div>
+      </div>
+      <!-- Subtle Floating Decorative Accent Ring -->
+      <div class="honeycomb-accent-ring"></div>
+    </div>
 
     <div class="detail-container" style="position: relative; z-index: 5; width: 100%;">
       <div class="blended-hero-content">
@@ -928,15 +940,15 @@
 
         <div class="blended-hero-badges">
           <span class="blended-hero-badge-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             <span>IKEA, Wayfair & Pottery Barn Experts</span>
           </span>
           <span class="blended-hero-badge-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             <span>Child-Safe Anti-Tip Wall Anchors</span>
           </span>
           <span class="blended-hero-badge-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
             <span>Rattle-Free Square Joinery</span>
           </span>
         </div>
