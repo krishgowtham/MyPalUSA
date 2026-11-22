@@ -83,28 +83,31 @@
       width: 100%;
       min-height: 520px;
       overflow: hidden;
+      /* Image-specific background blend: atmospheric sky hue on left, seamlessly melting into the image's specific background */
       background:
-        radial-gradient(ellipse 900px 560px at 0% 25%, rgba(186, 230, 253, 0.70) 0%, rgba(219, 234, 254, 0.48) 38%, rgba(240, 249, 255, 0.15) 70%, transparent 100%),
-        radial-gradient(circle 500px at 12% 80%, rgba(191, 219, 254, 0.50) 0%, rgba(224, 242, 254, 0.20) 50%, transparent 75%),
-        linear-gradient(135deg, #e0f2fe 0%, #e8f4fc 32%, #f0f7fc 65%, #f8fafc 100%);
+        radial-gradient(ellipse 750px 520px at 0% 25%, rgba(199, 226, 250, 0.45) 0%, rgba(220, 238, 254, 0.22) 40%, transparent 75%),
+        linear-gradient(to right, #edf5fd 0%, var(--hero-bg-base, #f3f4f6) 45%, var(--hero-bg-base, #f3f4f6) 100%);
       padding: clamp(56px, 7vw, 90px) 0 clamp(48px, 6vw, 76px);
       text-align: left;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid rgba(0, 113, 227, 0.10);
+      border-bottom: 1px solid rgba(0, 113, 227, 0.08);
     }
 
     .blended-hero-bg-img {
       position: absolute;
       top: 0;
       right: 0;
-      width: 65%;
+      width: 70%;
       height: 100%;
       background-position: right center;
       background-size: cover;
       background-repeat: no-repeat;
       z-index: 0;
       pointer-events: none;
+      /* Soft feathered mask: smoothly dissolves the image's left edge into the specific background */
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.20) 14%, rgba(0, 0, 0, 0.85) 38%, #000000 65%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.20) 14%, rgba(0, 0, 0, 0.85) 38%, #000000 65%);
     }
 
     .blended-hero-gradient-veil {
@@ -112,14 +115,14 @@
       inset: 0;
       z-index: 1;
       pointer-events: none;
+      /* Blends smoothly from left atmospheric tint into the image-specific background wall */
       background: linear-gradient(
         to right,
-        rgba(224, 242, 254, 0.98) 0%,
-        rgba(228, 244, 254, 0.96) 28%,
-        rgba(235, 246, 255, 0.92) 42%,
-        rgba(240, 249, 255, 0.68) 58%,
-        rgba(240, 249, 255, 0.22) 78%,
-        transparent 96%
+        var(--hero-veil-left, rgba(238, 246, 254, 0.96)) 0%,
+        var(--hero-veil-left, rgba(238, 246, 254, 0.94)) 28%,
+        var(--hero-veil-mid, rgba(243, 244, 246, 0.82)) 45%,
+        var(--hero-veil-edge, rgba(243, 244, 246, 0.35)) 66%,
+        transparent 88%
       );
     }
 
@@ -191,10 +194,10 @@
       .blended-hero-gradient-veil {
         background: linear-gradient(
           to right,
-          rgba(224, 242, 254, 0.98) 0%,
-          rgba(228, 244, 254, 0.95) 36%,
-          rgba(235, 246, 255, 0.88) 55%,
-          rgba(240, 249, 255, 0.45) 75%,
+          var(--hero-veil-left, rgba(238, 246, 254, 0.98)) 0%,
+          var(--hero-veil-left, rgba(238, 246, 254, 0.95)) 36%,
+          var(--hero-veil-mid, rgba(243, 244, 246, 0.88)) 55%,
+          var(--hero-veil-edge, rgba(243, 244, 246, 0.45)) 75%,
           transparent 100%
         );
       }
@@ -208,13 +211,15 @@
       .blended-hero-bg-img {
         width: 100%;
         opacity: 0.22;
+        -webkit-mask-image: none;
+        mask-image: none;
       }
       .blended-hero-gradient-veil {
         background: linear-gradient(
           to bottom,
-          rgba(224, 242, 254, 0.97) 0%,
-          rgba(235, 246, 255, 0.92) 50%,
-          rgba(245, 250, 255, 0.85) 100%
+          var(--hero-veil-left, rgba(238, 246, 254, 0.97)) 0%,
+          var(--hero-veil-mid, rgba(243, 244, 246, 0.92)) 50%,
+          var(--hero-bg-base, #f3f4f6) 100%
         );
       }
       .blended-hero-content {
