@@ -80,7 +80,7 @@
     margin: 0 auto;
     padding: 0 clamp(20px, 4vw, 48px);
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.05fr 0.95fr;
     gap: clamp(32px, 5vw, 64px);
     align-items: center;
   }
@@ -151,8 +151,8 @@
   .hero-3d-stage {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    height: 460px;
+    max-width: 580px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,11 +164,11 @@
   /* Core Ambient Radial Aura */
   .portal-orb-glow {
     position: absolute;
-    width: 360px;
-    height: 360px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(0, 113, 227, 0.45) 0%, rgba(99, 102, 241, 0.28) 45%, rgba(56, 189, 248, 0.12) 70%, transparent 85%);
-    filter: blur(40px);
+    filter: blur(45px);
     z-index: 1;
     pointer-events: none;
   }
@@ -182,16 +182,16 @@
   }
 
   .portal-ring-outer {
-    width: 420px;
-    height: 420px;
+    width: 520px;
+    height: 520px;
     border: 2px dashed rgba(56, 189, 248, 0.35);
     box-shadow: 0 0 35px rgba(0, 113, 227, 0.25), inset 0 0 30px rgba(0, 113, 227, 0.15);
     animation: portalSpinClockwise 45s linear infinite;
   }
 
   .portal-ring-middle {
-    width: 370px;
-    height: 370px;
+    width: 460px;
+    height: 460px;
     border: 2px solid transparent;
     background: linear-gradient(135deg, rgba(0, 113, 227, 0.6), rgba(168, 85, 247, 0.5), rgba(56, 189, 248, 0.45)) border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
@@ -201,8 +201,8 @@
   }
 
   .portal-ring-inner {
-    width: 320px;
-    height: 320px;
+    width: 400px;
+    height: 400px;
     border: 1.5px solid rgba(255, 255, 255, 0.2);
     background: radial-gradient(circle, rgba(15, 28, 63, 0.85) 0%, rgba(11, 21, 45, 0.95) 75%);
     box-shadow: inset 0 0 35px rgba(0, 113, 227, 0.35);
@@ -213,39 +213,39 @@
     to { transform: rotate(360deg); }
   }
 
-  /* 3D Elevated Standing Logo Card */
+  /* 3D Elevated Standing Logo Card (Scaled 30% Bigger & More Slided) */
   .logo-3d-card {
     position: relative;
     z-index: 10;
-    width: 390px;
-    max-width: 88%;
+    width: 508px;
+    max-width: 95%;
     background: #ffffff;
-    border-radius: 26px;
-    padding: 30px 36px;
+    border-radius: 30px;
+    padding: 34px 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: perspective(1000px) rotateY(-8deg) rotateX(4deg) translateZ(35px);
+    transform: perspective(1100px) rotateY(-14deg) rotateX(6deg) rotateZ(-1.5deg) translateZ(45px);
     box-shadow:
-      -18px 26px 65px -8px rgba(0, 0, 0, 0.75),
-      0 0 50px rgba(0, 113, 227, 0.4),
-      0 0 100px rgba(99, 102, 241, 0.25),
+      -22px 30px 75px -10px rgba(0, 0, 0, 0.78),
+      0 0 60px rgba(0, 113, 227, 0.42),
+      0 0 110px rgba(99, 102, 241, 0.28),
       inset 0 1px 1px rgba(255, 255, 255, 1);
     border: 2px solid rgba(255, 255, 255, 0.95);
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
   }
 
   .hero-3d-stage:hover .logo-3d-card {
-    transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) translateZ(55px);
+    transform: perspective(1100px) rotateY(-4deg) rotateX(2deg) rotateZ(0deg) translateZ(65px);
     box-shadow:
-      -22px 32px 80px -6px rgba(0, 0, 0, 0.85),
-      0 0 65px rgba(0, 113, 227, 0.55),
-      0 0 120px rgba(99, 102, 241, 0.35);
+      -26px 36px 90px -8px rgba(0, 0, 0, 0.88),
+      0 0 75px rgba(0, 113, 227, 0.6),
+      0 0 135px rgba(99, 102, 241, 0.4);
   }
 
   .logo-3d-img {
     width: 100%;
-    max-width: 330px;
+    max-width: 430px;
     height: auto;
     object-fit: contain;
     display: block;
@@ -343,30 +343,31 @@
       max-width: 100%;
     }
     .hero-3d-stage {
-      height: 380px;
-      max-width: 420px;
+      height: 420px;
+      max-width: 480px;
       margin-top: 15px;
     }
     .portal-ring-outer {
+      width: 400px;
+      height: 400px;
+    }
+    .portal-ring-middle {
+      width: 350px;
+      height: 350px;
+    }
+    .portal-ring-inner {
+      width: 300px;
+      height: 300px;
+    }
+    .portal-orb-glow {
       width: 330px;
       height: 330px;
     }
-    .portal-ring-middle {
-      width: 290px;
-      height: 290px;
-    }
-    .portal-ring-inner {
-      width: 250px;
-      height: 250px;
-    }
-    .portal-orb-glow {
-      width: 270px;
-      height: 270px;
-    }
     .logo-3d-card {
-      width: 310px;
-      padding: 22px;
-      transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateZ(25px);
+      width: 395px;
+      max-width: 92%;
+      padding: 26px 32px;
+      transform: perspective(1000px) rotateY(-8deg) rotateX(4deg) translateZ(30px);
     }
     .badge-shield {
       left: 0;
