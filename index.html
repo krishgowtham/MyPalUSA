@@ -86,20 +86,34 @@
   }
 
   .hero-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #60a5fa;
-    background: rgba(30, 58, 138, 0.45);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(96, 165, 250, 0.35);
-    padding: 6px 18px;
+    background:
+      linear-gradient(rgba(11, 21, 45, 0.9), rgba(11, 21, 45, 0.9)) padding-box,
+      linear-gradient(135deg, #38bdf8 0%, #0071e3 48%, #0f2b66 100%) border-box;
+    border: 1.8px solid transparent;
+    padding: 6px 20px;
     border-radius: 980px;
     margin-bottom: 18px;
     box-shadow: 0 4px 18px rgba(0, 113, 227, 0.25);
+    transition: all 0.25s ease;
+  }
+  .hero-badge svg {
+    flex-shrink: 0;
+    stroke: #38bdf8;
+  }
+  .hero-badge:hover {
+    background:
+      linear-gradient(rgba(11, 21, 45, 0.9), rgba(11, 21, 45, 0.9)) padding-box,
+      linear-gradient(135deg, #7dd3fc 0%, #38bdf8 45%, #0071e3 100%) border-box;
+    box-shadow: 0 6px 22px rgba(0, 113, 227, 0.35);
+    transform: translateY(-1px);
   }
   .hero-content {
     max-width: 620px;
@@ -429,13 +443,38 @@
     margin: 0 auto clamp(36px, 5vw, 52px) auto;
   }
   .section-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: #0071e3;
-    display: block;
-    margin-bottom: 8px;
+    color: #0f172a;
+    background:
+      linear-gradient(#ffffff, #ffffff) padding-box,
+      linear-gradient(135deg, #38bdf8 0%, #0071e3 48%, #0f2b66 100%) border-box;
+    border: 1.8px solid transparent;
+    padding: 6px 20px;
+    border-radius: 980px;
+    margin-bottom: 16px;
+    box-shadow: 0 3px 12px rgba(0, 113, 227, 0.12), 0 1px 3px rgba(15, 23, 42, 0.04);
+    transition: all 0.25s ease;
+  }
+
+  .section-tag svg {
+    flex-shrink: 0;
+    stroke: #0071e3;
+    transition: stroke 0.2s ease;
+  }
+
+  .section-tag:hover {
+    background:
+      linear-gradient(#ffffff, #ffffff) padding-box,
+      linear-gradient(135deg, #7dd3fc 0%, #38bdf8 45%, #0071e3 100%) border-box;
+    box-shadow: 0 6px 20px rgba(0, 113, 227, 0.22);
+    transform: translateY(-1px);
   }
   .section-header-center h3 {
     font-size: clamp(28px, 3.5vw, 40px);
@@ -938,7 +977,12 @@
     <div class="hero-inner">
       <!-- Left Column: Content & Direct Actions -->
       <div class="hero-content">
-        <span class="hero-badge">Where Talent Meets Opportunity</span>
+        <span class="hero-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>Where Talent Meets Opportunity</span>
+        </span>
         <h2>Precision Installation.<br><span>Flawless Execution.</span></h2>
         <p>Your trusted home enhancement partner for custom window blinds, wobble-free ceiling fans, TV wall mounting, and smart home automation across North Carolina.</p>
         <div class="hero-btns">
@@ -967,7 +1011,14 @@
   <section class="overview-section-outer">
     <div class="overview-section-inner">
       <div class="section-header-center">
-        <span class="section-tag">Core Disciplines</span>
+        <span class="section-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span>Core Disciplines</span>
+        </span>
         <h3>Professional Installation Portfolio</h3>
         <p>Expert residential enhancements delivered with quality craftsmanship, upfront rates, and zero mess.</p>
       </div>
@@ -1040,6 +1091,13 @@
   <section class="why-choose-outer">
     <div class="why-choose-inner">
       <div class="why-choose-header">
+        <span class="section-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+          <span>THE MYPAL ADVANTAGE</span>
+        </span>
         <h3>Why Choose MyPal USA?</h3>
         <p>Our commitment is to deliver unparalleled quality, convenience, and aesthetic appeal, ensuring your home is both beautiful and functional.</p>
       </div>
@@ -1086,6 +1144,13 @@
   <!-- 4. Quick Action Callout -->
   <section class="action-strip-outer">
     <div class="action-strip-inner">
+      <span class="section-tag" style="margin-bottom: 16px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>DIRECT DISPATCH DESK</span>
+      </span>
       <h4>Ready to schedule your installation?</h4>
       <p>Direct scheduling available by phone at <a href="tel:9196563524" class="phone-link">(919) 656 3524</a> or email consultation.</p>
       <button type="button" onclick="openScheduleModal(null, event);" class="btn-pill primary" style="padding: 13px 30px; font-size: 15px;"><span class="btn-icon">📅</span><span>Schedule Free Consultation &rsaquo;</span></button>
@@ -1147,7 +1212,13 @@
     <div class="schedule-modal-card">
       <button type="button" class="modal-close-btn" onclick="closeScheduleModal();" aria-label="Close">&times;</button>
       
-      <span class="modal-pill">MyPalUSA LLC Direct Dispatch</span>
+      <span class="modal-pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>MyPalUSA LLC Direct Dispatch</span>
+      </span>
       <h3 id="modalTitle">Schedule Your Installation</h3>
       <p id="modalSub">Connect directly with our installation team to get a quote, check availability, or schedule your appointment.</p>
       

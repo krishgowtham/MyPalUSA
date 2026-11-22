@@ -232,17 +232,37 @@
       padding: 0 clamp(20px, 4vw, 48px);
     }
     .eyebrow-teal {
-      display: inline-block;
-      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #0071e3;
-      background: #ecfdf5;
-      border: 1px solid #a7f3d0;
-      padding: 6px 16px;
+      letter-spacing: 0.12em;
+      color: #0f172a;
+      background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #38bdf8 0%, #0071e3 48%, #0f2b66 100%) border-box;
+      border: 1.8px solid transparent;
+      padding: 6px 20px;
       border-radius: 980px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 12px rgba(0, 113, 227, 0.12), 0 1px 3px rgba(15, 23, 42, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    .eyebrow-teal svg {
+      flex-shrink: 0;
+      stroke: #0071e3;
+      transition: stroke 0.2s ease;
+    }
+
+    .eyebrow-teal:hover {
+      background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #7dd3fc 0%, #38bdf8 45%, #0071e3 100%) border-box;
+      box-shadow: 0 6px 20px rgba(0, 113, 227, 0.22);
+      transform: translateY(-1px);
     }
     .detail-hero h1 {
       font-size: clamp(28px, 3.4vw, 48px);
@@ -887,7 +907,10 @@
 
     <div class="detail-container" style="position: relative; z-index: 5; width: 100%;">
       <div class="blended-hero-content">
-        <span class="eyebrow-teal">Kitchen Plumbing</span>
+        <span class="eyebrow-teal">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+          <span>Kitchen Plumbing</span>
+        </span>
         <h1>Quiet, Leak-Free Kitchen Power. Plumbed and Wired to Code.</h1>
         <p class="lead">Stainless steel 3-bolt flange seating, dishwasher drain knockout removal, and high-pressure leak testing.</p>
 
