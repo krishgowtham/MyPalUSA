@@ -1356,6 +1356,7 @@ span.nav-chevron {
   padding: 4px 10px;
   border-radius: 980px;
   margin-bottom: 12px;
+  white-space: nowrap;
 }
 .package-price-row {
   display: flex;
