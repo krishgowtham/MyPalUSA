@@ -105,41 +105,42 @@
       z-index: 1;
     }
 
-    /* Single Massive Honeycomb Showcase - Spaces Out of the Banner */
+    /* Single Massive Honeycomb Showcase - Spaces Out of the Banner with 3D Perspective Angle */
     .honeycomb-showcase-wrap {
       position: absolute;
-      right: clamp(-80px, -4vw, -20px);
+      right: clamp(-60px, -2vw, 40px);
       top: 50%;
-      transform: translateY(-50%);
-      width: clamp(520px, 50vw, 760px);
-      height: clamp(480px, 46vw, 700px);
+      transform: translateY(-50%) perspective(1200px) rotateY(-15deg) rotateX(7deg) rotateZ(-4deg);
+      transform-style: preserve-3d;
+      width: clamp(500px, 46vw, 720px);
+      height: clamp(540px, 50vw, 780px);
       z-index: 2;
       pointer-events: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 45px rgba(0, 113, 227, 0.40));
+      filter: drop-shadow(0 35px 70px rgba(0, 0, 0, 0.80)) drop-shadow(0 0 50px rgba(0, 113, 227, 0.45));
     }
 
-    /* Outer Glowing Precision Border */
+    /* Outer Glowing Precision Border - Classic Pointed Honeycomb Geometry */
     .honeycomb-outer-frame {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 35%, #0071e3 65%, rgba(255, 255, 255, 0.6) 80%, #0284c7 100%);
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      padding: 3.5px;
+      background: linear-gradient(145deg, #7dd3fc 0%, #38bdf8 30%, #0071e3 60%, rgba(255, 255, 255, 0.7) 75%, #0284c7 100%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      padding: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
-      filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.5));
+      filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
     }
 
-    /* Inner Photography Masked into Hexagon */
+    /* Inner Photography Masked into Vertical Pointed Honeycomb Hexagon */
     .honeycomb-inner-img {
       width: 100%;
       height: 100%;
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
       background-image: url('images/blinds_hero_banner.jpg');
       background-position: center center;
       background-size: cover;
@@ -208,10 +209,11 @@
 
     @media (max-width: 1024px) {
       .honeycomb-showcase-wrap {
-        width: 440px;
-        height: 420px;
-        right: -40px;
-        opacity: 0.88;
+        width: 420px;
+        height: 460px;
+        right: -30px;
+        opacity: 0.90;
+        transform: translateY(-50%) perspective(1000px) rotateY(-10deg) rotateX(4deg);
       }
     }
 
@@ -226,9 +228,9 @@
         position: relative;
         right: auto;
         top: auto;
-        transform: none;
-        width: clamp(280px, 85vw, 360px);
-        height: clamp(260px, 80vw, 340px);
+        transform: perspective(800px) rotateY(-6deg) rotateX(4deg);
+        width: clamp(280px, 80vw, 340px);
+        height: clamp(310px, 88vw, 380px);
         margin: 32px auto 0;
       }
       .detail-hero.blended-hero.honeycomb-hero .blended-hero-content {
