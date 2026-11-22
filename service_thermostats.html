@@ -78,20 +78,21 @@
       background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
     }
     /* Blended Hero Banner */
-        .detail-hero.blended-hero {
+            .detail-hero.blended-hero {
       position: relative;
       width: 100%;
       min-height: 520px;
       overflow: hidden;
-      /* Image-specific background blend: atmospheric sky hue on left, seamlessly melting into the image's specific background */
+      /* Image-specific background: seamlessly matches the photograph's ambient room environment */
+      background-color: var(--hero-bg-base, #f7f7f8);
       background:
-        radial-gradient(ellipse 750px 520px at 0% 25%, rgba(199, 226, 250, 0.45) 0%, rgba(220, 238, 254, 0.22) 40%, transparent 75%),
-        linear-gradient(to right, #edf5fd 0%, var(--hero-bg-base, #f8fafc) 45%, var(--hero-bg-base, #f8fafc) 100%);
+        radial-gradient(ellipse 900px 560px at 0% 25%, var(--hero-ambient, rgba(255, 255, 255, 0.90)) 0%, transparent 70%),
+        linear-gradient(to right, var(--hero-bg-base, #f7f7f8) 0%, var(--hero-bg-base, #f7f7f8) 100%);
       padding: clamp(56px, 7vw, 90px) 0 clamp(48px, 6vw, 76px);
       text-align: left;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid rgba(0, 113, 227, 0.08);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 .blended-hero-bg-img {
       position: absolute;
@@ -114,14 +115,14 @@
       inset: 0;
       z-index: 1;
       pointer-events: none;
-      /* Blends smoothly from left atmospheric tint into the image-specific background wall */
+      /* Seamlessly fades using the exact color of the image's background */
       background: linear-gradient(
         to right,
-        var(--hero-veil-left, rgba(238, 246, 254, 0.96)) 0%,
-        var(--hero-veil-left, rgba(238, 246, 254, 0.94)) 28%,
-        var(--hero-veil-mid, rgba(248, 250, 252, 0.82)) 45%,
-        var(--hero-veil-edge, rgba(248, 250, 252, 0.35)) 66%,
-        transparent 88%
+        var(--hero-bg-base, #f7f7f8) 0%,
+        var(--hero-bg-base, #f7f7f8) 32%,
+        var(--hero-veil-mid, rgba(247, 247, 248, 0.85)) 50%,
+        var(--hero-veil-edge, rgba(247, 247, 248, 0.35)) 70%,
+        transparent 90%
       );
     }
 
@@ -195,14 +196,14 @@
       inset: 0;
       z-index: 1;
       pointer-events: none;
-      /* Blends smoothly from left atmospheric tint into the image-specific background wall */
+      /* Seamlessly fades using the exact color of the image's background */
       background: linear-gradient(
         to right,
-        var(--hero-veil-left, rgba(238, 246, 254, 0.96)) 0%,
-        var(--hero-veil-left, rgba(238, 246, 254, 0.94)) 28%,
-        var(--hero-veil-mid, rgba(248, 250, 252, 0.82)) 45%,
-        var(--hero-veil-edge, rgba(248, 250, 252, 0.35)) 66%,
-        transparent 88%
+        var(--hero-bg-base, #f7f7f8) 0%,
+        var(--hero-bg-base, #f7f7f8) 32%,
+        var(--hero-veil-mid, rgba(247, 247, 248, 0.85)) 50%,
+        var(--hero-veil-edge, rgba(247, 247, 248, 0.35)) 70%,
+        transparent 90%
       );
     }
     }
