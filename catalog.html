@@ -50,6 +50,37 @@
       position: relative;
       z-index: 2;
     }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      background:
+        linear-gradient(rgba(11, 21, 45, 0.9), rgba(11, 21, 45, 0.9)) padding-box,
+        linear-gradient(135deg, #7dd3fc 0%, #38bdf8 45%, #0071e3 100%) border-box;
+      border: 1.8px solid transparent;
+      padding: 6px 20px;
+      border-radius: 980px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 18px rgba(0, 113, 227, 0.28);
+      transition: all 0.25s ease;
+    }
+    .hero-badge svg {
+      flex-shrink: 0;
+      stroke: #38bdf8;
+    }
+    .hero-badge:hover {
+      background:
+        linear-gradient(rgba(11, 21, 45, 0.9), rgba(11, 21, 45, 0.9)) padding-box,
+        linear-gradient(135deg, #bae6fd 0%, #7dd3fc 45%, #2563eb 100%) border-box;
+      box-shadow: 0 6px 24px rgba(0, 113, 227, 0.42);
+      color: #7dd3fc;
+      transform: translateY(-1px);
+    }
     .catalog-stage .headline-giant {
       color: #ffffff;
       font-size: clamp(38px, 5.5vw, 64px);
@@ -397,7 +428,7 @@
   <!-- Hero -->
   <section class="catalog-stage">
     <div class="apple-container">
-      <span class="hero-badge" style="display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #60a5fa; background: rgba(30, 58, 138, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(96, 165, 250, 0.35); padding: 6px 18px; border-radius: 980px; margin-bottom: 18px; box-shadow: 0 4px 18px rgba(0, 113, 227, 0.25);">Tested Hardware Specifications</span>
+      <span class="hero-badge">Tested Hardware Specifications</span>
       <h1 class="headline-giant">
         <span class="gradient-text-blue">Curated for your home.</span>
       </h1>

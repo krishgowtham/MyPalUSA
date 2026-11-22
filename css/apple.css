@@ -1588,3 +1588,44 @@ span.nav-chevron {
   justify-content: center;
   gap: 10px !important;
 }
+
+/* Universal Luxury Dark Hero Badge */
+.hero-badge,
+.hero-pill,
+.install-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  background:
+    linear-gradient(rgba(11, 21, 45, 0.9), rgba(11, 21, 45, 0.9)) padding-box,
+    linear-gradient(135deg, #7dd3fc 0%, #38bdf8 45%, #0071e3 100%) border-box;
+  border: 1.8px solid transparent;
+  padding: 6px 20px;
+  border-radius: 980px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 18px rgba(0, 113, 227, 0.28);
+  transition: all 0.25s ease;
+}
+
+.hero-badge svg,
+.hero-pill svg,
+.install-hero-tag svg {
+  flex-shrink: 0;
+  stroke: #38bdf8;
+}
+
+.hero-badge:hover,
+.hero-pill:hover,
+.install-hero-tag:hover {
+  background:
+    linear-gradient(rgba(11, 21, 45, 0.9), rgba(11, 21, 45, 0.9)) padding-box,
+    linear-gradient(135deg, #bae6fd 0%, #7dd3fc 45%, #2563eb 100%) border-box;
+  box-shadow: 0 6px 24px rgba(0, 113, 227, 0.42);
+  color: #7dd3fc;
+  transform: translateY(-1px);
+}
