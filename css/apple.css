@@ -995,18 +995,42 @@ span.nav-chevron {
   margin-bottom: 20px;
   line-height: 1.6;
 }
-.footer-contact-direct {
+.footer-contact-direct,
+.footer-direct-contact {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
+  margin-top: 16px;
 }
-.footer-contact-direct a {
-  color: #f3f4f6;
-  text-decoration: none;
+.footer-contact-direct a,
+.footer-direct-contact a,
+.footer-contact-link,
+.footer-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+  font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
 }
-.footer-contact-direct a:hover {
+.footer-contact-direct a svg,
+.footer-direct-contact a svg,
+.footer-contact-link svg,
+.footer-contact-item svg {
+  width: 15px;
+  height: 15px;
+  stroke: #38bdf8;
+  flex-shrink: 0;
+  display: inline-block;
+}
+.footer-contact-direct a:hover,
+.footer-direct-contact a:hover,
+.footer-contact-link:hover,
+.footer-contact-item:hover {
   color: #38bdf8;
+  transform: translateX(2px);
 }
 
 .footer-col h5 {
