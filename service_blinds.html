@@ -84,12 +84,15 @@
       width: 100%;
       min-height: 520px;
       overflow: hidden;
-      background-color: #f8fafc;
+      background:
+        radial-gradient(ellipse 900px 560px at 0% 25%, rgba(186, 230, 253, 0.70) 0%, rgba(219, 234, 254, 0.48) 38%, rgba(240, 249, 255, 0.15) 70%, transparent 100%),
+        radial-gradient(circle 500px at 12% 80%, rgba(191, 219, 254, 0.50) 0%, rgba(224, 242, 254, 0.20) 50%, transparent 75%),
+        linear-gradient(135deg, #e0f2fe 0%, #e8f4fc 32%, #f0f7fc 65%, #f8fafc 100%);
       padding: clamp(56px, 7vw, 90px) 0 clamp(48px, 6vw, 76px);
       text-align: left;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      border-bottom: 1px solid rgba(0, 113, 227, 0.10);
     }
 
     .blended-hero-bg-img {
@@ -113,12 +116,12 @@
       pointer-events: none;
       background: linear-gradient(
         to right,
-        #f8fafc 0%,
-        #f8fafc 38%,
-        rgba(248, 250, 252, 0.95) 48%,
-        rgba(248, 250, 252, 0.60) 65%,
-        rgba(248, 250, 252, 0.15) 85%,
-        transparent 100%
+        rgba(224, 242, 254, 0.98) 0%,
+        rgba(228, 244, 254, 0.96) 28%,
+        rgba(235, 246, 255, 0.92) 42%,
+        rgba(240, 249, 255, 0.68) 58%,
+        rgba(240, 249, 255, 0.22) 78%,
+        transparent 96%
       );
     }
 
@@ -130,7 +133,7 @@
       height: 80px;
       z-index: 2;
       pointer-events: none;
-      background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+      background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.7) 45%, #ffffff 100%);
     }
 
     .blended-hero-content {
@@ -190,10 +193,10 @@
       .blended-hero-gradient-veil {
         background: linear-gradient(
           to right,
-          #f8fafc 0%,
-          #f8fafc 42%,
-          rgba(248, 250, 252, 0.94) 58%,
-          rgba(248, 250, 252, 0.55) 75%,
+          rgba(224, 242, 254, 0.98) 0%,
+          rgba(228, 244, 254, 0.95) 36%,
+          rgba(235, 246, 255, 0.88) 55%,
+          rgba(240, 249, 255, 0.45) 75%,
           transparent 100%
         );
       }
@@ -211,8 +214,9 @@
       .blended-hero-gradient-veil {
         background: linear-gradient(
           to bottom,
-          rgba(248, 250, 252, 0.96) 0%,
-          rgba(248, 250, 252, 0.88) 100%
+          rgba(224, 242, 254, 0.97) 0%,
+          rgba(235, 246, 255, 0.92) 50%,
+          rgba(245, 250, 255, 0.85) 100%
         );
       }
       .blended-hero-content {
