@@ -977,9 +977,42 @@
   </div>
 
   <script>
-    function toggleMobileMenu() {
+    function toggleMobileMenu(forceClose) {
       var m = document.getElementById('mobileMenu');
-      if (m) m.classList.toggle('active');
+      var btn = document.querySelector('.mobile-menu-btn');
+      if (!m) return;
+      var willOpen = forceClose === false ? false : (forceClose === true ? true : !m.classList.contains('active'));
+      if (willOpen) {
+        m.classList.add('active');
+        if (btn) {
+          btn.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+        document.body.style.overflow = 'hidden';
+      } else {
+        m.classList.remove('active');
+        if (btn) {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      var m = document.getElementById('mobileMenu');
+      var btn = document.querySelector('.mobile-menu-btn');
+      if (m && m.classList.contains('active')) {
+        if (!m.contains(e.target) && !btn.contains(e.target)) {
+          toggleMobileMenu(false);
+        } else if (e.target.closest('a')) {
+          toggleMobileMenu(false);
+        }
+      }
+    });
+
+    function closeModal() {
+      if (typeof closeScheduleModal === 'function') closeScheduleModal();
     }
 
     function openScheduleModal(serviceName, e) {

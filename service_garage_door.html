@@ -24,7 +24,7 @@
     }
     .sub-nav {
       position: sticky;
-      top: 52px;
+      top: 64px;
       z-index: 999;
       background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(20px);
@@ -870,7 +870,7 @@
     <!-- Mobile Dropdown -->
     <div class="mobile-dropdown" id="mobileMenu">
       <a href="index.html" class="mobile-nav-link">Home</a>
-            <details class="mobile-services-accordion" open>
+            <details class="mobile-services-accordion">
         <summary class="mobile-nav-link active">
           Installation Services <span class="accordion-arrow">▾</span>
         </summary>
@@ -1248,6 +1248,43 @@
 </div>
 
 <script>
+    function toggleMobileMenu(forceClose) {
+      var m = document.getElementById("mobileMenu");
+      var btn = document.querySelector(".mobile-menu-btn");
+      if (!m) return;
+      var willOpen = forceClose === false ? false : (forceClose === true ? true : !m.classList.contains("active"));
+      if (willOpen) {
+        m.classList.add("active");
+        if (btn) {
+          btn.classList.add("active");
+          btn.setAttribute("aria-expanded", "true");
+        }
+        document.body.style.overflow = "hidden";
+      } else {
+        m.classList.remove("active");
+        if (btn) {
+          btn.classList.remove("active");
+          btn.setAttribute("aria-expanded", "false");
+        }
+        document.body.style.overflow = "";
+      }
+    }
+
+    document.addEventListener("click", function(e) {
+      var m = document.getElementById("mobileMenu");
+      var btn = document.querySelector(".mobile-menu-btn");
+      if (m && m.classList.contains("active")) {
+        if (!m.contains(e.target) && !btn.contains(e.target)) {
+          toggleMobileMenu(false);
+        } else if (e.target.closest("a")) {
+          toggleMobileMenu(false);
+        }
+      }
+    });
+
+    function closeScheduleModal() {
+      closeModal();
+    }
 
     function copyContactText(text, btn, e) {
       if (e) {
