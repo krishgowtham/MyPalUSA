@@ -1772,7 +1772,7 @@ span.nav-chevron {
   position: relative;
   width: 100%;
   min-height: 560px;
-  overflow: hidden;
+  overflow: visible;
   background:
     radial-gradient(850px 520px at 85% 30%, rgba(0, 113, 227, 0.42) 0%, rgba(99, 102, 241, 0.22) 42%, transparent 75%),
     radial-gradient(700px 450px at 15% 20%, rgba(14, 165, 233, 0.28) 0%, rgba(59, 130, 246, 0.10) 45%, transparent 68%),
@@ -1786,7 +1786,15 @@ span.nav-chevron {
   z-index: 10;
 }
 
-.detail-hero.blended-hero.honeycomb-hero::before {
+.honeycomb-hero-glow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.honeycomb-hero-glow::before {
   content: "";
   position: absolute;
   top: -80px;
@@ -1797,10 +1805,9 @@ span.nav-chevron {
   filter: blur(65px);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 1;
 }
 
-.detail-hero.blended-hero.honeycomb-hero::after {
+.honeycomb-hero-glow::after {
   content: "";
   position: absolute;
   bottom: -60px;
@@ -1811,7 +1818,22 @@ span.nav-chevron {
   filter: blur(70px);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 1;
+}
+
+.honeycomb-showcase-wrap {
+  position: absolute;
+  right: clamp(40px, 5vw, 95px);
+  top: 52%;
+  transform: translateY(-46%) perspective(1000px) rotateY(-24deg) rotateX(8deg) rotateZ(-3deg);
+  transform-style: preserve-3d;
+  width: clamp(552px, 52vw, 760px);
+  height: clamp(483px, 46vw, 667px);
+  z-index: 25;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 35px 70px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 50px rgba(0, 113, 227, 0.45));
 }
 
 /* Secondary Installation Hero - Global Responsive Standards */
