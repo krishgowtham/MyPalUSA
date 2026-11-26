@@ -1766,3 +1766,43 @@ span.nav-chevron {
   color: #7dd3fc;
   transform: translateY(-1px);
 }
+
+/* Secondary Installation Hero - Global Responsive Standards */
+@media (max-width: 1024px) {
+  .detail-hero.blended-hero.honeycomb-hero {
+    min-height: auto;
+    padding-top: clamp(44px, 6vw, 64px);
+    padding-bottom: clamp(44px, 6vw, 64px);
+    overflow: hidden;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .detail-hero.blended-hero.honeycomb-hero .detail-container {
+    order: 1;
+    width: 100%;
+  }
+  .detail-hero.blended-hero.honeycomb-hero .blended-hero-content {
+    max-width: 100%;
+  }
+  .honeycomb-showcase-wrap {
+    order: 2;
+    position: relative;
+    right: auto;
+    left: auto;
+    top: auto;
+    transform: perspective(800px) rotateY(-6deg) rotateX(4deg);
+    width: clamp(280px, 86vw, 440px);
+    height: clamp(245px, 75vw, 385px);
+    margin: 36px auto 0;
+    opacity: 1;
+  }
+  .detail-hero.blended-hero .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .detail-hero.blended-hero .hero-btn-group a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

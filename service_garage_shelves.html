@@ -187,7 +187,18 @@
     }
 
     .detail-hero.blended-hero.honeycomb-hero .blended-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 20px;
       color: #94a3b8;
+    }
+
+    .detail-hero.blended-hero.honeycomb-hero .blended-hero-badge-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13.5px;
     }
 
     .detail-hero.blended-hero.honeycomb-hero .blended-hero-badge-item span {
@@ -205,34 +216,33 @@
       box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
     }
 
-        @media (max-width: 1024px) {
-      .honeycomb-showcase-wrap {
-        width: 460px;
-        height: 414px;
-        right: clamp(20px, 3vw, 40px);
-        opacity: 0.90;
-        transform: translateY(-50%) perspective(900px) rotateY(-18deg) rotateX(6deg);
-      }
-    }
-
-    @media (max-width: 768px) {
+            @media (max-width: 1024px) {
       .detail-hero.blended-hero.honeycomb-hero {
         min-height: auto;
-        padding-top: 50px;
-        padding-bottom: 40px;
+        padding-top: clamp(44px, 6vw, 64px);
+        padding-bottom: clamp(44px, 6vw, 64px);
         overflow: hidden;
+        flex-direction: column;
+        align-items: stretch;
       }
-      .honeycomb-showcase-wrap {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: perspective(800px) rotateY(-6deg) rotateX(4deg);
-        width: clamp(322px, 90vw, 414px);
-        height: clamp(288px, 80vw, 368px);
-        margin: 32px auto 0;
+      .detail-hero.blended-hero.honeycomb-hero .detail-container {
+        order: 1;
+        width: 100%;
       }
       .detail-hero.blended-hero.honeycomb-hero .blended-hero-content {
         max-width: 100%;
+      }
+      .honeycomb-showcase-wrap {
+        order: 2;
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        transform: perspective(800px) rotateY(-6deg) rotateX(4deg);
+        width: clamp(280px, 86vw, 440px);
+        height: clamp(245px, 75vw, 385px);
+        margin: 36px auto 0;
+        opacity: 1;
       }
       .detail-hero.blended-hero .hero-btn-group {
         flex-direction: column;
