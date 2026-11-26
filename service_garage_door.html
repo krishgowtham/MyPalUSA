@@ -78,22 +78,51 @@
       text-align: center;
       background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
     }
-        /* Dark Luxury Honeycomb Hero */
+        /* Dark Luxury Honeycomb Hero - Same Royal Apple Dark Palette as Homepage */
     .detail-hero.blended-hero.honeycomb-hero {
       position: relative;
       width: 100%;
       min-height: 560px;
-      overflow: visible;
+      overflow: hidden;
       background:
-        radial-gradient(ellipse 900px 600px at 80% 50%, rgba(0, 113, 227, 0.22) 0%, rgba(56, 189, 248, 0.08) 45%, transparent 75%),
-        radial-gradient(circle 600px at 15% 20%, rgba(30, 58, 138, 0.35) 0%, transparent 65%),
-        linear-gradient(135deg, #060b16 0%, #0a1122 50%, #0d172e 100%);
+        radial-gradient(850px 520px at 85% 30%, rgba(0, 113, 227, 0.42) 0%, rgba(99, 102, 241, 0.22) 42%, transparent 75%),
+        radial-gradient(700px 450px at 15% 20%, rgba(14, 165, 233, 0.28) 0%, rgba(59, 130, 246, 0.10) 45%, transparent 68%),
+        radial-gradient(900px 400px at 50% 10%, rgba(30, 58, 138, 0.35) 0%, transparent 70%),
+        linear-gradient(155deg, #090e1a 0%, #0b152d 38%, #0f1c3f 70%, #080d1a 100%);
       padding: clamp(68px, 8vw, 104px) 0;
       text-align: left;
       display: flex;
       align-items: center;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       z-index: 10;
+    }
+
+    .detail-hero.blended-hero.honeycomb-hero::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: 8%;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.45) 0%, rgba(56, 189, 248, 0.22) 45%, transparent 70%);
+      filter: blur(65px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .detail-hero.blended-hero.honeycomb-hero::after {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      left: 8%;
+      width: 440px;
+      height: 440px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(168, 85, 247, 0.18) 45%, transparent 70%);
+      filter: blur(70px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
     }
 
     .honeycomb-hero-glow {
