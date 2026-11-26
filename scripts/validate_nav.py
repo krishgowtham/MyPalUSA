@@ -50,8 +50,8 @@ def validate_file(filepath):
         errors.append("Missing RESIDENTIAL INSTALLATION header block")
     else:
         header_content = header_match.group(1)
-        if 'nav-dropdown-view-all' not in header_content or 'All Services Hub' not in header_content:
-            errors.append("Missing '<a href=\"installation.html\" class=\"nav-dropdown-view-all\">All Services Hub &rsaquo;</a>' in header")
+        if 'nav-dropdown-view-all' not in header_content or 'All Services &rsaquo;' not in header_content:
+            errors.append("Missing '<a href=\"installation.html\" class=\"nav-dropdown-view-all\">All Services &rsaquo;</a>' in header")
 
     # 3. Check simple-list desktop items
     list_match = re.search(r'<div class="nav-dropdown-grid simple-list">([\s\S]*?)</div>', content)
@@ -74,10 +74,10 @@ def validate_file(filepath):
         errors.append("Missing Installation Services mobile-services-accordion")
     else:
         mobile_html = mobile_match.group(1)
-        if 'All Services Hub' not in mobile_html:
-            errors.append("Missing standard 'All Services Hub &rsaquo;' link in mobile accordion")
-        if 'All Services Overview' in mobile_html:
-            errors.append("Legacy 'All Services Overview' found - must be standardized to 'All Services Hub &rsaquo;'")
+        if 'All Services &rsaquo;' not in mobile_html:
+            errors.append("Missing standard 'All Services &rsaquo;' link in mobile accordion")
+        if 'All Services Hub' in mobile_html or 'All Services Overview' in mobile_html:
+            errors.append("Legacy 'All Services Hub/Overview' found - must be standardized to 'All Services &rsaquo;'")
 
         for href, label in CANONICAL_SERVICES:
             if f'href="{href}"' not in mobile_html:

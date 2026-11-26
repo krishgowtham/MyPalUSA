@@ -42,7 +42,7 @@ def generate_desktop_dropdown(is_active=False):
           <div class="nav-dropdown-menu simple-menu">
             <div class="nav-dropdown-header">
               <span class="nav-dropdown-title">RESIDENTIAL INSTALLATION</span>
-              <a href="installation.html" class="nav-dropdown-view-all">All Services Hub &rsaquo;</a>
+              <a href="installation.html" class="nav-dropdown-view-all">All Services &rsaquo;</a>
             </div>
             <div class="nav-dropdown-grid simple-list">
 {items_html}
@@ -54,7 +54,7 @@ def generate_mobile_accordion(is_active=False, current_file=""):
     active_summary = ' active' if is_active else ''
     hub_active = ' active' if current_file in ('installation.html', 'installation-service.html') else ''
     
-    sublinks = [f'          <a href="installation.html" class="mobile-sublink all-link{hub_active}">All Services Hub &rsaquo;</a>']
+    sublinks = [f'          <a href="installation.html" class="mobile-sublink all-link{hub_active}">All Services &rsaquo;</a>']
     for href, label in CANONICAL_SERVICES:
         item_active = ' active' if current_file == href else ''
         sublinks.append(f'          <a href="{href}" class="mobile-sublink{item_active}"><span>{label.replace("&", "&amp;")}</span></a>')
@@ -84,28 +84,22 @@ def sync_file(filepath):
     )
 
     # 1. Update Desktop Dropdown
-    if filename == "about.html":
-        # Replace the flat installation link with full dropdown
-        flat_pattern = r'<a href="installation\.html" class="nav-link">Installation Services</a>'
-        new_desktop = generate_desktop_dropdown(is_active=False)
-        content = re.sub(flat_pattern, new_desktop, content)
-    else:
-        # Match existing nav-dropdown-wrapper for Installation Services
-        # It comes before Home Inspection dropdown
-        dropdown_pattern = r'<div class="nav-dropdown-wrapper">\s*<a href="installation\.html"[\s\S]*?RESIDENTIAL INSTALLATION[\s\S]*?</div>\s*</div>\s*</div>'
-        new_desktop = generate_desktop_dropdown(is_active=is_install_active)
+    dropdown_pattern = r'<div class="nav-dropdown-wrapper">\s*<a href="installation\.html"[\s\S]*?RESIDENTIAL INSTALLATION[\s\S]*?</div>\s*</div>\s*</div>'
+    new_desktop = generate_desktop_dropdown(is_active=is_install_active)
+    if re.search(dropdown_pattern, content):
         content = re.sub(dropdown_pattern, new_desktop, content)
+    else:
+        flat_pattern = r'<a href="installation\.html" class="nav-link">Installation Services</a>'
+        content = re.sub(flat_pattern, new_desktop, content)
 
     # 2. Update Mobile Accordion for Installation Services
-    if filename == "about.html":
-        # Replace flat mobile link with mobile accordion
-        flat_mobile_pattern = r'<a href="installation\.html" class="mobile-nav-link">Installation Services</a>'
-        new_mobile = generate_mobile_accordion(is_active=False, current_file=filename)
-        content = re.sub(flat_mobile_pattern, new_mobile, content)
-    else:
-        mobile_pattern = r'<details class="mobile-services-accordion">\s*<summary class="mobile-nav-link[^"]*">\s*Installation Services[\s\S]*?</div>\s*</details>'
-        new_mobile = generate_mobile_accordion(is_active=is_install_active, current_file=filename)
+    mobile_pattern = r'<details class="mobile-services-accordion">\s*<summary class="mobile-nav-link[^"]*">\s*Installation Services[\s\S]*?</div>\s*</details>'
+    new_mobile = generate_mobile_accordion(is_active=is_install_active, current_file=filename)
+    if re.search(mobile_pattern, content):
         content = re.sub(mobile_pattern, new_mobile, content)
+    else:
+        flat_mobile_pattern = r'<a href="installation\.html" class="mobile-nav-link">Installation Services</a>'
+        content = re.sub(flat_mobile_pattern, new_mobile, content)
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(content)

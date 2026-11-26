@@ -15,18 +15,18 @@ This document establishes the architecture, standards, and **Thumb Rules** gover
 ## 2. Mandatory "Thumb Rules"
 
 ### Rule 1: Standardized Dropdown Header
-Every service category dropdown header **must** feature both the category section title (e.g., `RESIDENTIAL INSTALLATION`) and a direct right-aligned link to the category Hub (`All Services Hub ›` pointing to `installation.html`).
+Every service category dropdown header **must** feature both the category section title (e.g., `RESIDENTIAL INSTALLATION`) and a direct right-aligned link to the category Hub (`All Services ›` pointing to `installation.html`).
 
 ```html
 <div class="nav-dropdown-header">
   <span class="nav-dropdown-title">RESIDENTIAL INSTALLATION</span>
-  <a href="installation.html" class="nav-dropdown-view-all">All Services Hub &rsaquo;</a>
+  <a href="installation.html" class="nav-dropdown-view-all">All Services &rsaquo;</a>
 </div>
 ```
 
 ### Rule 2: Unified Wording Standard
-- **Always use**: `All Services Hub &rsaquo;`
-- **Never use**: `All Services Overview`, `View All Services`, `All Services`, or custom variations.
+- **Always use**: `All Services &rsaquo;`
+- **Never use**: `All Services Hub`, `All Services Overview`, `View All Services`, or custom variations.
 - **Entity**: Use `&rsaquo;` for the trailing chevron arrow.
 
 ### Rule 3: Mobile Accordion Parity
@@ -34,7 +34,7 @@ The mobile navigation accordion under `Installation Services` must begin with th
 
 ```html
 <div class="mobile-sublinks">
-  <a href="installation.html" class="mobile-sublink all-link">All Services Hub &rsaquo;</a>
+  <a href="installation.html" class="mobile-sublink all-link">All Services &rsaquo;</a>
   <a href="service_blinds.html" class="mobile-sublink"><span>Custom Blinds Installation</span></a>
   <!-- Remaining 11 canonical services -->
 </div>
