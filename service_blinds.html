@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Window Blinds & Shades | Professional Installation | MyPalUSA LLC</title>
-  <meta name="description" content="Laser-measured privacy, refined light control, and flawless inside or outside frame installation.">
+  <meta name="description"
+    content="Laser-measured privacy, refined light control, and flawless inside or outside frame installation.">
   <link rel="stylesheet" href="css/apple.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
@@ -13,6 +15,7 @@
       --apple-blue-light: #ecfdf5;
       --apple-blue-border: #a7f3d0;
     }
+
     body {
       background-color: #fbfbfd;
       color: #1d1d1f;
@@ -22,6 +25,7 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
+
     .sub-nav {
       position: sticky;
       top: 64px;
@@ -32,6 +36,7 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       padding: 10px 0;
     }
+
     .sub-nav-inner {
       max-width: 1440px;
       width: 100%;
@@ -41,22 +46,34 @@
       justify-content: space-between;
       align-items: center;
     }
+
     .breadcrumb {
       font-size: 13.5px;
       color: #86868b;
     }
+
     .breadcrumb a {
       color: #86868b;
       text-decoration: none;
       transition: color 0.2s;
     }
-    .breadcrumb a:hover { color: #0071e3; }
-    .breadcrumb span { color: #1d1d1f; font-weight: 600; margin-left: 4px; }
+
+    .breadcrumb a:hover {
+      color: #0071e3;
+    }
+
+    .breadcrumb span {
+      color: #1d1d1f;
+      font-weight: 600;
+      margin-left: 4px;
+    }
+
     .sub-nav-cta {
       display: flex;
       gap: 16px;
       align-items: center;
     }
+
     .btn-pill-sm {
       display: inline-flex;
       align-items: center;
@@ -67,11 +84,15 @@
       text-decoration: none;
       transition: all 0.2s;
     }
+
     .btn-pill-sm.primary {
       background: #0071e3;
       color: #ffffff;
     }
-    .btn-pill-sm.primary:hover { background: #3894ff; }
+
+    .btn-pill-sm.primary:hover {
+      background: #3894ff;
+    }
 
     .detail-hero {
       padding: clamp(40px, 6vw, 80px) 0 40px;
@@ -105,7 +126,7 @@
       z-index: 1;
     }
 
-        /* Single Massive Honeycomb Showcase - Slided towards left, fully contained on right side */
+    /* Single Massive Honeycomb Showcase - Slided towards left, fully contained on right side */
     .honeycomb-showcase-wrap {
       position: absolute;
       right: clamp(40px, 5vw, 95px);
@@ -136,7 +157,7 @@
       filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
     }
 
-        /* Inner Photography Masked into Vertical Pointed Honeycomb Hexagon */
+    /* Inner Photography Masked into Vertical Pointed Honeycomb Hexagon */
     .honeycomb-inner-img {
       width: 100%;
       height: 100%;
@@ -160,8 +181,13 @@
     }
 
     @keyframes rotateSlow {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     .detail-hero.blended-hero.honeycomb-hero .blended-hero-content {
@@ -206,7 +232,7 @@
       box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
     }
 
-        @media (max-width: 1024px) {
+    @media (max-width: 1024px) {
       .honeycomb-showcase-wrap {
         width: 460px;
         height: 414px;
@@ -223,6 +249,7 @@
         padding-bottom: 40px;
         overflow: hidden;
       }
+
       .honeycomb-showcase-wrap {
         position: relative;
         right: auto;
@@ -232,24 +259,29 @@
         height: clamp(288px, 80vw, 368px);
         margin: 32px auto 0;
       }
+
       .detail-hero.blended-hero.honeycomb-hero .blended-hero-content {
         max-width: 100%;
       }
+
       .detail-hero.blended-hero .hero-btn-group {
         flex-direction: column;
         width: 100%;
       }
+
       .detail-hero.blended-hero .hero-btn-group a {
         width: 100%;
         justify-content: center;
       }
     }
+
     .detail-container {
       max-width: 1440px;
       width: 100%;
       margin: 0 auto;
       padding: 0 clamp(20px, 4vw, 48px);
     }
+
     .eyebrow-teal {
       display: inline-flex;
       align-items: center;
@@ -283,6 +315,7 @@
       box-shadow: 0 6px 20px rgba(0, 113, 227, 0.22);
       transform: translateY(-1px);
     }
+
     .detail-hero h1 {
       font-size: clamp(28px, 3.4vw, 48px);
       font-weight: 700;
@@ -294,6 +327,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .detail-hero p.lead {
       font-size: clamp(15.5px, 1.4vw, 19px);
       line-height: 1.55;
@@ -301,6 +335,7 @@
       max-width: 1200px;
       margin: 0 auto 36px;
     }
+
     .hero-btn-group {
       display: flex;
       justify-content: center;
@@ -308,6 +343,7 @@
       flex-wrap: wrap;
       margin-bottom: clamp(36px, 5vw, 56px);
     }
+
     .btn-hero-primary {
       background: #0071e3;
       color: #ffffff;
@@ -321,11 +357,17 @@
       gap: 10px;
       transition: all 0.2s;
     }
-    .btn-hero-primary:hover { background: #3894ff; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 113, 227, 0.25); }
+
+    .btn-hero-primary:hover {
+      background: #3894ff;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0, 113, 227, 0.25);
+    }
+
     .btn-hero-secondary {
       background: #f5f5f7;
       color: #1d1d1f;
-      border: 1px solid rgba(0,0,0,0.12);
+      border: 1px solid rgba(0, 0, 0, 0.12);
       padding: 14px 30px;
       border-radius: 980px;
       font-size: 16px;
@@ -336,7 +378,10 @@
       gap: 10px;
       transition: all 0.2s;
     }
-    .btn-hero-secondary:hover { background: #e8e8ed; }
+
+    .btn-hero-secondary:hover {
+      background: #e8e8ed;
+    }
 
     .hero-image-wrap {
       border-radius: clamp(16px, 3vw, 28px);
@@ -346,8 +391,9 @@
       width: 100%;
       margin: 0 auto;
       background: #ffffff;
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0, 0, 0, 0.06);
     }
+
     .hero-image-wrap img {
       width: 100%;
       height: auto;
@@ -360,6 +406,7 @@
       text-align: center;
       margin: clamp(50px, 7vw, 85px) 0 clamp(28px, 4vw, 44px);
     }
+
     .section-title-wrap h2 {
       font-size: clamp(26px, 3.2vw, 38px);
       font-weight: 700;
@@ -367,6 +414,7 @@
       letter-spacing: -0.02em;
       margin-bottom: 12px;
     }
+
     .section-title-wrap p {
       font-size: clamp(14px, 1.2vw, 16px);
       color: #86868b;
@@ -381,19 +429,22 @@
       gap: clamp(18px, 2.5vw, 28px);
       margin-bottom: 60px;
     }
+
     .impact-card {
       background: #ffffff;
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0, 0, 0, 0.06);
       border-radius: 20px;
       padding: clamp(22px, 3vw, 32px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
     }
+
     .impact-card h4 {
       font-size: 19px;
       font-weight: 700;
       color: #0071e3;
       margin-bottom: 12px;
     }
+
     .impact-card p {
       font-size: 15px;
       line-height: 1.6;
@@ -403,20 +454,25 @@
 
     .types-list {
       background: #ffffff;
-      border: 1px solid rgba(0,0,0,0.08);
+      border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 24px;
       padding: clamp(12px, 3vw, 36px);
       margin-bottom: 70px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.03);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.03);
     }
+
     .type-item {
       display: flex;
       gap: 18px;
       padding: 22px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       align-items: flex-start;
     }
-    .type-item:last-child { border-bottom: none; }
+
+    .type-item:last-child {
+      border-bottom: none;
+    }
+
     .type-num {
       width: 34px;
       height: 34px;
@@ -435,12 +491,14 @@
       box-shadow: 0 3px 8px rgba(0, 113, 227, 0.12), inset 0 1px 1px #ffffff;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
     .type-item h4 {
       font-size: 18px;
       font-weight: 700;
       color: #1d1d1f;
       margin: 0 0 8px;
     }
+
     .type-item p {
       font-size: 15px;
       color: #515154;
@@ -454,18 +512,21 @@
       gap: clamp(18px, 2.5vw, 26px);
       margin-bottom: 70px;
     }
+
     .process-step {
       background: #f5f5f7;
       border-radius: 20px;
       padding: clamp(22px, 3vw, 28px);
       position: relative;
     }
+
     .process-step h4 {
       font-size: 17px;
       font-weight: 700;
       color: #0071e3;
       margin: 0 0 10px;
     }
+
     .process-step p {
       font-size: 14.5px;
       color: #515154;
@@ -475,24 +536,30 @@
 
     .specs-table {
       background: #ffffff;
-      border: 1px solid rgba(0,0,0,0.08);
+      border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 20px;
       overflow: hidden;
       margin-bottom: 70px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
     }
+
     .spec-row {
       display: grid;
       grid-template-columns: 320px 1fr;
       padding: 18px 28px;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       font-size: 15px;
     }
-    .spec-row:last-child { border-bottom: none; }
+
+    .spec-row:last-child {
+      border-bottom: none;
+    }
+
     .spec-label {
       font-weight: 700;
       color: #1d1d1f;
     }
+
     .spec-val {
       color: #515154;
       line-height: 1.5;
@@ -504,33 +571,38 @@
       gap: clamp(20px, 2.5vw, 32px);
       margin-bottom: 70px;
     }
+
     .package-card {
       background: #ffffff;
-      border: 1px solid rgba(0,0,0,0.08);
+      border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 24px;
       padding: clamp(28px, 3.5vw, 38px);
       display: flex;
       flex-direction: column;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.04);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
       position: relative;
     }
+
     .package-name {
       font-size: 21px;
       font-weight: 700;
       color: #1d1d1f;
       margin-bottom: 8px;
     }
+
     .package-price {
       font-size: 36px;
       font-weight: 800;
       color: #0071e3;
       margin-bottom: 20px;
     }
+
     .package-features {
       list-style: none;
       padding: 0;
       margin: 0 0 28px;
     }
+
     .package-features li {
       padding: 8px 0;
       font-size: 14.5px;
@@ -539,11 +611,13 @@
       align-items: center;
       gap: 10px;
     }
+
     .package-features li::before {
       content: "✓";
       color: #0071e3;
       font-weight: bold;
     }
+
     .btn-primary {
       background: #0071e3;
       color: #ffffff;
@@ -555,27 +629,38 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-    .btn-primary:hover { background: #3894ff; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 113, 227, 0.25); }
+
+    .btn-primary:hover {
+      background: #3894ff;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0, 113, 227, 0.25);
+    }
 
     .faq-wrap {
       background: #ffffff;
-      border: 1px solid rgba(0,0,0,0.08);
+      border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 24px;
       padding: clamp(16px, 3vw, 36px);
       margin-bottom: 70px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.03);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.03);
     }
+
     .faq-item {
       padding: 24px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
-    .faq-item:last-child { border-bottom: none; }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
     .faq-item h4 {
       font-size: 17.5px;
       font-weight: 700;
       color: #1d1d1f;
       margin: 0 0 10px;
     }
+
     .faq-item p {
       font-size: 15px;
       color: #515154;
@@ -588,11 +673,12 @@
       justify-content: space-between;
       align-items: center;
       padding: 32px 0 64px;
-      border-top: 1px solid rgba(0,0,0,0.08);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
       font-size: 15px;
       flex-wrap: wrap;
       gap: 16px;
     }
+
     .service-nav a {
       color: #0071e3;
       font-weight: 600;
@@ -601,192 +687,234 @@
       align-items: center;
       gap: 6px;
     }
-    .service-nav a:hover { text-decoration: underline; }
+
+    .service-nav a:hover {
+      text-decoration: underline;
+    }
 
     @media (max-width: 900px) {
-      .spec-row { grid-template-columns: 1fr; gap: 6px; }
+      .spec-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
     }
+
     @media (max-width: 768px) {
-      .sub-nav-inner { flex-direction: column; gap: 10px; align-items: flex-start; }
-      .sub-nav-cta { width: 100%; justify-content: space-between; }
-      .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
-      .type-item { flex-direction: column; gap: 12px; }
+      .sub-nav-inner {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .sub-nav-cta {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .btn-hero-primary,
+      .btn-hero-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .type-item {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
 
-    
-  /* Schedule Modal Styles */
-  .modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.52);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 999999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  .modal-backdrop.active {
-    opacity: 1;
-    visibility: visible;
-  }
-  .modal-card {
-    background: #ffffff;
-    border-radius: 26px;
-    max-width: 480px;
-    width: 100%;
-    padding: 38px 28px 30px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    position: relative;
-    text-align: center;
-    transform: translateY(24px) scale(0.96);
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    box-sizing: border-box;
-  }
-  .modal-backdrop.active .modal-card {
-    transform: translateY(0) scale(1);
-  }
-  .modal-close-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: none;
-    background: #f5f5f7;
-    color: #1d1d1f;
-    font-size: 22px;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .modal-close-btn:hover {
-    background: #e5e5ea;
-    transform: scale(1.05);
-  }
-  .modal-icon-badge {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: #eef6ff;
-    border: 1.5px solid #b8d9ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    margin: 0 auto 16px;
-  }
-  .modal-card h3 {
-    font-size: 23px;
-    font-weight: 700;
-    color: #1d1d1f;
-    margin: 0 0 8px;
-    letter-spacing: -0.02em;
-    line-height: 1.25;
-  }
-  .modal-card p {
-    font-size: 14px;
-    color: #6e6e73;
-    line-height: 1.5;
-    margin: 0 0 24px;
-  }
-  .modal-contact-options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 22px;
-  }
-  .modal-contact-card {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 15px 18px;
-    background: #fbfbfd;
-    border: 1.5px solid #e5e5ea;
-    border-radius: 18px;
-    text-decoration: none;
-    color: inherit;
-    text-align: left;
-    transition: all 0.2s ease;
-  }
-  .modal-contact-card:hover {
-    border-color: #0071e3;
-    background: #f0f7ff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0, 113, 227, 0.1);
-  }
-  .contact-card-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: #ffffff;
-    border: 1px solid rgba(0,0,0,0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-  }
-  .contact-card-info {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 0;
-  }
-  .contact-card-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #0071e3;
-    margin-bottom: 2px;
-  }
-  .contact-card-val {
-    font-size: 15.5px;
-    font-weight: 700;
-    color: #1d1d1f;
-    letter-spacing: -0.01em;
-    white-space: nowrap;
-  }
-  .contact-card-note {
-    font-size: 11.5px;
-    color: #86868b;
-    margin-top: 2px;
-  }
-  .contact-card-action {
-    font-size: 13px;
-    font-weight: 600;
-    color: #0071e3;
-    background: #eef6ff;
-    padding: 6px 14px;
-    border-radius: 980px;
-    border: 1px solid #b8d9ff;
-    flex-shrink: 0;
-  }
-  .modal-footer-note {
-    font-size: 12px;
-    color: #86868b;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
 
+    /* Schedule Modal Styles */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.52);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      border-radius: 26px;
+      max-width: 480px;
+      width: 100%;
+      padding: 38px 28px 30px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      position: relative;
+      text-align: center;
+      transform: translateY(24px) scale(0.96);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+    }
+
+    .modal-backdrop.active .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .modal-close-btn:hover {
+      background: #e5e5ea;
+      transform: scale(1.05);
+    }
+
+    .modal-icon-badge {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #eef6ff;
+      border: 1.5px solid #b8d9ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin: 0 auto 16px;
+    }
+
+    .modal-card h3 {
+      font-size: 23px;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    .modal-card p {
+      font-size: 14px;
+      color: #6e6e73;
+      line-height: 1.5;
+      margin: 0 0 24px;
+    }
+
+    .modal-contact-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .modal-contact-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 18px;
+      background: #fbfbfd;
+      border: 1.5px solid #e5e5ea;
+      border-radius: 18px;
+      text-decoration: none;
+      color: inherit;
+      text-align: left;
+      transition: all 0.2s ease;
+    }
+
+    .modal-contact-card:hover {
+      border-color: #0071e3;
+      background: #f0f7ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 113, 227, 0.1);
+    }
+
+    .contact-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .contact-card-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-card-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #0071e3;
+      margin-bottom: 2px;
+    }
+
+    .contact-card-val {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #1d1d1f;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .contact-card-note {
+      font-size: 11.5px;
+      color: #86868b;
+      margin-top: 2px;
+    }
+
+    .contact-card-action {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0071e3;
+      background: #eef6ff;
+      padding: 6px 14px;
+      border-radius: 980px;
+      border: 1px solid #b8d9ff;
+      flex-shrink: 0;
+    }
+
+    .modal-footer-note {
+      font-size: 12px;
+      color: #86868b;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Main Glass Navigation Bar -->
@@ -800,22 +928,26 @@
       <!-- Desktop Links -->
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
-                <div class="nav-dropdown-wrapper">
+        <div class="nav-dropdown-wrapper">
           <a href="installation.html" class="nav-link active nav-dropdown-trigger">
             <span>Installation Services</span>
-            <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </a>
-                      <div class="nav-dropdown-menu simple-menu">
+          <div class="nav-dropdown-menu simple-menu">
             <div class="nav-dropdown-header">
               <span class="nav-dropdown-title">RESIDENTIAL INSTALLATION</span>
+              <a href="installation.html" class="nav-dropdown-view-all">All Services Hub &rsaquo;</a>
             </div>
             <div class="nav-dropdown-grid simple-list">
               <a href="service_blinds.html" class="nav-dropdown-item simple">Custom Blinds Installation</a>
-              <a href="service_ceiling_fans.html" class="nav-dropdown-item simple">Ceiling Fan Installation &amp; Wiring</a>
+              <a href="service_ceiling_fans.html" class="nav-dropdown-item simple">Ceiling Fan Installation &amp;
+                Wiring</a>
               <a href="service_tv_mounting.html" class="nav-dropdown-item simple">TV Wall Mounting</a>
-              <a href="service_furniture_assembly.html" class="nav-dropdown-item simple">Furniture Assembly &amp; Build</a>
+              <a href="service_furniture_assembly.html" class="nav-dropdown-item simple">Furniture Assembly &amp;
+                Build</a>
               <a href="service_curtains.html" class="nav-dropdown-item simple">Curtains &amp; Custom Drapery Rods</a>
               <a href="service_smart_switches.html" class="nav-dropdown-item simple">Smart Switches &amp; Automation</a>
               <a href="service_thermostats.html" class="nav-dropdown-item simple">Smart Thermostats</a>
@@ -831,7 +963,8 @@
         <div class="nav-dropdown-wrapper">
           <a href="home-inspection.html" class="nav-link nav-dropdown-trigger">
             <span>Home Inspection</span>
-            <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </a>
@@ -855,10 +988,17 @@
 
       <!-- Action Buttons -->
       <div class="nav-actions">
-        <a href="tel:9196563524" class="nav-phone-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>(919) 656 3524</span></a>
+        <a href="tel:9196563524" class="nav-phone-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+            style="flex-shrink: 0;">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg><span>(919) 656 3524</span></a>
         <button type="button" onclick="openScheduleModal();" class="nav-cta-btn">Schedule Service</button>
         <button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu();" aria-label="Toggle Menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -870,16 +1010,18 @@
     <!-- Mobile Dropdown -->
     <div class="mobile-dropdown" id="mobileMenu">
       <a href="index.html" class="mobile-nav-link">Home</a>
-            <details class="mobile-services-accordion">
+      <details class="mobile-services-accordion">
         <summary class="mobile-nav-link active">
           Installation Services <span class="accordion-arrow">▾</span>
         </summary>
         <div class="mobile-sublinks">
-          <a href="installation.html" class="mobile-sublink all-link">All Services Overview &rsaquo;</a>
+          <a href="installation.html" class="mobile-sublink all-link">All Services Hub &rsaquo;</a>
           <a href="service_blinds.html" class="mobile-sublink"><span>Custom Blinds Installation</span></a>
-          <a href="service_ceiling_fans.html" class="mobile-sublink"><span>Ceiling Fan Installation &amp; Wiring</span></a>
+          <a href="service_ceiling_fans.html" class="mobile-sublink"><span>Ceiling Fan Installation &amp;
+              Wiring</span></a>
           <a href="service_tv_mounting.html" class="mobile-sublink"><span>TV Wall Mounting</span></a>
-          <a href="service_furniture_assembly.html" class="mobile-sublink"><span>Furniture Assembly &amp; Build</span></a>
+          <a href="service_furniture_assembly.html" class="mobile-sublink"><span>Furniture Assembly &amp;
+              Build</span></a>
           <a href="service_curtains.html" class="mobile-sublink"><span>Curtains &amp; Custom Drapery Rods</span></a>
           <a href="service_smart_switches.html" class="mobile-sublink"><span>Smart Switches &amp; Automation</span></a>
           <a href="service_thermostats.html" class="mobile-sublink"><span>Smart Thermostats</span></a>
@@ -895,15 +1037,24 @@
           Home Inspection Services <span class="accordion-arrow">▾</span>
         </summary>
         <div class="mobile-sublinks">
-          <a href="home-inspection.html#packages" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Inspection Packages</span></a>
-          <a href="home-inspection.html#pkg-phase-bundle" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Bundle Promotions (Save $415)</span></a>
+          <a href="home-inspection.html#packages" onclick="toggleMobileMenu();" class="mobile-sublink"><span>Inspection
+              Packages</span></a>
+          <a href="home-inspection.html#pkg-phase-bundle" onclick="toggleMobileMenu();"
+            class="mobile-sublink"><span>Bundle Promotions (Save $415)</span></a>
         </div>
       </details>
       <a href="catalog.html" class="mobile-nav-link">Hardware Catalog</a>
       <a href="about.html" class="mobile-nav-link">About Us</a>
       <div class="mobile-nav-divider"></div>
-      <a href="tel:9196563524" class="mobile-nav-link phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>Call (919) 656 3524</span></a>
-      <button type="button" onclick="openScheduleModal(); toggleMobileMenu();" class="mobile-schedule-btn">Schedule Service Now &rsaquo;</button>
+      <a href="tel:9196563524" class="mobile-nav-link phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+          style="flex-shrink: 0;">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg><span>Call (919) 656 3524</span></a>
+      <button type="button" onclick="openScheduleModal(); toggleMobileMenu();" class="mobile-schedule-btn">Schedule
+        Service Now &rsaquo;</button>
     </div>
   </header>
 
@@ -912,11 +1063,11 @@
     <div class="sub-nav-inner">
       <div class="breadcrumb">
         <a href="index.html">Home</a> &rsaquo;
-        <a href="installation.html" >Installation</a> &rsaquo;
+        <a href="installation.html">Installation</a> &rsaquo;
         <span>Window Blinds & Shades</span>
       </div>
       <div class="sub-nav-cta">
-        <span style="font-size: 13.5px; font-weight: 600; color: #1d1d1f;">From $20 / window</span>
+        <span style="font-size: 13.5px; font-weight: 600; color: #1d1d1f;">From $35 / window</span>
       </div>
     </div>
   </div>
@@ -937,23 +1088,41 @@
     <div class="detail-container" style="position: relative; z-index: 5; width: 100%;">
       <div class="blended-hero-content">
         <span class="eyebrow-teal">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="3" y1="15" x2="21" y2="15"></line>
+            <line x1="9" y1="3" x2="9" y2="21"></line>
+          </svg>
           <span>Precision Window Treatments</span>
         </span>
         <h1>The Impact of Blinds on Your Environment.</h1>
-        <p class="lead">Laser-measured privacy, refined light control, and flawless inside or outside frame installation.</p>
+        <p class="lead">Laser-measured privacy, refined light control, and flawless inside or outside frame
+          installation.</p>
 
         <div class="blended-hero-badges">
           <span class="blended-hero-badge-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
             <span>Laser-Level Exact Fit</span>
           </span>
           <span class="blended-hero-badge-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
             <span>Cordless &amp; Motorized Options</span>
           </span>
           <span class="blended-hero-badge-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
             <span>Same-Day &amp; Weekend Slots</span>
           </span>
         </div>
@@ -970,23 +1139,28 @@
       <p>How professional installation transforms your home ambiance, functionality, and daily comfort.</p>
     </div>
     <div class="impact-grid">
-      
-        <div class="impact-card">
-          <h4>Ambiance & Feel</h4>
-          <p>The style, material, and light control offered by blinds directly impact the mood of a room. Soft, diffused light creates a calming atmosphere, while glare reduction makes a space comfortable and inviting.</p>
-        </div>
-        <div class="impact-card">
-          <h4>Quality & Texture</h4>
-          <p>The material and construction contribute to the perceived quality of a space. Rich textures like wood or fabric add warmth and organic beauty, while sleek materials like aluminum lend a modern architectural edge.</p>
-        </div>
-        <div class="impact-card">
-          <h4>Light Control & Reflection</h4>
-          <p>Blinds are primary tools for managing natural sunlight. They can filter, block, or redirect light, preventing glare on displays and protecting expensive furnishings and hardwood floors from UV rays.</p>
-        </div>
-        <div class="impact-card">
-          <h4>Coverage & Privacy</h4>
-          <p>Different blind types offer varying levels of coverage and privacy, from complete blackout for bedrooms to gentle light filtering for active living spaces.</p>
-        </div>
+
+      <div class="impact-card">
+        <h4>Ambiance & Feel</h4>
+        <p>The style, material, and light control offered by blinds directly impact the mood of a room. Soft, diffused
+          light creates a calming atmosphere, while glare reduction makes a space comfortable and inviting.</p>
+      </div>
+      <div class="impact-card">
+        <h4>Quality & Texture</h4>
+        <p>The material and construction contribute to the perceived quality of a space. Rich textures like wood or
+          fabric add warmth and organic beauty, while sleek materials like aluminum lend a modern architectural edge.
+        </p>
+      </div>
+      <div class="impact-card">
+        <h4>Light Control & Reflection</h4>
+        <p>Blinds are primary tools for managing natural sunlight. They can filter, block, or redirect light, preventing
+          glare on displays and protecting expensive furnishings and hardwood floors from UV rays.</p>
+      </div>
+      <div class="impact-card">
+        <h4>Coverage & Privacy</h4>
+        <p>Different blind types offer varying levels of coverage and privacy, from complete blackout for bedrooms to
+          gentle light filtering for active living spaces.</p>
+      </div>
     </div>
 
     <!-- 2. Types & Breakdown Guide -->
@@ -995,56 +1169,63 @@
       <p>Explore the full spectrum of equipment and models we expertly install.</p>
     </div>
     <div class="types-list">
-      
-        <div class="type-item">
-          <div class="type-num">1</div>
-          <div>
-            <h4>Wooden Blinds (Venetian)</h4>
-            <p>Natural wood horizontal slats that tilt for precise light control. Brings organic warmth, richness, and a timeless feel with visible natural grain and superior insulation.</p>
-          </div>
+
+      <div class="type-item">
+        <div class="type-num">1</div>
+        <div>
+          <h4>Wooden Blinds (Venetian)</h4>
+          <p>Natural wood horizontal slats that tilt for precise light control. Brings organic warmth, richness, and a
+            timeless feel with visible natural grain and superior insulation.</p>
         </div>
-        <div class="type-item">
-          <div class="type-num">2</div>
-          <div>
-            <h4>Faux Wood Blinds</h4>
-            <p>Durable composite/PVC construction mimicking real wood. Resistant to moisture, humidity, and warping—ideal for kitchens, bathrooms, and high-humidity areas.</p>
-          </div>
+      </div>
+      <div class="type-item">
+        <div class="type-num">2</div>
+        <div>
+          <h4>Faux Wood Blinds</h4>
+          <p>Durable composite/PVC construction mimicking real wood. Resistant to moisture, humidity, and warping—ideal
+            for kitchens, bathrooms, and high-humidity areas.</p>
         </div>
-        <div class="type-item">
-          <div class="type-num">3</div>
-          <div>
-            <h4>Metal Venetian Blinds</h4>
-            <p>Lightweight, ultra-durable thin aluminum slats. Offers a sleek, minimalist aesthetic with exceptional light reflection that bounces brightness deeper into rooms.</p>
-          </div>
+      </div>
+      <div class="type-item">
+        <div class="type-num">3</div>
+        <div>
+          <h4>Metal Venetian Blinds</h4>
+          <p>Lightweight, ultra-durable thin aluminum slats. Offers a sleek, minimalist aesthetic with exceptional light
+            reflection that bounces brightness deeper into rooms.</p>
         </div>
-        <div class="type-item">
-          <div class="type-num">4</div>
-          <div>
-            <h4>Roller Blinds & Shades</h4>
-            <p>Single-piece fabric rolling onto a clean tube mechanism. Available in sheer light-filtering, solar screen, or complete room-darkening blackout materials.</p>
-          </div>
+      </div>
+      <div class="type-item">
+        <div class="type-num">4</div>
+        <div>
+          <h4>Roller Blinds & Shades</h4>
+          <p>Single-piece fabric rolling onto a clean tube mechanism. Available in sheer light-filtering, solar screen,
+            or complete room-darkening blackout materials.</p>
         </div>
-        <div class="type-item">
-          <div class="type-num">5</div>
-          <div>
-            <h4>Roman Blinds</h4>
-            <p>Tailored fabric window coverings folding into elegant cascading pleats when raised. Adds soft texture, sophistication, and refined designer drapery styling.</p>
-          </div>
+      </div>
+      <div class="type-item">
+        <div class="type-num">5</div>
+        <div>
+          <h4>Roman Blinds</h4>
+          <p>Tailored fabric window coverings folding into elegant cascading pleats when raised. Adds soft texture,
+            sophistication, and refined designer drapery styling.</p>
         </div>
-        <div class="type-item">
-          <div class="type-num">6</div>
-          <div>
-            <h4>Cellular Honeycomb Shades</h4>
-            <p>Engineered honeycomb-shaped air pockets providing maximum thermal insulation, noise reduction, and gentle diffused lighting.</p>
-          </div>
+      </div>
+      <div class="type-item">
+        <div class="type-num">6</div>
+        <div>
+          <h4>Cellular Honeycomb Shades</h4>
+          <p>Engineered honeycomb-shaped air pockets providing maximum thermal insulation, noise reduction, and gentle
+            diffused lighting.</p>
         </div>
-        <div class="type-item">
-          <div class="type-num">7</div>
-          <div>
-            <h4>Vertical Blinds</h4>
-            <p>Smooth sliding vertical vanes ideal for sliding glass patio doors and floor-to-ceiling windows, offering effortless side stack and wide light adjustment.</p>
-          </div>
+      </div>
+      <div class="type-item">
+        <div class="type-num">7</div>
+        <div>
+          <h4>Vertical Blinds</h4>
+          <p>Smooth sliding vertical vanes ideal for sliding glass patio doors and floor-to-ceiling windows, offering
+            effortless side stack and wide light adjustment.</p>
         </div>
+      </div>
     </div>
 
     <!-- 3. 4-Step Precision Workflow -->
@@ -1053,23 +1234,26 @@
       <p>Our systematic, white-glove approach guarantees exact execution from initial measurement to clean-up.</p>
     </div>
     <div class="process-grid">
-      
-        <div class="process-step">
-          <h4>1. 3-Point Laser Measurement</h4>
-          <p>We measure the window frame width at top, middle, and bottom, plus height and depth to detect any out-of-square framing.</p>
-        </div>
-        <div class="process-step">
-          <h4>2. Heavy-Duty Bracket Mounting</h4>
-          <p>Brackets are level-anchored directly into solid window frame framing with anti-corrosion hardware.</p>
-        </div>
-        <div class="process-step">
-          <h4>3. Headrail Lock & Valance Seating</h4>
-          <p>The headrail snaps securely into the locking brackets, followed by the decorative valance flush alignment.</p>
-        </div>
-        <div class="process-step">
-          <h4>4. Tension & Glide Calibration</h4>
-          <p>We calibrate internal spring tension for effortless one-finger lifting, smooth slat rotation, and motor limit settings.</p>
-        </div>
+
+      <div class="process-step">
+        <h4>1. 3-Point Laser Measurement</h4>
+        <p>We measure the window frame width at top, middle, and bottom, plus height and depth to detect any
+          out-of-square framing.</p>
+      </div>
+      <div class="process-step">
+        <h4>2. Heavy-Duty Bracket Mounting</h4>
+        <p>Brackets are level-anchored directly into solid window frame framing with anti-corrosion hardware.</p>
+      </div>
+      <div class="process-step">
+        <h4>3. Headrail Lock & Valance Seating</h4>
+        <p>The headrail snaps securely into the locking brackets, followed by the decorative valance flush alignment.
+        </p>
+      </div>
+      <div class="process-step">
+        <h4>4. Tension & Glide Calibration</h4>
+        <p>We calibrate internal spring tension for effortless one-finger lifting, smooth slat rotation, and motor limit
+          settings.</p>
+      </div>
     </div>
 
     <!-- 4. Technical Specifications -->
@@ -1078,74 +1262,104 @@
       <p>Delivering precision craftsmanship, secure mounting, and dependable quality.</p>
     </div>
     <div class="specs-table">
-      
-        <div class="spec-row">
-          <div class="spec-label">Measurement Standard</div>
-          <div class="spec-val">3-Point digital laser distance measurement (top, middle, bottom jambs)</div>
-        </div>
-        <div class="spec-row">
-          <div class="spec-label">Mounting Options</div>
-          <div class="spec-val">Inside mount (flush with jamb) or outside mount (trim/drywall overlay)</div>
-        </div>
-        <div class="spec-row">
-          <div class="spec-label">Operation Mechanisms</div>
-          <div class="spec-val">Cordless push/pull, wand tilt, motorized battery RF, continuous loop</div>
-        </div>
-        <div class="spec-row">
-          <div class="spec-label">Operation</div>
-          <div class="spec-val">Modern cordless, wand tilt, and motorized treatment designs</div>
-        </div>
-        <div class="spec-row">
-          <div class="spec-label">Smart Automation</div>
-          <div class="spec-val">Compatible with RF remotes, solar charging panels, and Matter/Wi-Fi smart hubs</div>
-        </div>
+
+      <div class="spec-row">
+        <div class="spec-label">Measurement Standard</div>
+        <div class="spec-val">3-Point digital laser distance measurement (top, middle, bottom jambs)</div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-label">Mounting Options</div>
+        <div class="spec-val">Inside mount (flush with jamb) or outside mount (trim/drywall overlay)</div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-label">Operation Mechanisms</div>
+        <div class="spec-val">Cordless push/pull, wand tilt, motorized battery RF, continuous loop</div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-label">Operation</div>
+        <div class="spec-val">Modern cordless, wand tilt, and motorized treatment designs</div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-label">Smart Automation</div>
+        <div class="spec-val">Compatible with RF remotes, solar charging panels, and Matter/Wi-Fi smart hubs</div>
+      </div>
     </div>
 
     <!-- 5. Transparent Packages & Pricing -->
     <div class="section-title-wrap">
       <h2>Installation Packages & Rates</h2>
-      <p>Standard list rates shown below. <strong>We frequently charge less with active promotional specials &amp; bundle savings — call for today’s discounted&nbsp;price!</strong></p>
+      <p>Standard list rates shown below. <strong>We frequently charge less with active promotional specials &amp;
+          bundle savings — call for today’s discounted&nbsp;price!</strong></p>
     </div>
     <div class="packages-grid">
-      
-        <div class="package-card">
-          <div class="package-discount-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg><span>Special Discount Available</span></div>
-          <div class="package-name">Standard Window (Min. 4 Windows)</div>
-          <div class="package-price-row">
-            <div class="package-price">$35</div>
-            <span class="package-price-sub">Per Window (Min. 4)</span>
-          </div>
-          <ul class="package-features">
-            <li>Minimum 4 window treatments</li><li>Inside or outside mount</li><li>Laser plumb alignment</li><li>Smooth glide calibration</li>
-          </ul>
-          <a href="javascript:void(0)" onclick="openScheduleModal('Standard Window (Min. 4 Windows)');" class="btn-primary" style="margin-top: auto;">Call for Special Price &rsaquo;</a>
+
+      <div class="package-card">
+        <div class="package-discount-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            style="flex-shrink: 0;">
+            <path
+              d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+            </path>
+          </svg><span>Special Discount Available</span></div>
+        <div class="package-name">Standard Single Window</div>
+        <div class="package-price-row">
+          <div class="package-price">$35</div>
+          <span class="package-price-sub">Standard List</span>
         </div>
-        <div class="package-card">
-          <div class="package-discount-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg><span>Special Discount Available</span></div>
-          <div class="package-name">Multi-Window (5+ Windows)</div>
-          <div class="package-price-row">
-            <div class="package-price">$30</div>
-            <span class="package-price-sub">Per Window</span>
-          </div>
-          <ul class="package-features">
-            <li>5+ window treatments</li><li>Cordless &amp; motorized setups</li><li>Packaging consolidation</li><li>Hardware warranty</li>
-          </ul>
-          <a href="javascript:void(0)" onclick="openScheduleModal('Multi-Window (5+ Windows)');" class="btn-primary" style="margin-top: auto;">Call for Special Price &rsaquo;</a>
+        <ul class="package-features">
+          <li>Inside or outside mount</li>
+          <li>Laser plumb alignment</li>
+          <li>Valance installation</li>
+          <li>Smooth glide calibration</li>
+        </ul>
+        <a href="javascript:void(0)" onclick="openScheduleModal('Standard Single Window');" class="btn-primary"
+          style="margin-top: auto;">Call for Special Price &rsaquo;</a>
+      </div>
+      <div class="package-card">
+        <div class="package-discount-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            style="flex-shrink: 0;">
+            <path
+              d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+            </path>
+          </svg><span>Special Discount Available</span></div>
+        <div class="package-name">Room Refresh (3-5 Windows)</div>
+        <div class="package-price-row">
+          <div class="package-price">$149</div>
+          <span class="package-price-sub">Standard List</span>
         </div>
-        <div class="package-card">
-          <div class="package-discount-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg><span>Special Discount Available</span></div>
-          <div class="package-name">Whole-Home Suite (10+ Windows)</div>
-          <div class="package-price-row">
-            <div class="package-price">$20</div>
-            <span class="package-price-sub">Per Window</span>
-          </div>
-          <ul class="package-features">
-            <li>10+ windows complete</li><li>Dedicated design layout</li><li>Motorized hub pairing available*</li><li>Volume package discount</li>
-          </ul>
-          <a href="javascript:void(0)" onclick="openScheduleModal('Whole-Home Suite (10+ Windows)');" class="btn-primary" style="margin-top: auto;">Call for Special Price &rsaquo;</a>
+        <ul class="package-features">
+          <li>Up to 5 window treatments</li>
+          <li>Cordless &amp; motorized setups</li>
+          <li>Packaging consolidation</li>
+          <li>Hardware warranty</li>
+        </ul>
+        <a href="javascript:void(0)" onclick="openScheduleModal('Room Refresh (3-5 Windows)');" class="btn-primary"
+          style="margin-top: auto;">Call for Special Price &rsaquo;</a>
+      </div>
+      <div class="package-card">
+        <div class="package-discount-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            style="flex-shrink: 0;">
+            <path
+              d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+            </path>
+          </svg><span>Special Discount Available</span></div>
+        <div class="package-name">Whole-Home Suite (10+ Windows)</div>
+        <div class="package-price-row">
+          <div class="package-price">$20</div>
+          <span class="package-price-sub">Per Window</span>
         </div>
+        <ul class="package-features">
+          <li>10+ windows complete</li>
+          <li>Dedicated design layout</li>
+          <li>Motorized hub pairing available</li>
+          <li>Volume package discount</li>
+        </ul>
+        <a href="javascript:void(0)" onclick="openScheduleModal('Whole-Home Suite (10+ Windows)');" class="btn-primary"
+          style="margin-top: auto;">Call for Special Price &rsaquo;</a>
+      </div>
     </div>
-    <p style="text-align: center; font-size: 13.5px; color: #86868b; margin-top: -40px; margin-bottom: 65px; line-height: 1.5;">* Motorized hub pairing may cost additional depending on the model.</p>
 
     <!-- 6. Frequently Asked Questions -->
     <div class="section-title-wrap">
@@ -1153,22 +1367,25 @@
       <p>Everything you need to know before your installation appointment.</p>
     </div>
     <div class="faq-wrap">
-      
-        <div class="faq-item">
-          <h4>Should I choose inside mount or outside mount?</h4>
-          <p>Inside mount provides a clean, recessed look flush with the window trim. Outside mount is recommended if window frame depth is less than 2 inches or if you want 100% blackout edge coverage.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Can you help me measure before I purchase blinds?</h4>
-          <p>Yes! We provide exact digital laser measuring consultations so you can order custom-cut blinds from any retailer with total confidence.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Do you install motorized smart blinds?</h4>
-          <p>Yes! We install and calibrate motorized smart roller and cellular shades, including Lutron, SmartWings, and Somfy, linking them to your app or voice assistant.</p>
-        </div>
+
+      <div class="faq-item">
+        <h4>Should I choose inside mount or outside mount?</h4>
+        <p>Inside mount provides a clean, recessed look flush with the window trim. Outside mount is recommended if
+          window frame depth is less than 2 inches or if you want 100% blackout edge coverage.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can you help me measure before I purchase blinds?</h4>
+        <p>Yes! We provide exact digital laser measuring consultations so you can order custom-cut blinds from any
+          retailer with total confidence.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you install motorized smart blinds?</h4>
+        <p>Yes! We install and calibrate motorized smart roller and cellular shades, including Lutron, SmartWings, and
+          Somfy, linking them to your app or voice assistant.</p>
+      </div>
     </div>
 
-            <!-- 7. Compatible Products from Catalog -->
+    <!-- 7. Compatible Products from Catalog -->
     <div class="catalog-service-section">
       <div class="section-title-wrap">
         <h2>Recommended Window Blinds & Hardware</h2>
@@ -1177,21 +1394,27 @@
       <div class="product-track">
         <div class="product-cell">
           <div class="cell-icon-wrap">
-            <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zm1 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M3 3h18v2H3zm1 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z" />
+            </svg>
           </div>
           <div class="cell-name">Cordless Faux Wood Blinds</div>
           <a href="catalog.html" target="_blank" rel="noopener" class="btn-amazon-gold">View on Amazon</a>
         </div>
         <div class="product-cell">
           <div class="cell-icon-wrap">
-            <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zm1 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M3 3h18v2H3zm1 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z" />
+            </svg>
           </div>
           <div class="cell-name">Smart Motorized Roller Shades</div>
           <a href="catalog.html" target="_blank" rel="noopener" class="btn-amazon-gold">View on Amazon</a>
         </div>
         <div class="product-cell view-all-cell">
           <div class="cell-icon-wrap">
-            <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+            </svg>
           </div>
           <div class="cell-name">More in Catalog</div>
           <a href="catalog.html" class="btn-amazon-gold btn-view-all-pill">View all</a>
@@ -1199,7 +1422,13 @@
       </div>
       <div class="catalog-explore-footer">
         <a href="catalog.html" class="btn-catalog-explore">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+          </svg>
           <span>Explore Full Hardware Catalog</span>
           <span class="btn-arrow">&rsaquo;</span>
         </a>
@@ -1216,64 +1445,92 @@
   </div>
 
   <!-- Minimalist Apple Footer -->
-  <footer style="border-top: 1px solid rgba(0,0,0,0.08); background: #fbfbfd; padding: 22px 16px; text-align: center; font-size: 13px; color: #86868b;">
+  <footer
+    style="border-top: 1px solid rgba(0,0,0,0.08); background: #fbfbfd; padding: 22px 16px; text-align: center; font-size: 13px; color: #86868b;">
     <div class="detail-container">
-      <p>© 2026 Copyright | MyPalUSA LLC &nbsp;&bull;&nbsp; <a href="terms.html" style="color: #0071e3; text-decoration: none;">Terms &amp; Conditions</a></p>
+      <p>© 2026 Copyright | MyPalUSA LLC &nbsp;&bull;&nbsp; <a href="terms.html"
+          style="color: #0071e3; text-decoration: none;">Terms &amp; Conditions</a></p>
     </div>
   </footer>
 
-  
-<!-- Schedule Installation Modal with Phone & Email -->
-<div id="scheduleModal" class="modal-backdrop" onclick="if(event.target===this) closeModal()">
-  <div class="modal-card">
-    <button class="modal-close-btn" onclick="closeModal()" aria-label="Close modal">&times;</button>
-    <div class="modal-icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
-    >Schedule Installation</h3>
-    <p id="modalSub">Connect directly with our installation team to get a quote, check availability, or schedule your appointment.</p>
-    
-    <div class="modal-contact-options">
-      <!-- Phone Option -->
-      <a href="tel:9196563524" class="modal-contact-card">
-        <div class="contact-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
-        <div class="contact-card-info">
-          <span class="contact-card-label">Direct Phone &amp; SMS</span>
-          <span class="contact-card-val">(919) 656 3524</span>
-          <span class="contact-card-note">Mon–Sat • 8:00 AM – 8:00 PM EST</span>
-        </div>
-        <div class="modal-action-col">
-          <span class="contact-card-action">Call Now &rsaquo;</span>
-          <button type="button" class="modal-copy-btn" onclick="copyContactText('(919) 656 3524', this, event);" title="Copy Phone Number">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span>Copy</span>
-          </button>
-        </div>
-      </a>
 
-      <!-- Email Option -->
-      <a href="mailto:mypalusallc@gmail.com?subject=Installation%20Schedule%20Request%20-%20MyPalUSA" class="modal-contact-card">
-        <div class="contact-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
-        <div class="contact-card-info">
-          <span class="contact-card-label">Direct Email Dispatch</span>
-          <span class="contact-card-val">mypalusallc@gmail.com</span>
-          <span class="contact-card-note">Fast response within 2 hours</span>
-        </div>
-        <div class="modal-action-col">
-          <span class="contact-card-action">Send Email &rsaquo;</span>
-          <button type="button" class="modal-copy-btn" onclick="copyContactText('mypalusallc@gmail.com', this, event);" title="Copy Email Address">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span>Copy</span>
-          </button>
-        </div>
-      </a>
-    </div>
+  <!-- Schedule Installation Modal with Phone & Email -->
+  <div id="scheduleModal" class="modal-backdrop" onclick="if(event.target===this) closeModal()">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg></div>
+      >Schedule Installation</h3>
+      <p id="modalSub">Connect directly with our installation team to get a quote, check availability, or schedule your
+        appointment.</p>
 
-    <div class="modal-footer-note">
-      <span>✓ 100% Guaranteed Workmanship</span> &bull; <span>✓ Licensed &amp; Insured</span>
+      <div class="modal-contact-options">
+        <!-- Phone Option -->
+        <a href="tel:9196563524" class="modal-contact-card">
+          <div class="contact-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg></div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">Direct Phone &amp; SMS</span>
+            <span class="contact-card-val">(919) 656 3524</span>
+            <span class="contact-card-note">Mon–Sat • 8:00 AM – 8:00 PM EST</span>
+          </div>
+          <div class="modal-action-col">
+            <span class="contact-card-action">Call Now &rsaquo;</span>
+            <button type="button" class="modal-copy-btn" onclick="copyContactText('(919) 656 3524', this, event);"
+              title="Copy Phone Number">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </a>
+
+        <!-- Email Option -->
+        <a href="mailto:mypalusallc@gmail.com?subject=Installation%20Schedule%20Request%20-%20MyPalUSA"
+          class="modal-contact-card">
+          <div class="contact-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg></div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">Direct Email Dispatch</span>
+            <span class="contact-card-val">mypalusallc@gmail.com</span>
+            <span class="contact-card-note">Fast response within 2 hours</span>
+          </div>
+          <div class="modal-action-col">
+            <span class="contact-card-action">Send Email &rsaquo;</span>
+            <button type="button" class="modal-copy-btn"
+              onclick="copyContactText('mypalusallc@gmail.com', this, event);" title="Copy Email Address">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </a>
+      </div>
+
+      <div class="modal-footer-note">
+        <span>✓ 100% Guaranteed Workmanship</span> &bull; <span>✓ Licensed &amp; Insured</span>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
+  <script>
     function toggleMobileMenu(forceClose) {
       var m = document.getElementById("mobileMenu");
       var btn = document.querySelector(".mobile-menu-btn");
@@ -1296,7 +1553,7 @@
       }
     }
 
-    document.addEventListener("click", function(e) {
+    document.addEventListener("click", function (e) {
       var m = document.getElementById("mobileMenu");
       var btn = document.querySelector(".mobile-menu-btn");
       if (m && m.classList.contains("active")) {
@@ -1322,13 +1579,13 @@
         btn.classList.add('copied');
         var origHTML = btn.innerHTML;
         btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copied!</span>';
-        setTimeout(function() {
+        setTimeout(function () {
           btn.classList.remove('copied');
           btn.innerHTML = origHTML;
         }, 2000);
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(setCopied).catch(function() {
+        navigator.clipboard.writeText(text).then(setCopied).catch(function () {
           fallbackCopy(text);
           setCopied();
         });
@@ -1343,39 +1600,40 @@
         ta.style.opacity = '0';
         document.body.appendChild(ta);
         ta.select();
-        try { document.execCommand('copy'); } catch(err) {}
+        try { document.execCommand('copy'); } catch (err) { }
         document.body.removeChild(ta);
       }
       return false;
     }
 
     function openScheduleModal(serviceName) {
-  var modal = document.getElementById('scheduleModal');
-  if (modal) {
-    var titleEl = document.getElementById('modalTitle');
-    var subEl = document.getElementById('modalSub');
-    if (serviceName && typeof serviceName === 'string') {
-      if (titleEl) titleEl.textContent = 'Special Price: ' + serviceName;
-      if (subEl) subEl.textContent = 'Call our team directly at (919) 656 3524 to claim your discounted rate, explore bundle specials, and schedule service.';
-    } else {
-      if (titleEl) titleEl.textContent = 'Schedule Installation';
-      if (subEl) subEl.textContent = 'Connect directly with our installation team to get a quote, check availability, or schedule your appointment.';
+      var modal = document.getElementById('scheduleModal');
+      if (modal) {
+        var titleEl = document.getElementById('modalTitle');
+        var subEl = document.getElementById('modalSub');
+        if (serviceName && typeof serviceName === 'string') {
+          if (titleEl) titleEl.textContent = 'Special Price: ' + serviceName;
+          if (subEl) subEl.textContent = 'Call our team directly at (919) 656 3524 to claim your discounted rate, explore bundle specials, and schedule service.';
+        } else {
+          if (titleEl) titleEl.textContent = 'Schedule Installation';
+          if (subEl) subEl.textContent = 'Connect directly with our installation team to get a quote, check availability, or schedule your appointment.';
+        }
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
     }
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-}
-function closeModal() {
-  var modal = document.getElementById('scheduleModal');
-  if (modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeModal();
-});
-</script>
+    function closeModal() {
+      var modal = document.getElementById('scheduleModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
 
 </body>
+
 </html>
